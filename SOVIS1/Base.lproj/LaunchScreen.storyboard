@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="signature-size1280(JPG Type)\logo1_1280" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-sI-Ija">
+                                <rect key="frame" x="0.0" y="-190" width="640" height="190"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JGn-sI-Ija" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="OG3-D5-2Zb"/>
+                            <constraint firstItem="JGn-sI-Ija" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="R7I-Aa-6mx"/>
+                            <constraint firstItem="JGn-sI-Ija" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="YPf-Gf-AUf"/>
+                            <constraint firstItem="JGn-sI-Ija" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="c1e-Nc-Vc5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JGn-sI-Ija"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="OG3-D5-2Zb"/>
+                                <exclude reference="R7I-Aa-6mx"/>
+                                <exclude reference="YPf-Gf-AUf"/>
+                                <exclude reference="c1e-Nc-Vc5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="JGn-sI-Ija"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="OG3-D5-2Zb"/>
+                                <include reference="R7I-Aa-6mx"/>
+                                <include reference="YPf-Gf-AUf"/>
+                                <include reference="c1e-Nc-Vc5"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="signature-size1280(JPG Type)\logo1_1280" width="640" height="190"/>
+    </resources>
 </document>
