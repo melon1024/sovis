@@ -16,11 +16,11 @@
 		280F47051D17D87D004290C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47041D17D87D004290C4 /* SystemConfiguration.framework */; };
 		280F47071D17D884004290C4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47061D17D884004290C4 /* AVFoundation.framework */; };
 		280F47091D17D88F004290C4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47081D17D88F004290C4 /* MediaPlayer.framework */; };
-		280F47121D17D9E2004290C4 /* DaumSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47111D17D9E2004290C4 /* DaumSpeech.framework */; };
 		280F47141D17D9F9004290C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47131D17D9F9004290C4 /* UIKit.framework */; };
 		280F47161D17DA04004290C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47151D17DA04004290C4 /* CoreGraphics.framework */; };
 		280F47181D17DA0E004290C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47171D17DA0E004290C4 /* QuartzCore.framework */; };
 		280F471A1D17DA20004290C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47191D17DA20004290C4 /* Foundation.framework */; };
+		280F471C1D17DBE1004290C4 /* DaumSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F471B1D17DBE1004290C4 /* DaumSpeech.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +35,11 @@
 		280F47041D17D87D004290C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		280F47061D17D884004290C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		280F47081D17D88F004290C4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		280F47111D17D9E2004290C4 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumSpeech.framework; path = "../../cs1/DaumSpeechIphoneOpenApiSample/internal/DaumSpeech-3.0.0/lib/Release/DaumSpeech.framework"; sourceTree = "<group>"; };
 		280F47131D17D9F9004290C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		280F47151D17DA04004290C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		280F47171D17DA0E004290C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		280F47191D17DA20004290C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		280F471B1D17DBE1004290C4 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumSpeech.framework; path = "../../Downloads/DaumSpeechIphoneOpenApiSample 4/internal/DaumSpeech-4.0/lib/Release/DaumSpeech.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,11 +47,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280F471C1D17DBE1004290C4 /* DaumSpeech.framework in Frameworks */,
 				280F471A1D17DA20004290C4 /* Foundation.framework in Frameworks */,
 				280F47181D17DA0E004290C4 /* QuartzCore.framework in Frameworks */,
 				280F47161D17DA04004290C4 /* CoreGraphics.framework in Frameworks */,
 				280F47141D17D9F9004290C4 /* UIKit.framework in Frameworks */,
-				280F47121D17D9E2004290C4 /* DaumSpeech.framework in Frameworks */,
 				280F47091D17D88F004290C4 /* MediaPlayer.framework in Frameworks */,
 				280F47071D17D884004290C4 /* AVFoundation.framework in Frameworks */,
 				280F47051D17D87D004290C4 /* SystemConfiguration.framework in Frameworks */,
@@ -95,11 +95,11 @@
 		280F470A1D17D8AC004290C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				280F471B1D17DBE1004290C4 /* DaumSpeech.framework */,
 				280F47191D17DA20004290C4 /* Foundation.framework */,
 				280F47171D17DA0E004290C4 /* QuartzCore.framework */,
 				280F47151D17DA04004290C4 /* CoreGraphics.framework */,
 				280F47131D17D9F9004290C4 /* UIKit.framework */,
-				280F47111D17D9E2004290C4 /* DaumSpeech.framework */,
 				280F47081D17D88F004290C4 /* MediaPlayer.framework */,
 				280F47061D17D884004290C4 /* AVFoundation.framework */,
 				280F47041D17D87D004290C4 /* SystemConfiguration.framework */,
