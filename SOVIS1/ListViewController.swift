@@ -12,6 +12,7 @@ import UIKit
 class ListViewController : UITableViewController{
     
     var list = Array<Foodinfo>()
+    var selectedItem :String = ""
     
     override func viewDidLoad() {
         
@@ -27,7 +28,9 @@ class ListViewController : UITableViewController{
         fInfo.titile = "양식"
         self.list.append(fInfo)
         
-        
+        fInfo = Foodinfo()
+        fInfo.titile = "일식"
+        self.list.append(fInfo)
         
     }
     
@@ -49,7 +52,19 @@ class ListViewController : UITableViewController{
      }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedItem = list[indexPath.row].titile!
+        print(list[indexPath.row].titile!)
         NSLog("Touch table Row at %d",indexPath.row)
+        self.performSegueWithIdentifier("showDetail", sender: self)
+    
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print(segue.identifier!)
+        if segue.identifier == "showDetail"{
+            let destination = segue.destinationViewController as! TableViewControllerDetail
+            destination.title2 = selectedItem
+        }
     }
 
 }
