@@ -25,6 +25,7 @@
 		280F47221D17F02F004290C4 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47211D17F02F004290C4 /* Food.swift */; };
 		280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47271D19547C004290C4 /* TableViewControllerDetail.swift */; };
 		280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */; };
+		280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47821D1A8361004290C4 /* ViewStoreDetail.swift */; };
 		D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		280F47211D17F02F004290C4 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		280F47271D19547C004290C4 /* TableViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerDetail.swift; sourceTree = "<group>"; };
 		280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerStoreList.swift; sourceTree = "<group>"; };
+		280F47821D1A8361004290C4 /* ViewStoreDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStoreDetail.swift; sourceTree = "<group>"; };
 		D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,12 +99,13 @@
 				D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */,
 				280F46F41D17D41F004290C4 /* Main.storyboard */,
 				280F47211D17F02F004290C4 /* Food.swift */,
-				280F471F1D17ED11004290C4 /* ListViewController.swift */,
 				280F46F71D17D41F004290C4 /* Assets.xcassets */,
 				280F46F91D17D41F004290C4 /* LaunchScreen.storyboard */,
 				280F46FC1D17D41F004290C4 /* Info.plist */,
+				280F471F1D17ED11004290C4 /* ListViewController.swift */,
 				280F47271D19547C004290C4 /* TableViewControllerDetail.swift */,
 				280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */,
+				280F47821D1A8361004290C4 /* ViewStoreDetail.swift */,
 			);
 			path = SOVIS1;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				280F46F31D17D41F004290C4 /* ViewController.swift in Sources */,
 				D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */,
 				280F47221D17F02F004290C4 /* Food.swift in Sources */,
+				280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */,
 				280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */,
 				280F47201D17ED11004290C4 /* ListViewController.swift in Sources */,
 				280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */,

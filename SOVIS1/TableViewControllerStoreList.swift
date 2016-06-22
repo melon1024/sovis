@@ -22,10 +22,10 @@ class TableViewControllerStoreList: UITableViewController {
         print(type2)
         
         if type == "한식"{
-            if type2 == "1man under"{
-                storeList.append("kimbaphaeven")
-                storeList.append("haksik")
-                storeList.append("ramen")
+            if type2 == "1만원 이하"{
+                storeList.append("김밥천국")
+                storeList.append("우정관")
+                storeList.append("엠마오관")
             }
         }
         
@@ -101,12 +101,28 @@ class TableViewControllerStoreList: UITableViewController {
 
     /*
     // MARK: - Navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     if segue.identifier == "showStoreList"{
+     let destination = segue.destinationViewController as! TableViewControllerStoreList
+     print(title2)
+     print("dddd"+selectedItem)
+     destination.type = title2
+     destination.type2 = selectedItem
+     
+     }
+     }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        
+        
     }
-    */
+    
 
 }

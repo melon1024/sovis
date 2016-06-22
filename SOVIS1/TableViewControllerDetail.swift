@@ -17,9 +17,9 @@ class TableViewControllerDetail: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        list.append("1man under")
-        list.append("1 ~ 2man")
-        list.append("2 man up")
+        list.append("1만원 이하")
+        list.append("1 ~ 2만원")
+        list.append("2만원 이상")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
