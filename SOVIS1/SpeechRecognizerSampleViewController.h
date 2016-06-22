@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *serviceHelpView;
 @property (weak, nonatomic) IBOutlet UILabel *resultText;
 
+- (NSString*) recogMethod;
+
 - (IBAction)segmentedControlValueChanged:(id)sender;
 - (IBAction)startButtonTapped:(id)sender;
 - (IBAction)stopButtonTapped:(id)sender;

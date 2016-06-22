@@ -54,6 +54,24 @@
     return NO;
 }
 
+
+
+
+- (void) someMethod:(NSString*)str {
+    NSDictionary *config = @{TextToSpeechConfigKeyApiKey : //@"2b268b18991386c80c9054ab1aee8ce709b3085c",
+                             @"72bbb307a99b0655aa1cb5d75c166b30",
+                             TextToSpeechConfigKeyVoiceType : TextToSpeechVoiceTypeWoman,
+                             TextToSpeechConfigServiceMode : NewtoneTalk_2,
+                             TextToSpeechConfigKeySpeechSpeed : @3.0};
+    _tts = [[MTTextToSpeechClient alloc] initWithConfig:config];
+    _tts.delegate = self;
+    
+    //self.statusMessage.text = @"";
+    //[self.tts play:@"하하하하하하하"];
+    [self.tts play:str];
+}
+
+
 - (IBAction)playButtonTapped:(id)sender {
     if (_tts != nil) {
         return;
@@ -68,7 +86,9 @@
     _tts.delegate = self;
     
     self.statusMessage.text = @"";
-    [self.tts play:self.textField.text];
+   // [self.tts play:self.textField.text];
+    [self.tts play:@"하하하하하"];
+
 }
 
 - (IBAction)stopButtonTapped:(id)sender {

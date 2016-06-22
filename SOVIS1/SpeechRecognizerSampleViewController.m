@@ -45,6 +45,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSString *) recogMethod {
+    self.resultText.text = @"";
+    NSString *rt;
+    if (self.speechRecognizer != nil) {
+        self.speechRecognizer = nil;
+    }
+    
+    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   @"72bbb307a99b0655aa1cb5d75c166b30", SpeechRecognizerConfigKeyApiKey,
+                                   //@"2b268b18991386c80c9054ab1aee8ce709b3085c", SpeechRecognizerConfigKeyApiKey,
+                                   //self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
+                                   SpeechRecognizerServiceTypeDictation, SpeechRecognizerConfigKeyServiceType, nil];
+    if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
+        [config setObject:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
+    }
+    
+    self.speechRecognizer = [[MTSpeechRecognizerClient alloc] initWithConfig:config];
+    [self.speechRecognizer setDelegate:self];
+    
+    [self.speechRecognizer startRecording];
+    rt = (NSString*)self.resultText.text;
+    return rt;
+}
+
 - (IBAction)segmentedControlValueChanged:(id)sender {
     switch ([sender selectedSegmentIndex]) {
         case 0:

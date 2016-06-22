@@ -19,6 +19,23 @@ class MainController: UIViewController {
         let now = NSDate()
         NSUserDefaults.standardUserDefaults().setObject(now, forKey: "buttonTap")
         UpdateDateLabel()
+        
+        //let tts = TTS_UIViewController()
+        //tts.tts_func()
+        //let tts = TTS_UIViewController.tts_func()
+        let tts: TTS_UIViewController = TTS_UIViewController()
+        //        let kk : String = "저 듣보잡입니다 멍멍 냐옹냐옹"
+
+        let kk : String = "안녕하세요 소비스입니다 무엇을 도와드릴까요?"
+        tts.someMethod(kk)
+        
+        //let rec: SpeechRecognizerSampleViewController = SpeechRecognizerSampleViewController()
+        //var str : String = "하하"
+        //str = rec.recogMethod()
+        
+        //tts.someMethod(str)
+        
+
         // Do any additional setup after loading the view.
     }
 

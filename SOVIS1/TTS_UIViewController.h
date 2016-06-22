@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *statusMessage;
 @property (weak, nonatomic) IBOutlet UITextField *speechSpeed;
 
+- (void) someMethod:(NSString*)str;
+
+
 - (IBAction)playButtonTapped:(id)sender;
 - (IBAction)stopButtonTapped:(id)sender;
 - (IBAction)voiceChanged:(id)sender;
