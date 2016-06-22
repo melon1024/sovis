@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -128,68 +127,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sBD-xq-19X">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBD-xq-19X">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="265" id="eBM-3g-xRM"/>
-                                    <constraint firstAttribute="width" constant="241" id="yc9-Z4-Teg"/>
+                                    <constraint firstAttribute="height" constant="300" id="Urt-79-YlO"/>
+                                    <constraint firstAttribute="width" constant="500" id="w2D-XW-Jnp"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="eBM-3g-xRM"/>
-                                        <exclude reference="yc9-Z4-Teg"/>
+                                        <exclude reference="Urt-79-YlO"/>
+                                        <exclude reference="w2D-XW-Jnp"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="67" y="113" width="241" height="265"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="183" y="138" width="500" height="100"/>
                                     <mask key="constraints">
-                                        <include reference="eBM-3g-xRM"/>
-                                        <include reference="yc9-Z4-Teg"/>
+                                        <include reference="Urt-79-YlO"/>
+                                        <include reference="w2D-XW-Jnp"/>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nc-oo-IhX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음식점이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nc-oo-IhX">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="166" y="35" width="42" height="21"/>
-                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음식점 세부정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51h-VL-nLM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="음식점 세부정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51h-VL-nLM">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="36" y="363" width="108" height="21"/>
+                                    <rect key="frame" x="32" y="411" width="108" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="297" width="400" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="sBD-xq-19X" secondAttribute="trailing" constant="47" id="0RL-7p-5uf"/>
-                            <constraint firstItem="sBD-xq-19X" firstAttribute="leading" secondItem="4mm-YL-Xhm" secondAttribute="leadingMargin" constant="47" id="3Ex-I2-9Qo"/>
-                            <constraint firstItem="sBD-xq-19X" firstAttribute="top" secondItem="iZH-lo-r8D" secondAttribute="bottom" id="4dz-gk-gIH"/>
-                            <constraint firstItem="51h-VL-nLM" firstAttribute="leading" secondItem="4mm-YL-Xhm" secondAttribute="leadingMargin" constant="16" id="PoW-jI-ziI"/>
-                            <constraint firstItem="fe8-yh-p8w" firstAttribute="top" secondItem="sBD-xq-19X" secondAttribute="bottom" constant="289" id="T05-b8-muJ"/>
-                            <constraint firstItem="51h-VL-nLM" firstAttribute="top" secondItem="sBD-xq-19X" secondAttribute="bottom" constant="34" id="bin-cL-Y4c"/>
-                            <constraint firstItem="sBD-xq-19X" firstAttribute="centerX" secondItem="4mm-YL-Xhm" secondAttribute="centerX" id="dqm-4r-aJA"/>
+                            <constraint firstItem="sBD-xq-19X" firstAttribute="leading" secondItem="4mm-YL-Xhm" secondAttribute="leadingMargin" constant="163" id="IMu-jC-Wuh"/>
+                            <constraint firstItem="51h-VL-nLM" firstAttribute="leading" secondItem="4mm-YL-Xhm" secondAttribute="leadingMargin" id="S68-aC-q2c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sBD-xq-19X" secondAttribute="trailing" constant="164" id="Xp8-aE-8hl"/>
+                            <constraint firstItem="51h-VL-nLM" firstAttribute="top" secondItem="sBD-xq-19X" secondAttribute="bottom" constant="30" id="qSA-qF-di3"/>
+                            <constraint firstItem="sBD-xq-19X" firstAttribute="top" secondItem="iZH-lo-r8D" secondAttribute="bottom" constant="74" id="uTF-Bg-AAF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="sBD-xq-19X"/>
                                 <exclude reference="5Nc-oo-IhX"/>
-                                <exclude reference="51h-VL-nLM"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="T05-b8-muJ"/>
-                                <exclude reference="PoW-jI-ziI"/>
-                                <exclude reference="bin-cL-Y4c"/>
-                                <exclude reference="0RL-7p-5uf"/>
-                                <exclude reference="3Ex-I2-9Qo"/>
-                                <exclude reference="4dz-gk-gIH"/>
-                                <exclude reference="dqm-4r-aJA"/>
+                                <exclude reference="IMu-jC-Wuh"/>
+                                <exclude reference="Xp8-aE-8hl"/>
+                                <exclude reference="uTF-Bg-AAF"/>
+                                <exclude reference="S68-aC-q2c"/>
+                                <exclude reference="qSA-qF-di3"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -198,14 +195,17 @@
                                 <include reference="5Nc-oo-IhX"/>
                                 <include reference="51h-VL-nLM"/>
                             </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="sBD-xq-19X"/>
+                            </mask>
                             <mask key="constraints">
-                                <include reference="T05-b8-muJ"/>
-                                <include reference="PoW-jI-ziI"/>
-                                <include reference="bin-cL-Y4c"/>
-                                <include reference="0RL-7p-5uf"/>
-                                <include reference="3Ex-I2-9Qo"/>
-                                <include reference="4dz-gk-gIH"/>
-                                <include reference="dqm-4r-aJA"/>
+                                <include reference="IMu-jC-Wuh"/>
+                                <include reference="Xp8-aE-8hl"/>
+                                <include reference="uTF-Bg-AAF"/>
+                                <include reference="S68-aC-q2c"/>
+                                <include reference="qSA-qF-di3"/>
                             </mask>
                         </variation>
                     </view>
