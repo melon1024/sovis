@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wfO-eg-p3H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wfO-eg-p3H">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -124,6 +125,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fe8-yh-p8w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4mm-YL-Xhm" customClass="view">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sBD-xq-19X">
@@ -181,13 +183,13 @@
                                 <exclude reference="51h-VL-nLM"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="T05-b8-muJ"/>
+                                <exclude reference="PoW-jI-ziI"/>
+                                <exclude reference="bin-cL-Y4c"/>
                                 <exclude reference="0RL-7p-5uf"/>
                                 <exclude reference="3Ex-I2-9Qo"/>
                                 <exclude reference="4dz-gk-gIH"/>
                                 <exclude reference="dqm-4r-aJA"/>
-                                <exclude reference="PoW-jI-ziI"/>
-                                <exclude reference="bin-cL-Y4c"/>
-                                <exclude reference="T05-b8-muJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -197,13 +199,13 @@
                                 <include reference="51h-VL-nLM"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="T05-b8-muJ"/>
+                                <include reference="PoW-jI-ziI"/>
+                                <include reference="bin-cL-Y4c"/>
                                 <include reference="0RL-7p-5uf"/>
                                 <include reference="3Ex-I2-9Qo"/>
                                 <include reference="4dz-gk-gIH"/>
                                 <include reference="dqm-4r-aJA"/>
-                                <include reference="PoW-jI-ziI"/>
-                                <include reference="bin-cL-Y4c"/>
-                                <include reference="T05-b8-muJ"/>
                             </mask>
                         </variation>
                     </view>
