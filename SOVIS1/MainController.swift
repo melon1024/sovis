@@ -12,7 +12,7 @@ class MainController: UIViewController {
 
     @IBOutlet weak var DateLabel: UILabel!
     
-    
+    var inputstr : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,6 @@ class MainController: UIViewController {
         //tts.tts_func()
         //let tts = TTS_UIViewController.tts_func()
         let tts: TTS_UIViewController = TTS_UIViewController()
-        //        let kk : String = "저 듣보잡입니다 멍멍 냐옹냐옹"
-
         let kk : String = "안녕하세요 소비스입니다 무엇을 도와드릴까요?"
         tts.someMethod(kk)
         
@@ -50,7 +48,13 @@ class MainController: UIViewController {
         self.DateLabel.text = NSDate().description
     }
     
-    @IBAction func UpdateLabel(sender: AnyObject) {
+   
+    @IBAction func startRecog(sender: AnyObject) {
+        let rec: SpeechRecognizerSampleViewController = SpeechRecognizerSampleViewController()
+        
+        inputstr = rec.recogMethod()
+        print(inputstr)
+        
         
     }
 

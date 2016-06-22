@@ -15,6 +15,9 @@ class ListViewController : UITableViewController{
     var selectedItem :String = ""
     
     override func viewDidLoad() {
+        let tts_ListViewController: TTS_UIViewController = TTS_UIViewController()
+        let kk_ListViewController : String = "원하시는 음식 종류를 선택해주세요."
+        tts_ListViewController.someMethod(kk_ListViewController)
         
         var fInfo = Foodinfo()
          fInfo.titile = "한식"

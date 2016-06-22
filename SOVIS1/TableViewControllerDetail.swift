@@ -16,6 +16,9 @@ class TableViewControllerDetail: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tts_TableViewControllerDetail: TTS_UIViewController = TTS_UIViewController()
+        let kk_TableViewControllerDetail : String = "원하시는 가격대를 선택해주세요."
+        tts_TableViewControllerDetail.someMethod(kk_TableViewControllerDetail)
 
         list.append("1만원 이하")
         list.append("1 ~ 2만원")

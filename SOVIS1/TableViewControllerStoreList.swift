@@ -18,6 +18,10 @@ class TableViewControllerStoreList: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tts_TableViewControllerStoreList: TTS_UIViewController = TTS_UIViewController()
+        let kk_TableViewControllerStoreList : String = "원하시는 음식점을 선택해주세요."
+        tts_TableViewControllerStoreList.someMethod(kk_TableViewControllerStoreList)
+        
         print(type)
         print(type2)
         
