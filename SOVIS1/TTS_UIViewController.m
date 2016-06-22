@@ -86,8 +86,8 @@
     _tts.delegate = self;
     
     self.statusMessage.text = @"";
-   // [self.tts play:self.textField.text];
-    [self.tts play:@"하하하하하"];
+    [self.tts play:self.textField.text];
+   // [self.tts play:@"하하하하하"];
 
 }
 

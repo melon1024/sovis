@@ -150,6 +150,7 @@
                 <constraint firstAttribute="trailing" secondItem="gn6-k7-9jT" secondAttribute="trailing" id="QwO-gN-O7u"/>
                 <constraint firstItem="gn6-k7-9jT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mwy-TZ-TL7"/>
             </constraints>
+            <point key="canvasLocation" x="396" y="309"/>
         </view>
     </objects>
 </document>

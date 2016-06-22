@@ -30,9 +30,9 @@ class MainController: UIViewController {
         //let rec: SpeechRecognizerSampleViewController = SpeechRecognizerSampleViewController()
         //var str : String = "하하"
         //str = rec.recogMethod()
-        
+        //inputstr = String(rec.recogMethod())
         //tts.someMethod(str)
-        
+    
 
         // Do any additional setup after loading the view.
     }

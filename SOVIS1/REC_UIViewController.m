@@ -1,23 +1,23 @@
 //
-//  SpeechRecognizerSampleViewController.m
-//  DaumSpeechSample
+//  REC_UIViewController.m
+//  SOVIS1
 //
-//  Created by KimKyungmin on 2014. 6. 11..
-//  Copyright (c) 2014년 Kim Kyungmin. All rights reserved.
+//  Created by gimozzi on 2016. 6. 23..
+//  Copyright © 2016년 JJ. All rights reserved.
 //
 
-#import "SpeechRecognizerSampleViewController.h"
+#import "REC_UIViewController.h"
 
 #define STRINGS_FILE_NAME   @"SpeechRecognizerSample"
 
-@interface SpeechRecognizerSampleViewController ()
+@interface REC_UIViewController ()
 
 @property (nonatomic, strong) MTSpeechRecognizerClient *speechRecognizer;
 @property (nonatomic, strong) NSString *selectedServiceType;
 
 @end
 
-@implementation SpeechRecognizerSampleViewController
+@implementation REC_UIViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,10 +33,27 @@
     [super viewDidLoad];
     
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.serviceHelpView.text = NSLocalizedStringFromTable(@"infoServiceTypeWeb", STRINGS_FILE_NAME, "web service type information.");
-    self.selectedServiceType = SpeechRecognizerServiceTypeWeb;
+    self.serviceHelpView.text = NSLocalizedStringFromTable(@"gg", STRINGS_FILE_NAME, "web service type information.");
+    self.selectedServiceType = SpeechRecognizerServiceTypeDictation;
+    self.resultText.text = @"";
+    if (self.speechRecognizer != nil) {
+        self.speechRecognizer = nil;
+    }
     
-	// Do any additional setup after loading the view, typically from a nib.
+    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
+                                   @"72bbb307a99b0655aa1cb5d75c166b30",
+                                   SpeechRecognizerConfigKeyApiKey,
+                                   self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
+    if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
+        [config setObject:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
+    }
+    
+    self.speechRecognizer = [[MTSpeechRecognizerClient alloc] initWithConfig:config];
+    [self.speechRecognizer setDelegate:self];
+    
+    [self.speechRecognizer startRecording];
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,52 +62,55 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSString *) recogMethod {
+- (void)Recognize:(id)sender{
     self.resultText.text = @"";
-    NSString *rt;
     if (self.speechRecognizer != nil) {
         self.speechRecognizer = nil;
     }
     
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   @"72bbb307a99b0655aa1cb5d75c166b30", SpeechRecognizerConfigKeyApiKey,
-                                   //@"2b268b18991386c80c9054ab1aee8ce709b3085c", SpeechRecognizerConfigKeyApiKey,
-                                   //self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
-                                   SpeechRecognizerServiceTypeDictation, SpeechRecognizerConfigKeyServiceType, nil];
-    /*
+                                   /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
+                                   @"72bbb307a99b0655aa1cb5d75c166b30",
+                                   SpeechRecognizerConfigKeyApiKey,
+                                   self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
         [config setObject:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
     }
-    */
     
     self.speechRecognizer = [[MTSpeechRecognizerClient alloc] initWithConfig:config];
     [self.speechRecognizer setDelegate:self];
     
     [self.speechRecognizer startRecording];
-    rt = (NSString*)self.resultText.text;
-    return rt;
 }
 
 - (IBAction)segmentedControlValueChanged:(id)sender {
     switch ([sender selectedSegmentIndex]) {
         case 0:
-            self.serviceHelpView.text = NSLocalizedStringFromTable(@"infoServiceTypeWeb", STRINGS_FILE_NAME, "web service type information.");
+            self.serviceHelpView.text = @"검색어";
+            /*NSLocalizedStringFromTable(@"infoServiceTypeWeb", STRINGS_FILE_NAME, "web service type information.");*/
             self.selectedServiceType = SpeechRecognizerServiceTypeWeb;
             break;
         case 1:
-            self.serviceHelpView.text = NSLocalizedStringFromTable(@"infoServiceTypeDictation", STRINGS_FILE_NAME, "dictation service type information.");
+            self.serviceHelpView.text = @"연속어";
+            /*NSLocalizedStringFromTable(@"infoServiceTypeDictation", STRINGS_FILE_NAME, "dictation service type information.");
+             */
             self.selectedServiceType = SpeechRecognizerServiceTypeDictation;
             break;
         case 2:
-            self.serviceHelpView.text = NSLocalizedStringFromTable(@"infoServiceTypeLocal", STRINGS_FILE_NAME, "local service type information.");
+            self.serviceHelpView.text = @"지역명";
+            /*NSLocalizedStringFromTable(@"infoServiceTypeLocal", STRINGS_FILE_NAME, "local service type information.");*/
             self.selectedServiceType = SpeechRecognizerServiceTypeLocal;
             break;
         case 3:
-            self.serviceHelpView.text = NSLocalizedStringFromTable(@"infoServiceTypeWord", STRINGS_FILE_NAME, "word service type information.");
+            self.serviceHelpView.text =@"고립어";
+            /*NSLocalizedStringFromTable(@"infoServiceTypeWord", STRINGS_FILE_NAME, "word service type information.");
+             */
             self.selectedServiceType = SpeechRecognizerServiceTypeWord;
             break;
         default:
-            self.serviceHelpView.text = NSLocalizedStringFromTable(@"infoServiceTypeWeb", STRINGS_FILE_NAME, "web service type information.");
+            self.serviceHelpView.text =@"검색어";
+            /*NSLocalizedStringFromTable(@"infoServiceTypeWeb", STRINGS_FILE_NAME, "web service type information.");
+             */
             self.selectedServiceType = SpeechRecognizerServiceTypeWeb;
             break;
     }
@@ -103,7 +123,9 @@
     }
     
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   @"2b268b18991386c80c9054ab1aee8ce709b3085c", SpeechRecognizerConfigKeyApiKey,
+                                   /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
+                                   @"72bbb307a99b0655aa1cb5d75c166b30",
+SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
         [config setObject:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
@@ -133,7 +155,9 @@
 - (IBAction)showSpeechRecognizerView:(id)sender {
     self.resultText.text = @"";
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   @"2b268b18991386c80c9054ab1aee8ce709b3085c", SpeechRecognizerConfigKeyApiKey,
+                                   /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
+                                   @"72bbb307a99b0655aa1cb5d75c166b30",
+SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
         [config setValue:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
@@ -219,4 +243,3 @@
 }
 
 @end
-

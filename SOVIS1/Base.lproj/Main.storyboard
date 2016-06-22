@@ -139,7 +139,7 @@
                                         <exclude reference="w2D-XW-Jnp"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="67" y="113" width="241" height="265"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
@@ -161,7 +161,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="32" y="411" width="108" height="21"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
@@ -220,6 +220,213 @@
             </objects>
             <point key="canvasLocation" x="6908.25" y="307.875"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="BIe-fm-tUk">
+            <objects>
+                <viewController id="VuY-MA-woy" customClass="REC_UIViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tkr-cZ-096"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Wb-kd-1JG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h9s-y3-Tvd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="a0Z-4t-w3E">
+                                <rect key="frame" x="44" y="227" width="280" height="29"/>
+                                <segments>
+                                    <segment title="검색어"/>
+                                    <segment title="연속어"/>
+                                    <segment title="지역명"/>
+                                    <segment title="고립어"/>
+                                </segments>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="100" width="280" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="100" width="280" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="100" width="280" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="VuY-MA-woy" eventType="valueChanged" id="Tmr-sM-W7W"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="음성인식 샘플" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzA-PE-Vq2">
+                                <rect key="frame" x="44" y="196" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="69" width="280" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="68" width="280" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="69" width="280" height="21"/>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcB-Ai-xwM">
+                                <rect key="frame" x="44" y="266" width="280" height="74"/>
+                                <color key="backgroundColor" red="0.91037547829999999" green="0.91037547829999999" blue="0.91037547829999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="139" width="280" height="74"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="138" width="280" height="74"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="139" width="280" height="74"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZu-5t-fdl">
+                                <rect key="frame" x="46" y="369" width="85" height="44"/>
+                                <state key="normal" title="start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="195" y="242" width="85" height="44"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="49" y="241" width="85" height="44"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="195" y="242" width="85" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="VuY-MA-woy" eventType="touchUpInside" id="jad-zK-yDx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qi0-Wl-TrV">
+                                <rect key="frame" x="142" y="369" width="85" height="44"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="291" y="242" width="85" height="44"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="241" width="85" height="44"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="291" y="242" width="85" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="VuY-MA-woy" eventType="touchUpInside" id="Zqz-e2-mRk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBe-oI-GIG">
+                                <rect key="frame" x="239" y="368" width="85" height="44"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="388" y="241" width="85" height="44"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="242" y="240" width="85" height="44"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="388" y="241" width="85" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="VuY-MA-woy" eventType="touchUpInside" id="wc4-Na-1Uh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="headTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="JeT-y6-GtG">
+                                <rect key="frame" x="44" y="409" width="280" height="44"/>
+                                <color key="backgroundColor" red="0.91280691960000004" green="0.91280691960000004" blue="0.91280691960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="282" width="280" height="44"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="281" width="280" height="44"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="282" width="280" height="44"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEs-hD-p0x">
+                                <rect key="frame" x="82" y="348" width="205" height="30"/>
+                                <state key="normal" title="Show SpeechRecognizerView">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="231" y="221" width="205" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="85" y="220" width="205" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="231" y="221" width="205" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showSpeechRecognizerView:" destination="VuY-MA-woy" eventType="touchUpInside" id="bHi-c4-kAg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D74-ZG-sDH">
+                                <rect key="frame" x="44" y="176" width="42" height="30"/>
+                                <state key="normal" title="닫기">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="49" width="42" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="48" width="42" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="49" width="42" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="wfO-eg-p3H" kind="modal" id="xJf-KC-hGi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="a0Z-4t-w3E"/>
+                                <include reference="DzA-PE-Vq2"/>
+                                <include reference="FcB-Ai-xwM"/>
+                                <include reference="dZu-5t-fdl"/>
+                                <include reference="Qi0-Wl-TrV"/>
+                                <include reference="jBe-oI-GIG"/>
+                                <include reference="JeT-y6-GtG"/>
+                                <include reference="fEs-hD-p0x"/>
+                                <include reference="D74-ZG-sDH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="a0Z-4t-w3E"/>
+                                <include reference="DzA-PE-Vq2"/>
+                                <include reference="FcB-Ai-xwM"/>
+                                <include reference="dZu-5t-fdl"/>
+                                <include reference="Qi0-Wl-TrV"/>
+                                <include reference="jBe-oI-GIG"/>
+                                <include reference="JeT-y6-GtG"/>
+                                <include reference="fEs-hD-p0x"/>
+                                <include reference="D74-ZG-sDH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="resultText" destination="JeT-y6-GtG" id="7hy-ym-OlX"/>
+                        <outlet property="serviceHelpView" destination="FcB-Ai-xwM" id="rQz-7c-Qgi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQ2-k1-rml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2829.75" y="-617.625"/>
+        </scene>
         <!--공지사항-->
         <scene sceneID="z21-6s-BtV">
             <objects>
@@ -256,6 +463,13 @@
                                     <segue destination="6b4-XB-lCU" kind="modal" id="fUa-6X-4Xc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMU-Z8-FjF">
+                                <rect key="frame" x="74" y="230" width="44" height="30"/>
+                                <state key="normal" title="Recog"/>
+                                <connections>
+                                    <segue destination="VuY-MA-woy" kind="modal" id="hG1-q0-ZYf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -288,17 +502,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="음성합성 샘플" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaF-7g-Utw">
-                                <rect key="frame" x="134" y="71" width="94" height="21"/>
+                                <rect key="frame" x="134" y="70" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상태 메시지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vp6-OC-DDb">
-                                <rect key="frame" x="46" y="330" width="70" height="21"/>
+                                <rect key="frame" x="46" y="329" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcq-zp-CDq">
-                                <rect key="frame" x="112" y="292" width="42" height="30"/>
+                                <rect key="frame" x="112" y="291" width="42" height="30"/>
                                 <state key="normal" title="Play">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -307,7 +521,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-rP-XaV">
-                                <rect key="frame" x="200" y="292" width="33" height="30"/>
+                                <rect key="frame" x="200" y="291" width="33" height="30"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -316,7 +530,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfh-cW-gVq">
-                                <rect key="frame" x="41" y="48" width="30" height="30"/>
+                                <rect key="frame" x="41" y="47" width="30" height="30"/>
                                 <state key="normal" title="닫기">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -325,29 +539,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIx-Vs-eGp">
-                                <rect key="frame" x="54" y="359" width="267" height="34"/>
+                                <rect key="frame" x="54" y="358" width="267" height="34"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFK-GH-raE">
-                                <rect key="frame" x="268" y="112" width="53" height="30"/>
+                                <rect key="frame" x="268" y="111" width="53" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="속도 (0.5~4.0)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB2-r3-uv0">
-                                <rect key="frame" x="173" y="116" width="87" height="21"/>
+                                <rect key="frame" x="173" y="115" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이곳에 텍스트를 적고 Play 버튼을 누르세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uvu-TZ-HqJ">
-                                <rect key="frame" x="46" y="240" width="271" height="30"/>
+                                <rect key="frame" x="46" y="239" width="271" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8oG-nX-fjf">
-                                <rect key="frame" x="46" y="197" width="275" height="29"/>
+                                <rect key="frame" x="46" y="196" width="275" height="29"/>
                                 <segments>
                                     <segment title="남성낭독체"/>
                                     <segment title="남성대화체"/>
@@ -359,7 +573,7 @@
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yzJ-em-9vt">
-                                <rect key="frame" x="134" y="151" width="187" height="29"/>
+                                <rect key="frame" x="134" y="150" width="187" height="29"/>
                                 <segments>
                                     <segment title="NewtoneTTS 1"/>
                                     <segment title="NewtoneTTS 2"/>
@@ -425,4 +639,7 @@
         <image name="pizza" width="30" height="30"/>
         <image name="push-pin" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hrz-Ed-QIi"/>
+    </inferredMetricsTieBreakers>
 </document>
