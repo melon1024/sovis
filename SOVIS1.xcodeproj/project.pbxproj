@@ -21,6 +21,19 @@
 		280F47181D17DA0E004290C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47171D17DA0E004290C4 /* QuartzCore.framework */; };
 		280F471A1D17DA20004290C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47191D17DA20004290C4 /* Foundation.framework */; };
 		280F471E1D17DCFF004290C4 /* DaumSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F471D1D17DCFF004290C4 /* DaumSpeech.framework */; };
+		280F47201D17ED11004290C4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F471F1D17ED11004290C4 /* ListViewController.swift */; };
+		280F47221D17F02F004290C4 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47211D17F02F004290C4 /* Food.swift */; };
+		280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47271D19547C004290C4 /* TableViewControllerDetail.swift */; };
+		280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */; };
+		280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47821D1A8361004290C4 /* ViewStoreDetail.swift */; };
+		28C04D8C1D1ACCC200BC3B32 /* woojeong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */; };
+		D3DF68591D1AD03800BF9944 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF68581D1AD03800BF9944 /* libstdc++.6.tbd */; };
+		D3DF685B1D1AD05500BF9944 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF685A1D1AD05500BF9944 /* libiconv.tbd */; };
+		D3DF68631D1AD09300BF9944 /* SpeechRecognizerSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF685E1D1AD09300BF9944 /* SpeechRecognizerSampleViewController.m */; };
+		D3DF68641D1AD09300BF9944 /* SpeechRecognizerSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DF685F1D1AD09300BF9944 /* SpeechRecognizerSampleViewController.xib */; };
+		D3DF68651D1AD09300BF9944 /* TextToSpeechSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF68611D1AD09300BF9944 /* TextToSpeechSampleViewController.m */; };
+		D3DF68661D1AD09300BF9944 /* TextToSpeechSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DF68621D1AD09300BF9944 /* TextToSpeechSampleViewController.xib */; };
+		D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +53,22 @@
 		280F47171D17DA0E004290C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		280F47191D17DA20004290C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		280F471D1D17DCFF004290C4 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumSpeech.framework; path = SOVIS1/framework/DaumSpeech.framework; sourceTree = "<group>"; };
+		280F471F1D17ED11004290C4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		280F47211D17F02F004290C4 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		280F47271D19547C004290C4 /* TableViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerDetail.swift; sourceTree = "<group>"; };
+		280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerStoreList.swift; sourceTree = "<group>"; };
+		280F47821D1A8361004290C4 /* ViewStoreDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStoreDetail.swift; sourceTree = "<group>"; };
+		28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woojeong.jpg; sourceTree = "<group>"; };
+		D3DF68581D1AD03800BF9944 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		D3DF685A1D1AD05500BF9944 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D3DF685C1D1AD09200BF9944 /* SOVIS1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SOVIS1-Bridging-Header.h"; sourceTree = "<group>"; };
+		D3DF685D1D1AD09300BF9944 /* SpeechRecognizerSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechRecognizerSampleViewController.h; sourceTree = "<group>"; };
+		D3DF685E1D1AD09300BF9944 /* SpeechRecognizerSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechRecognizerSampleViewController.m; sourceTree = "<group>"; };
+		D3DF685F1D1AD09300BF9944 /* SpeechRecognizerSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechRecognizerSampleViewController.xib; sourceTree = "<group>"; };
+		D3DF68601D1AD09300BF9944 /* TextToSpeechSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextToSpeechSampleViewController.h; sourceTree = "<group>"; };
+		D3DF68611D1AD09300BF9944 /* TextToSpeechSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextToSpeechSampleViewController.m; sourceTree = "<group>"; };
+		D3DF68621D1AD09300BF9944 /* TextToSpeechSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextToSpeechSampleViewController.xib; sourceTree = "<group>"; };
+		D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DF685B1D1AD05500BF9944 /* libiconv.tbd in Frameworks */,
+				D3DF68591D1AD03800BF9944 /* libstdc++.6.tbd in Frameworks */,
 				280F471E1D17DCFF004290C4 /* DaumSpeech.framework in Frameworks */,
 				280F471A1D17DA20004290C4 /* Foundation.framework in Frameworks */,
 				280F47181D17DA0E004290C4 /* QuartzCore.framework in Frameworks */,
@@ -68,6 +99,7 @@
 				280F470A1D17D8AC004290C4 /* Frameworks */,
 				280F46EF1D17D41F004290C4 /* SOVIS1 */,
 				280F46EE1D17D41F004290C4 /* Products */,
+				28C04D8A1D1ACC9C00BC3B32 /* ImageSet */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,10 +116,23 @@
 			children = (
 				280F46F01D17D41F004290C4 /* AppDelegate.swift */,
 				280F46F21D17D41F004290C4 /* ViewController.swift */,
+				D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */,
 				280F46F41D17D41F004290C4 /* Main.storyboard */,
+				280F47211D17F02F004290C4 /* Food.swift */,
 				280F46F71D17D41F004290C4 /* Assets.xcassets */,
 				280F46F91D17D41F004290C4 /* LaunchScreen.storyboard */,
 				280F46FC1D17D41F004290C4 /* Info.plist */,
+				280F471F1D17ED11004290C4 /* ListViewController.swift */,
+				280F47271D19547C004290C4 /* TableViewControllerDetail.swift */,
+				280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */,
+				280F47821D1A8361004290C4 /* ViewStoreDetail.swift */,
+				D3DF685D1D1AD09300BF9944 /* SpeechRecognizerSampleViewController.h */,
+				D3DF685E1D1AD09300BF9944 /* SpeechRecognizerSampleViewController.m */,
+				D3DF685F1D1AD09300BF9944 /* SpeechRecognizerSampleViewController.xib */,
+				D3DF68601D1AD09300BF9944 /* TextToSpeechSampleViewController.h */,
+				D3DF68611D1AD09300BF9944 /* TextToSpeechSampleViewController.m */,
+				D3DF68621D1AD09300BF9944 /* TextToSpeechSampleViewController.xib */,
+				D3DF685C1D1AD09200BF9944 /* SOVIS1-Bridging-Header.h */,
 			);
 			path = SOVIS1;
 			sourceTree = "<group>";
@@ -95,6 +140,8 @@
 		280F470A1D17D8AC004290C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3DF685A1D1AD05500BF9944 /* libiconv.tbd */,
+				D3DF68581D1AD03800BF9944 /* libstdc++.6.tbd */,
 				280F471D1D17DCFF004290C4 /* DaumSpeech.framework */,
 				280F47191D17DA20004290C4 /* Foundation.framework */,
 				280F47171D17DA0E004290C4 /* QuartzCore.framework */,
@@ -106,6 +153,15 @@
 				280F47021D17D874004290C4 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28C04D8A1D1ACC9C00BC3B32 /* ImageSet */ = {
+			isa = PBXGroup;
+			children = (
+				28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */,
+			);
+			name = ImageSet;
+			path = SOVIS1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +222,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DF68641D1AD09300BF9944 /* SpeechRecognizerSampleViewController.xib in Resources */,
 				280F46FB1D17D41F004290C4 /* LaunchScreen.storyboard in Resources */,
+				D3DF68661D1AD09300BF9944 /* TextToSpeechSampleViewController.xib in Resources */,
 				280F46F81D17D41F004290C4 /* Assets.xcassets in Resources */,
 				280F46F61D17D41F004290C4 /* Main.storyboard in Resources */,
+				28C04D8C1D1ACCC200BC3B32 /* woojeong.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,8 +238,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DF68651D1AD09300BF9944 /* TextToSpeechSampleViewController.m in Sources */,
 				280F46F31D17D41F004290C4 /* ViewController.swift in Sources */,
+				D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */,
+				280F47221D17F02F004290C4 /* Food.swift in Sources */,
+				D3DF68631D1AD09300BF9944 /* SpeechRecognizerSampleViewController.m in Sources */,
+				280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */,
 				280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */,
+				280F47201D17ED11004290C4 /* ListViewController.swift in Sources */,
+				280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */,
+				280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SOVIS1/framework",
@@ -303,6 +371,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = June.SOVIS1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SOVIS1/SOVIS1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -310,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SOVIS1/framework",
@@ -318,6 +389,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = June.SOVIS1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SOVIS1/SOVIS1-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -340,6 +412,7 @@
 				280F47011D17D41F004290C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
