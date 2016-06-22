@@ -26,6 +26,7 @@
 		280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47271D19547C004290C4 /* TableViewControllerDetail.swift */; };
 		280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */; };
 		280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47821D1A8361004290C4 /* ViewStoreDetail.swift */; };
+		28C04D8C1D1ACCC200BC3B32 /* woojeong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */; };
 		D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		280F47271D19547C004290C4 /* TableViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerDetail.swift; sourceTree = "<group>"; };
 		280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerStoreList.swift; sourceTree = "<group>"; };
 		280F47821D1A8361004290C4 /* ViewStoreDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStoreDetail.swift; sourceTree = "<group>"; };
+		28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woojeong.jpg; sourceTree = "<group>"; };
 		D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				280F470A1D17D8AC004290C4 /* Frameworks */,
 				280F46EF1D17D41F004290C4 /* SOVIS1 */,
 				280F46EE1D17D41F004290C4 /* Products */,
+				28C04D8A1D1ACC9C00BC3B32 /* ImageSet */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +127,15 @@
 				280F47021D17D874004290C4 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28C04D8A1D1ACC9C00BC3B32 /* ImageSet */ = {
+			isa = PBXGroup;
+			children = (
+				28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */,
+			);
+			name = ImageSet;
+			path = SOVIS1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +199,7 @@
 				280F46FB1D17D41F004290C4 /* LaunchScreen.storyboard in Resources */,
 				280F46F81D17D41F004290C4 /* Assets.xcassets in Resources */,
 				280F46F61D17D41F004290C4 /* Main.storyboard in Resources */,
+				28C04D8C1D1ACCC200BC3B32 /* woojeong.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,37 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="signature-size1280(JPG Type)\logo1_1280" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-sI-Ija">
-                                <rect key="frame" x="0.0" y="-190" width="640" height="190"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="sNj-g4-UQP">
+                                <rect key="frame" x="0.0" y="-97" width="302" height="97"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JGn-sI-Ija" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="OG3-D5-2Zb"/>
-                            <constraint firstItem="JGn-sI-Ija" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="R7I-Aa-6mx"/>
-                            <constraint firstItem="JGn-sI-Ija" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="YPf-Gf-AUf"/>
-                            <constraint firstItem="JGn-sI-Ija" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="c1e-Nc-Vc5"/>
+                            <constraint firstItem="sNj-g4-UQP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Iuo-p0-hJE"/>
+                            <constraint firstItem="sNj-g4-UQP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iq4-Pu-OTJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="JGn-sI-Ija"/>
+                                <exclude reference="sNj-g4-UQP"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="OG3-D5-2Zb"/>
-                                <exclude reference="R7I-Aa-6mx"/>
-                                <exclude reference="YPf-Gf-AUf"/>
-                                <exclude reference="c1e-Nc-Vc5"/>
+                                <exclude reference="Iuo-p0-hJE"/>
+                                <exclude reference="iq4-Pu-OTJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="JGn-sI-Ija"/>
+                                <include reference="sNj-g4-UQP"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="OG3-D5-2Zb"/>
-                                <include reference="R7I-Aa-6mx"/>
-                                <include reference="YPf-Gf-AUf"/>
-                                <include reference="c1e-Nc-Vc5"/>
+                                <include reference="Iuo-p0-hJE"/>
+                                <include reference="iq4-Pu-OTJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -58,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="signature-size1280(JPG Type)\logo1_1280" width="640" height="190"/>
+        <image name="logo1" width="302" height="97"/>
     </resources>
 </document>

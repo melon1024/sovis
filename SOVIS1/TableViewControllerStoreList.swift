@@ -13,8 +13,8 @@ class TableViewControllerStoreList: UITableViewController {
     var type :String = ""
     var type2 :String = ""
     var storeList = Array<String>()
-    
-    
+    var row :String = ""
+    var selectedItem :String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,13 +55,14 @@ class TableViewControllerStoreList: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let row = self.storeList[indexPath.row]
+        row = self.storeList[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("ListCell") as UITableViewCell!
         
         cell.textLabel?.text = row
 
         return cell
     }
+    
  
 
     /*
@@ -116,13 +117,15 @@ class TableViewControllerStoreList: UITableViewController {
 
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation*/
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        let nothing : String = ""
-        
-        
-    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "showStoreDetail")
+        {
+            let destination = segue.destinationViewController as! ViewStoreDetail
+            
+            destination.storeName=self.selectedItem
+            destination.storeDetailInfo = "blahblah"
+        }
+    }
 
 }

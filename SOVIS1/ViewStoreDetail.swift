@@ -11,17 +11,18 @@ import UIKit
 
 class ViewStoreDetail: UIViewController {
  
-    var storeName :String = ""
-    var storeDetailInfo : String = ""
-
-    var thumbPath:String?
-    
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeImage: UIImageView!
     @IBOutlet weak var storeDetailLabel: UILabel!
-    override func viewDidLoad() {
+    var storeName :String = ""
+    var storeDetailInfo : String = ""
+
+    var thumbPath:String = "woojeong.jpg"
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
-                storeImage.image = UIImage(named : thumbPath! )
+        
+        storeImage.image = UIImage(named : thumbPath )
         
         self.storeNameLabel.text = storeName
         self.storeDetailLabel.text=storeDetailInfo
