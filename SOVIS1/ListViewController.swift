@@ -13,13 +13,39 @@ var rec_ListView: REC_UIViewController = REC_UIViewController ()
 
 class ListViewController : UITableViewController{
     
-    var list = Array<Foodinfo>()
-    var selectedItem :String = ""
     
+    
+    var list = ["한식","중식","일식","양식"]
+    var country :String = ""
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        let tts_ListViewController: TTS_UIViewController = TTS_UIViewController()
+        let kk_ListViewController : String = "원하시는 음식 종류를 선택해주세요."
+        tts_ListViewController.someMethod(kk_ListViewController)
+        
+        
+        rec_ListView.Recognize(extstr)
+        sleep(0)
+        print("ListView before sleep @@@@@@@@@@@")
+        
+        if check_finish == 1 {
+            if extstr != "" {
+                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
+                //self.recogStr.text = extstr
+            }
+            else{
+                print("하지만 없죠")
+                //self.recogStr.text = ""
+            }
+        }
+        else{
+            
+            print("check finish: 0")
+        }
+    }
     override func viewDidLoad() {
-        //let tts_ListViewController: TTS_UIViewController = TTS_UIViewController()
-        //let kk_ListViewController : String = "원하시는 음식 종류를 선택해주세요."
-        //tts_ListViewController.someMethod(kk_ListViewController)
+        
         
         //
         //rec_ListView.Recognize(extstr)
@@ -120,41 +146,8 @@ class ListViewController : UITableViewController{
 */
         print("ListView select@@@@@@@@@@@")
 
-        var fInfo = Foodinfo()
-         fInfo.titile = "한식"
-        self.list.append(fInfo)
         
-        fInfo = Foodinfo()
-        fInfo.titile = "중식"
-        self.list.append(fInfo)
-        
-        fInfo = Foodinfo()
-        fInfo.titile = "양식"
-        self.list.append(fInfo)
-        
-        fInfo = Foodinfo()
-        fInfo.titile = "일식"
-        self.list.append(fInfo)
-        
-        
-        rec_ListView.Recognize(extstr)
-        sleep(4)
-        print("ListView before sleep @@@@@@@@@@@")
-        
-        if check_finish == 1 {
-            if extstr != "" {
-                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
-                //self.recogStr.text = extstr
-            }
-            else{
-                print("하지만 없죠")
-                //self.recogStr.text = ""
-            }
-        }
-        else{
-            
-            print("check finish: 0")
-        }
+       
         
         
         /*
@@ -199,15 +192,14 @@ class ListViewController : UITableViewController{
         let row = self.list[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("ListCell") as UITableViewCell!
         
-        cell.textLabel?.text = row.titile
+        cell.textLabel?.text = row
     
         return cell
      }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        selectedItem = list[indexPath.row].titile!
-        print(list[indexPath.row].titile!)
-        NSLog("Touch table Row at %d",indexPath.row)
+        country = list[indexPath.row]
+        
         self.performSegueWithIdentifier("showDetail", sender: self)
     
     }
@@ -216,7 +208,7 @@ class ListViewController : UITableViewController{
         print(segue.identifier!)
         if segue.identifier == "showDetail"{
             let destination = segue.destinationViewController as! TableViewControllerDetail
-            destination.title2 = selectedItem
+            destination.selctedCountry = country
         }
     }
 

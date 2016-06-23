@@ -85,7 +85,7 @@ int check_finish = 0;
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"5ec089e0c8590d5a736fbde740f803cc",
+                                   @"3e17315317a84f2bceb70b1aae256906",
 
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -143,7 +143,7 @@ int check_finish = 0;
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"5ec089e0c8590d5a736fbde740f803cc",
+                                   @"3e17315317a84f2bceb70b1aae256906",
 
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];

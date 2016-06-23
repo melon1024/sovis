@@ -22,11 +22,18 @@
 		280F471A1D17DA20004290C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47191D17DA20004290C4 /* Foundation.framework */; };
 		280F471E1D17DCFF004290C4 /* DaumSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F471D1D17DCFF004290C4 /* DaumSpeech.framework */; };
 		280F47201D17ED11004290C4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F471F1D17ED11004290C4 /* ListViewController.swift */; };
-		280F47221D17F02F004290C4 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47211D17F02F004290C4 /* Food.swift */; };
+		280F47221D17F02F004290C4 /* StoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47211D17F02F004290C4 /* StoreClass.swift */; };
 		280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47271D19547C004290C4 /* TableViewControllerDetail.swift */; };
 		280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */; };
 		280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47821D1A8361004290C4 /* ViewStoreDetail.swift */; };
-		28C04D8C1D1ACCC200BC3B32 /* woojeong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */; };
+		28C267E11D1C25320059868C /* bali.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267D91D1C25320059868C /* bali.jpg */; };
+		28C267E21D1C25320059868C /* cheesebob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DA1D1C25320059868C /* cheesebob.jpg */; };
+		28C267E31D1C25320059868C /* gaya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DB1D1C25320059868C /* gaya.jpg */; };
+		28C267E41D1C25320059868C /* tol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DC1D1C25320059868C /* tol.jpg */; };
+		28C267E51D1C25320059868C /* tutle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DD1D1C25320059868C /* tutle.jpg */; };
+		28C267E61D1C25320059868C /* woojeong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DE1D1C25320059868C /* woojeong.jpg */; };
+		28C267E71D1C25320059868C /* yongssa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DF1D1C25320059868C /* yongssa.jpg */; };
+		28C267E81D1C25320059868C /* coco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267E01D1C25320059868C /* coco.jpg */; };
 		A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */; };
 		A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */; };
 		D3DF68741D1AD5A100BF9944 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF68731D1AD5A100BF9944 /* libstdc++.6.tbd */; };
@@ -52,11 +59,18 @@
 		280F47191D17DA20004290C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		280F471D1D17DCFF004290C4 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumSpeech.framework; path = SOVIS1/framework/DaumSpeech.framework; sourceTree = "<group>"; };
 		280F471F1D17ED11004290C4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		280F47211D17F02F004290C4 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		280F47211D17F02F004290C4 /* StoreClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreClass.swift; sourceTree = "<group>"; };
 		280F47271D19547C004290C4 /* TableViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerDetail.swift; sourceTree = "<group>"; };
 		280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerStoreList.swift; sourceTree = "<group>"; };
 		280F47821D1A8361004290C4 /* ViewStoreDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStoreDetail.swift; sourceTree = "<group>"; };
-		28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woojeong.jpg; sourceTree = "<group>"; };
+		28C267D91D1C25320059868C /* bali.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bali.jpg; sourceTree = "<group>"; };
+		28C267DA1D1C25320059868C /* cheesebob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheesebob.jpg; sourceTree = "<group>"; };
+		28C267DB1D1C25320059868C /* gaya.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gaya.jpg; sourceTree = "<group>"; };
+		28C267DC1D1C25320059868C /* tol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tol.jpg; sourceTree = "<group>"; };
+		28C267DD1D1C25320059868C /* tutle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tutle.jpg; sourceTree = "<group>"; };
+		28C267DE1D1C25320059868C /* woojeong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woojeong.jpg; sourceTree = "<group>"; };
+		28C267DF1D1C25320059868C /* yongssa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yongssa.jpg; sourceTree = "<group>"; };
+		28C267E01D1C25320059868C /* coco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coco.jpg; sourceTree = "<group>"; };
 		A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTS_UIViewController.h; sourceTree = "<group>"; };
 		A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTS_UIViewController.m; sourceTree = "<group>"; };
 		A3BF45111D1AFFBC00334083 /* REC_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REC_UIViewController.h; sourceTree = "<group>"; };
@@ -114,7 +128,7 @@
 				280F46F21D17D41F004290C4 /* ViewController.swift */,
 				D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */,
 				280F46F41D17D41F004290C4 /* Main.storyboard */,
-				280F47211D17F02F004290C4 /* Food.swift */,
+				280F47211D17F02F004290C4 /* StoreClass.swift */,
 				280F46F71D17D41F004290C4 /* Assets.xcassets */,
 				280F46F91D17D41F004290C4 /* LaunchScreen.storyboard */,
 				280F46FC1D17D41F004290C4 /* Info.plist */,
@@ -152,7 +166,14 @@
 		28C04D8A1D1ACC9C00BC3B32 /* ImageSet */ = {
 			isa = PBXGroup;
 			children = (
-				28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */,
+				28C267D91D1C25320059868C /* bali.jpg */,
+				28C267DA1D1C25320059868C /* cheesebob.jpg */,
+				28C267DB1D1C25320059868C /* gaya.jpg */,
+				28C267DC1D1C25320059868C /* tol.jpg */,
+				28C267DD1D1C25320059868C /* tutle.jpg */,
+				28C267DE1D1C25320059868C /* woojeong.jpg */,
+				28C267DF1D1C25320059868C /* yongssa.jpg */,
+				28C267E01D1C25320059868C /* coco.jpg */,
 			);
 			name = ImageSet;
 			path = SOVIS1;
@@ -217,10 +238,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C267E61D1C25320059868C /* woojeong.jpg in Resources */,
 				280F46FB1D17D41F004290C4 /* LaunchScreen.storyboard in Resources */,
+				28C267E71D1C25320059868C /* yongssa.jpg in Resources */,
+				28C267E41D1C25320059868C /* tol.jpg in Resources */,
+				28C267E31D1C25320059868C /* gaya.jpg in Resources */,
+				28C267E81D1C25320059868C /* coco.jpg in Resources */,
+				28C267E21D1C25320059868C /* cheesebob.jpg in Resources */,
 				280F46F81D17D41F004290C4 /* Assets.xcassets in Resources */,
 				280F46F61D17D41F004290C4 /* Main.storyboard in Resources */,
-				28C04D8C1D1ACCC200BC3B32 /* woojeong.jpg in Resources */,
+				28C267E51D1C25320059868C /* tutle.jpg in Resources */,
+				28C267E11D1C25320059868C /* bali.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +261,7 @@
 			files = (
 				280F46F31D17D41F004290C4 /* ViewController.swift in Sources */,
 				D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */,
-				280F47221D17F02F004290C4 /* Food.swift in Sources */,
+				280F47221D17F02F004290C4 /* StoreClass.swift in Sources */,
 				280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */,
 				280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */,
 				A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */,
@@ -357,7 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinwon Go (9Z6DP4ERYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SOVIS1/framework",
@@ -366,6 +394,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = June.SOVIS1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SOVIS1/SOVIS1-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -377,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinwon Go (9Z6DP4ERYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SOVIS1/framework",
@@ -386,6 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = June.SOVIS1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SOVIS1/SOVIS1-Bridging-Header.h";
 			};
 			name = Release;

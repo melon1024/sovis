@@ -10,27 +10,33 @@ import Foundation
 import UIKit
 
 class ViewStoreDetail: UIViewController {
- 
+    
+    @IBOutlet weak var navibar: UINavigationItem!
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeImage: UIImageView!
     @IBOutlet weak var storeDetailLabel: UILabel!
-    var storeName :String = ""
-    var storeDetailInfo : String = ""
-
-    var thumbPath:String = "woojeong.jpg"
+    var curStoreInfo = storeInfo()
     
-        override func viewDidLoad() {
+    
+    /*var storeName :String = ""
+     var storeDetailInfo : String = ""
+     
+     var thumbPath:String = "woojeong.jpg"*/
+    
+    override func viewDidLoad() {
+        self.navibar.title=self.curStoreInfo.storeName
         super.viewDidLoad()
         
-        storeImage.image = UIImage(named : thumbPath )
         
-        self.storeNameLabel.text = storeName
-        self.storeDetailLabel.text=storeDetailInfo
+        storeImage.image = UIImage(named : curStoreInfo.thumbnail! )
+        
+        self.storeNameLabel.text = curStoreInfo.storeName!
+        self.storeDetailLabel.text=curStoreInfo.detail!
         
         
         
         // Do any additional setup after loading the view.
     }
-
+    
     
 }
