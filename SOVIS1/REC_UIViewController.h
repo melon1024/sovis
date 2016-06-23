@@ -10,10 +10,20 @@
 #import <DaumSpeech/DaumSpeechRecognizer.h>
 #import <DaumSpeech/DaumTextToSpeech.h>
 
+extern NSString *extstr;
 @interface REC_UIViewController : UIViewController <MTSpeechRecognizerDelegate, MTSpeechRecognizerViewDelegate>
-
+{
+    NSString *recogstr;
+    
+    
+}
 @property (weak, nonatomic) IBOutlet UITextView *serviceHelpView;
 @property (weak, nonatomic) IBOutlet UILabel *resultText;
+//@property (nonatomic, strong) NSString *rtstr;
+//NSString *rtstr;
+
+@property (nonatomic, retain) NSString *recogstr;
+
 - (IBAction)segmentedControlValueChanged:(id)sender;
 - (IBAction)startButtonTapped:(id)sender;
 - (IBAction)stopButtonTapped:(id)sender;

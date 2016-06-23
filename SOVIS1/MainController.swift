@@ -8,9 +8,13 @@
 
 import UIKit
 
+var globstr: REC_UIViewController = REC_UIViewController ()
+var glstr : String?
+
 class MainController: UIViewController {
 
     @IBOutlet weak var DateLabel: UILabel!
+    @IBOutlet weak var recogStr: UILabel!
     
     var inputstr : String?
     
@@ -23,6 +27,8 @@ class MainController: UIViewController {
         //let tts = TTS_UIViewController()
         //tts.tts_func()
         //let tts = TTS_UIViewController.tts_func()
+        //globstr.recogstr = nil
+        
         let tts: TTS_UIViewController = TTS_UIViewController()
         let kk : String = "안녕하세요 소비스입니다 무엇을 도와드릴까요?"
         tts.someMethod(kk)
@@ -32,8 +38,29 @@ class MainController: UIViewController {
         //str = rec.recogMethod()
         //inputstr = String(rec.recogMethod())
         //tts.someMethod(str)
-    
-
+        
+        //glstr = globstr.Recognize()
+        
+        //globstr.resultText.text
+        /*
+        if globstr.resultText.text != nil {
+            print(globstr.resultText.text)
+        }
+ */
+        if globstr.recogstr != nil {
+            glstr = globstr.recogstr
+            print("dfdfdfdfdfdfdf" + String(glstr))
+                
+        }
+        if extstr != "" {
+            print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
+            self.recogStr.text = extstr
+        }
+        else{
+            self.recogStr.text = ""
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -50,11 +77,12 @@ class MainController: UIViewController {
     
    
     @IBAction func startRecog(sender: AnyObject) {
+       /*
         let rec: SpeechRecognizerSampleViewController = SpeechRecognizerSampleViewController()
         
         inputstr = rec.recogMethod()
         print(inputstr)
-        
+        */
         
     }
 

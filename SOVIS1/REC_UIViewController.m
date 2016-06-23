@@ -9,15 +9,23 @@
 #import "REC_UIViewController.h"
 
 #define STRINGS_FILE_NAME   @"SpeechRecognizerSample"
+NSString *globalString;
+NSString *extstr = @"";
 
 @interface REC_UIViewController ()
 
 @property (nonatomic, strong) MTSpeechRecognizerClient *speechRecognizer;
 @property (nonatomic, strong) NSString *selectedServiceType;
 
+@property (nonatomic, strong) NSString *rtstr;
+
 @end
 
 @implementation REC_UIViewController
+
+//@synthesize rtstr = _rtstr;
+@synthesize recogstr;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    recogstr = nil;
     
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.serviceHelpView.text = NSLocalizedStringFromTable(@"gg", STRINGS_FILE_NAME, "web service type information.");
@@ -42,7 +51,9 @@
     
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
-                                   @"72bbb307a99b0655aa1cb5d75c166b30",
+                                   //@"72bbb307a99b0655aa1cb5d75c166b30",
+                                   @"5355bdbf04eb4d28ff7ffcacde2ec6ff",
+
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
@@ -62,15 +73,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)Recognize:(id)sender{
+- (void)Recognize:(NSString*)str1 {
+    NSLog(@"recog\n");
     self.resultText.text = @"";
     if (self.speechRecognizer != nil) {
         self.speechRecognizer = nil;
     }
-    
+    str1 = @"";
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
-                                   @"72bbb307a99b0655aa1cb5d75c166b30",
+                                   //@"72bbb307a99b0655aa1cb5d75c166b30",
+                                   @"5355bdbf04eb4d28ff7ffcacde2ec6ff",
+
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
@@ -81,6 +95,8 @@
     [self.speechRecognizer setDelegate:self];
     
     [self.speechRecognizer startRecording];
+    //return self.resultText.text;
+    NSLog(@"뭐좀없나\n");
 }
 
 - (IBAction)segmentedControlValueChanged:(id)sender {
@@ -124,7 +140,9 @@
     
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
-                                   @"72bbb307a99b0655aa1cb5d75c166b30",
+                                   //@"72bbb307a99b0655aa1cb5d75c166b30",
+                                   @"5355bdbf04eb4d28ff7ffcacde2ec6ff",
+
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
@@ -156,7 +174,9 @@ SpeechRecognizerConfigKeyApiKey,
     self.resultText.text = @"";
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
-                                   @"72bbb307a99b0655aa1cb5d75c166b30",
+                                  // @"72bbb307a99b0655aa1cb5d75c166b30",
+                                   @"5355bdbf04eb4d28ff7ffcacde2ec6ff",
+
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
@@ -198,6 +218,8 @@ SpeechRecognizerConfigKeyApiKey,
 }
 
 - (void)onPartialResult:(NSString *)partialResult {
+    NSLog(@"\npartialresult이얌\n");
+
     NSString *result = partialResult;
     if (result.length > 0) {
         self.resultText.text = result;
@@ -206,6 +228,7 @@ SpeechRecognizerConfigKeyApiKey,
 }
 
 - (void)onResults:(NSArray *)results confidences:(NSArray *)confidences marked:(BOOL)marked {
+    NSLog(@"\nonresult이얌\n");
     self.resultText.text = @"";
     if (self.speechRecognizer) {
         self.speechRecognizer = nil;
@@ -227,9 +250,19 @@ SpeechRecognizerConfigKeyApiKey,
                                                     otherButtonTitles:nil, nil];
         [resultAlert show];
     } else {
+        NSLog(@"\nonresult successsssss\n");
+
         NSString *result = [results objectAtIndex:0];
         self.resultText.text = result;
         self.resultText.frame = CGRectMake(self.resultText.frame.origin.x, self.resultText.frame.origin.y, 282.f, self.resultText.frame.size.height);
+        
+        _rtstr = result;
+        globalString = result;
+        
+        //NSLog(@"\n%@\n", _rtstr);
+        
+        recogstr = result;
+        extstr = result;
     }
     
 }

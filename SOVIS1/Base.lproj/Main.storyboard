@@ -470,6 +470,12 @@
                                     <segue destination="VuY-MA-woy" kind="modal" id="hG1-q0-ZYf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psu-Rh-pSs">
+                                <rect key="frame" x="16" y="134" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -483,6 +489,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="DateLabel" destination="VyN-KV-fvA" id="USX-bq-CjI"/>
+                        <outlet property="recogStr" destination="psu-Rh-pSs" id="BDi-x5-WI6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYH-WO-ief" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -640,6 +647,6 @@
         <image name="push-pin" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hrz-Ed-QIi"/>
+        <segue reference="xJf-KC-hGi"/>
     </inferredMetricsTieBreakers>
 </document>
