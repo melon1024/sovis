@@ -11,7 +11,7 @@
 #define STRINGS_FILE_NAME   @"SpeechRecognizerSample"
 NSString *globalString;
 NSString *extstr = @"";
-int check_finish;
+int check_finish = 0;
 
 @interface REC_UIViewController ()
 
@@ -202,10 +202,12 @@ SpeechRecognizerConfigKeyApiKey,
 
 - (void)onReady {
     NSLog(@"\nonReady\n");
+    check_finish=0;
 }
 
 - (void)onBeginningOfSpeech {
     NSLog(@"\nonBeginningOfSpeech\n");
+    check_finish = 2;
 
 }
 
@@ -220,6 +222,7 @@ SpeechRecognizerConfigKeyApiKey,
     }
     self.resultText.text = message;
     NSLog(@"\n안될 줄 알았어 ㅎㅎ \n");
+    check_finish = 2;
 }
 
 - (void)onPartialResult:(NSString *)partialResult {
@@ -230,6 +233,7 @@ SpeechRecognizerConfigKeyApiKey,
         self.resultText.text = result;
         self.resultText.frame = CGRectMake(self.resultText.frame.origin.x, self.resultText.frame.origin.y, 282.f, self.resultText.frame.size.height);
     }
+    check_finish = 0;
 }
 
 - (void)onResults:(NSArray *)results confidences:(NSArray *)confidences marked:(BOOL)marked {
@@ -269,11 +273,12 @@ SpeechRecognizerConfigKeyApiKey,
         recogstr = result;
         extstr = result;
     }
-    
+    check_finish = 1;
 }
 
 - (void)onAudioLevel:(float)audioLevel {
     NSLog(@"\nonAudioLevel\n");
+    check_finish=0;
 
 }
 

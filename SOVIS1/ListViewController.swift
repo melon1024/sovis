@@ -25,25 +25,72 @@ class ListViewController : UITableViewController{
         //rec_ListView.Recognize(extstr)
         
         //delay
-        for i in 0..<10000 {}
+        //for i in 0..<10000 {}
         func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
             dispatch_after(time, dispatch_get_main_queue(), block)
         }
         
-        print("ListView start")
-
-        rec_ListView.Recognize(extstr)
-        sleep(3)
+ 
 
         /*
-        runAfterDelay(3){
-            print("delay...")
-        }*/
+        print("ListView start@@@@@@@@@@@@@@")
+        
+        repeat{
+            rec_ListView.Recognize(extstr)
+            
+            while check_finish < 1 {
+                print("1")
+                //usleep(500)
+                sleep(1)
+            }
+            print("rec ListView")
+
+        } while check_finish != 1
+        print("ListView before sleep @@@@@@@@@@@")
+
+        if check_finish == 1 {
+            if extstr != "" {
+                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
+                //self.recogStr.text = extstr
+            }
+            else{
+                print("하지만 없죠")
+                //self.recogStr.text = ""
+            }
+        }
+        */
         
         /*
+        while check_finish < 1{
+            usleep(5)
+        }
+ */
+//        usleep(3500)
+/*
+        
         runAfterDelay(3) {
-            print("delay start")    
+            
+            
+    
+            if check_finish == 1 {
+                if extstr != "" {
+                    print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
+                    //self.recogStr.text = extstr
+                }
+                else{
+                    print("하지만 없죠")
+                    //self.recogStr.text = ""
+                }
+            }
+            else if check_finish == 0 {
+                print("check finish 0@@@@@@@@@@@@@")
+            }
+        }
+ */       
+        
+         /*
+            print("delay start")
 
             print("delay 1000")
             if extstr != "" {
@@ -56,7 +103,7 @@ class ListViewController : UITableViewController{
             }
  
         }*/
-        
+        /*
         if check_finish == 1 {
             if extstr != "" {
                 print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
@@ -67,11 +114,12 @@ class ListViewController : UITableViewController{
                 //self.recogStr.text = ""
             }
         }
-        else{
-            print("check finish 0")
+        else if check_finish == 0 {
+            print("check finish 0@@@@@@@@@@@@@")
         }
+*/
+        print("ListView select@@@@@@@@@@@")
 
-        
         var fInfo = Foodinfo()
          fInfo.titile = "한식"
         self.list.append(fInfo)
@@ -87,6 +135,55 @@ class ListViewController : UITableViewController{
         fInfo = Foodinfo()
         fInfo.titile = "일식"
         self.list.append(fInfo)
+        
+        
+        rec_ListView.Recognize(extstr)
+        sleep(4)
+        print("ListView before sleep @@@@@@@@@@@")
+        
+        if check_finish == 1 {
+            if extstr != "" {
+                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
+                //self.recogStr.text = extstr
+            }
+            else{
+                print("하지만 없죠")
+                //self.recogStr.text = ""
+            }
+        }
+        else{
+            
+            print("check finish: 0")
+        }
+        
+        
+        /*
+        print("ListView start@@@@@@@@@@@@@@")
+        
+        repeat{
+            rec_ListView.Recognize(extstr)
+            
+            while check_finish < 1 {
+                print("1")
+                //usleep(500)
+                sleep(1)
+            }
+            print("rec ListView")
+            
+        } while check_finish != 1
+        print("ListView before sleep @@@@@@@@@@@")
+        
+        if check_finish == 1 {
+            if extstr != "" {
+                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
+                //self.recogStr.text = extstr
+            }
+            else{
+                print("하지만 없죠")
+                //self.recogStr.text = ""
+            }
+        }
+    */
         
     }
     
