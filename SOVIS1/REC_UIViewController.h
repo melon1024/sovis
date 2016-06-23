@@ -11,6 +11,7 @@
 #import <DaumSpeech/DaumTextToSpeech.h>
 
 extern NSString *extstr;
+extern int check_finish;
 @interface REC_UIViewController : UIViewController <MTSpeechRecognizerDelegate, MTSpeechRecognizerViewDelegate>
 {
     NSString *recogstr;

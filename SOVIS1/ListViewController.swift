@@ -25,7 +25,7 @@ class ListViewController : UITableViewController{
         //rec_ListView.Recognize(extstr)
         
         //delay
-        //for i in 0..<1000000 {}
+        for i in 0..<10000 {}
         func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
             dispatch_after(time, dispatch_get_main_queue(), block)
@@ -34,8 +34,15 @@ class ListViewController : UITableViewController{
         print("ListView start")
 
         rec_ListView.Recognize(extstr)
+        sleep(3)
 
-        runAfterDelay(2) {
+        /*
+        runAfterDelay(3){
+            print("delay...")
+        }*/
+        
+        /*
+        runAfterDelay(3) {
             print("delay start")    
 
             print("delay 1000")
@@ -48,17 +55,22 @@ class ListViewController : UITableViewController{
                 //self.recogStr.text = ""
             }
  
-        }
-        /*
-        if extstr != "" {
-            print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
-            //self.recogStr.text = extstr
+        }*/
+        
+        if check_finish == 1 {
+            if extstr != "" {
+                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
+                //self.recogStr.text = extstr
+            }
+            else{
+                print("하지만 없죠")
+                //self.recogStr.text = ""
+            }
         }
         else{
-            print("하지만 없죠")
-            //self.recogStr.text = ""
+            print("check finish 0")
         }
- */
+
         
         var fInfo = Foodinfo()
          fInfo.titile = "한식"

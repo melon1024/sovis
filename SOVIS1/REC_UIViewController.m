@@ -11,6 +11,7 @@
 #define STRINGS_FILE_NAME   @"SpeechRecognizerSample"
 NSString *globalString;
 NSString *extstr = @"";
+int check_finish;
 
 @interface REC_UIViewController ()
 
@@ -75,6 +76,7 @@ NSString *extstr = @"";
 
 - (void)Recognize:(NSString*)str1 {
     NSLog(@"recog\n");
+    check_finish = 0;
     self.resultText.text = @"";
     if (self.speechRecognizer != nil) {
         self.speechRecognizer = nil;
@@ -276,7 +278,9 @@ SpeechRecognizerConfigKeyApiKey,
 }
 
 - (void)onFinished {
-    NSLog(@"\nonFinished\n");
+    NSLog(@"\nonFinished[%@]\n", extstr);
+    check_finish = 1;
+    
 
 }
 
