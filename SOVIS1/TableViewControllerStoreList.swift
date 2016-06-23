@@ -14,7 +14,7 @@ class TableViewControllerStoreList: UITableViewController {
     var selectedCountry :String = ""
     var selectedPrice :String = ""
     var storeList = Array<String>()
-    var row :String = ""
+    var row = storeInfo()
     var selectedItem :String = ""
     var store = Array<storeInfo>()
     var randomStoreNum = [Int](count: 5,repeatedValue: -1)
@@ -119,6 +119,7 @@ class TableViewControllerStoreList: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -134,12 +135,26 @@ class TableViewControllerStoreList: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        row = self.suggestion[indexPath.row].storeName!
-        let cell = tableView.dequeueReusableCellWithIdentifier("ListCell") as UITableViewCell!
+        row = self.suggestion[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("ListCell") as! storeCell
+        cell.storeName?.text=row.storeName
+        cell.storeDetail?.text=row.detail
+        cell.StoreThumnail.image=UIImage(named: row.thumbnail!)
+        /*
+        cell.textLabel?.text = row.storeName
+        cell.detailTextLabel?.text = row.detail*/
+        /*
+        let title = cell.viewWithTag(101) as? UILabel
+        let detail = cell.viewWithTag(102) as? UILabel
+        title?.text = row.storeName
+        detail?.text = row.detail
         
-        cell.textLabel?.text = row
+        let thumnail = cell.viewWithTag(103) as? UIImageView
+        
+        thumnail?.image = UIImage(named: row.thumbnail!)*/
         
         return cell
+        
     }
     
     

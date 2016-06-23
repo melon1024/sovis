@@ -29,13 +29,14 @@ class ListViewController : UITableViewController{
         sleep(0)
         print("ListView before sleep @@@@@@@@@@@")
         
+   
         if check_finish == 1 {
             if extstr != "" {
-                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
+                print("exstr :" + extstr)
                 //self.recogStr.text = extstr
             }
             else{
-                print("하지만 없죠")
+                print("결과 없음")
                 //self.recogStr.text = ""
             }
         }
@@ -178,6 +179,15 @@ class ListViewController : UITableViewController{
         }
     */
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        sleep(2)
+        country = list[0]   //셀렉트 한식
+        
+        //hashfunction 쓰면 아마도 될듯
+        
+        self.performSegueWithIdentifier("showDetail", sender: self)
     }
     
     override func tableView(tableView:UITableView, numberOfRowsInSection section : Int)

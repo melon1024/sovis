@@ -26,6 +26,7 @@
 		280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47271D19547C004290C4 /* TableViewControllerDetail.swift */; };
 		280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */; };
 		280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47821D1A8361004290C4 /* ViewStoreDetail.swift */; };
+		289860D81D1C657B00BF87D6 /* Storelist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289860D71D1C657B00BF87D6 /* Storelist.swift */; };
 		28C267E11D1C25320059868C /* bali.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267D91D1C25320059868C /* bali.jpg */; };
 		28C267E21D1C25320059868C /* cheesebob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DA1D1C25320059868C /* cheesebob.jpg */; };
 		28C267E31D1C25320059868C /* gaya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DB1D1C25320059868C /* gaya.jpg */; };
@@ -63,6 +64,7 @@
 		280F47271D19547C004290C4 /* TableViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerDetail.swift; sourceTree = "<group>"; };
 		280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerStoreList.swift; sourceTree = "<group>"; };
 		280F47821D1A8361004290C4 /* ViewStoreDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStoreDetail.swift; sourceTree = "<group>"; };
+		289860D71D1C657B00BF87D6 /* Storelist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storelist.swift; sourceTree = "<group>"; };
 		28C267D91D1C25320059868C /* bali.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bali.jpg; sourceTree = "<group>"; };
 		28C267DA1D1C25320059868C /* cheesebob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheesebob.jpg; sourceTree = "<group>"; };
 		28C267DB1D1C25320059868C /* gaya.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gaya.jpg; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				280F46F21D17D41F004290C4 /* ViewController.swift */,
 				D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */,
 				280F46F41D17D41F004290C4 /* Main.storyboard */,
+				289860D71D1C657B00BF87D6 /* Storelist.swift */,
 				280F47211D17F02F004290C4 /* StoreClass.swift */,
 				280F46F71D17D41F004290C4 /* Assets.xcassets */,
 				280F46F91D17D41F004290C4 /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 				A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */,
 				280F47201D17ED11004290C4 /* ListViewController.swift in Sources */,
 				280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */,
+				289860D81D1C657B00BF87D6 /* Storelist.swift in Sources */,
 				280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */,
 				A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */,
 			);

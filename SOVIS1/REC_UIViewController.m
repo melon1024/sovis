@@ -11,6 +11,8 @@
 #define STRINGS_FILE_NAME   @"SpeechRecognizerSample"
 NSString *globalString;
 NSString *extstr = @"";
+//NSString *partialtext =@"";
+
 int check_finish = 0;
 
 @interface REC_UIViewController ()
@@ -34,6 +36,7 @@ int check_finish = 0;
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
@@ -41,6 +44,8 @@ int check_finish = 0;
 {
     [super viewDidLoad];
     recogstr = nil;
+    
+
     
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.serviceHelpView.text = NSLocalizedStringFromTable(@"gg", STRINGS_FILE_NAME, "web service type information.");
@@ -53,7 +58,7 @@ int check_finish = 0;
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"5ec089e0c8590d5a736fbde740f803cc",
+                                   @"d3460a19bdde7105fe92c9c58eb97fc1",
 
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -75,6 +80,7 @@ int check_finish = 0;
 }
 
 - (void)Recognize:(NSString*)str1 {
+    self.selectedServiceType=SpeechRecognizerServiceTypeWord;
     NSLog(@"recog\n");
     check_finish = 0;
     self.resultText.text = @"";
@@ -82,15 +88,12 @@ int check_finish = 0;
         self.speechRecognizer = nil;
     }
     str1 = @"";
-    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
-                                   //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"3e17315317a84f2bceb70b1aae256906",
+    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:                                 @"3e17315317a84f2bceb70b1aae256906",
 
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
-        [config setObject:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
+        [config setObject:@"한식\n중식\n일식\n양식" forKey:SpeechRecognizerConfigKeyUserDictionary];
     }
     
     self.speechRecognizer = [[MTSpeechRecognizerClient alloc] initWithConfig:config];
@@ -143,12 +146,12 @@ int check_finish = 0;
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"3e17315317a84f2bceb70b1aae256906",
+                                   @"d3460a19bdde7105fe92c9c58eb97fc1",
 
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
-        [config setObject:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
+        [config setObject:@"한식\n중식\n일식\n양식" forKey:SpeechRecognizerConfigKeyUserDictionary];
     }
     
     self.speechRecognizer = [[MTSpeechRecognizerClient alloc] initWithConfig:config];
@@ -177,12 +180,12 @@ SpeechRecognizerConfigKeyApiKey,
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                   // @"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"5ec089e0c8590d5a736fbde740f803cc",
+                                   @"d3460a19bdde7105fe92c9c58eb97fc1",
 
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
-        [config setValue:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
+        [config setValue:@"한식\n중식\n일식\n양식" forKey:SpeechRecognizerConfigKeyUserDictionary];
     }
     MTSpeechRecognizerView *view = [[MTSpeechRecognizerView alloc] initWithFrame:self.view.bounds withConfig:config];
     view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -213,6 +216,7 @@ SpeechRecognizerConfigKeyApiKey,
 
 - (void)onEndOfSpeech {
     NSLog(@"\nonEndOfSpeech\n");
+    check_finish = 1;
 
 }
 
@@ -226,9 +230,11 @@ SpeechRecognizerConfigKeyApiKey,
 }
 
 - (void)onPartialResult:(NSString *)partialResult {
-    NSLog(@"\npartialresult이얌\n");
+    printf("partial result method start!\n");
 
     NSString *result = partialResult;
+    //partialtext = partialResult;
+    printf("partial result is : %s\n",[result UTF8String]);
     if (result.length > 0) {
         self.resultText.text = result;
         self.resultText.frame = CGRectMake(self.resultText.frame.origin.x, self.resultText.frame.origin.y, 282.f, self.resultText.frame.size.height);
@@ -277,14 +283,14 @@ SpeechRecognizerConfigKeyApiKey,
 }
 
 - (void)onAudioLevel:(float)audioLevel {
-    NSLog(@"\nonAudioLevel\n");
+    printf("audiol_levle\n");
     check_finish=0;
 
 }
 
 - (void)onFinished {
     NSLog(@"\nonFinished[%@]\n", extstr);
-    check_finish = 1;
+    
     
 
 }

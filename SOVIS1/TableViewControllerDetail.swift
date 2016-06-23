@@ -26,6 +26,15 @@ class TableViewControllerDetail: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    override func viewDidAppear(animated: Bool) {
+        sleep(2)
+        price = list[0]   //셀렉트 "1만원 이하"
+        
+        //hashfunction 쓰면 아마도 될듯
+        
+        self.performSegueWithIdentifier("showStoreList", sender: self)
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
