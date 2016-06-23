@@ -29,10 +29,6 @@
 		28C04D8C1D1ACCC200BC3B32 /* woojeong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C04D8B1D1ACCC200BC3B32 /* woojeong.jpg */; };
 		A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */; };
 		A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */; };
-		D3DF686F1D1AD55400BF9944 /* SpeechRecognizerSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF686A1D1AD55400BF9944 /* SpeechRecognizerSampleViewController.m */; };
-		D3DF68701D1AD55400BF9944 /* SpeechRecognizerSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DF686B1D1AD55400BF9944 /* SpeechRecognizerSampleViewController.xib */; };
-		D3DF68711D1AD55400BF9944 /* TextToSpeechSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF686D1D1AD55400BF9944 /* TextToSpeechSampleViewController.m */; };
-		D3DF68721D1AD55400BF9944 /* TextToSpeechSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DF686E1D1AD55400BF9944 /* TextToSpeechSampleViewController.xib */; };
 		D3DF68741D1AD5A100BF9944 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF68731D1AD5A100BF9944 /* libstdc++.6.tbd */; };
 		D3DF68761D1AD5B000BF9944 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF68751D1AD5B000BF9944 /* libiconv.tbd */; };
 		D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */; };
@@ -66,12 +62,6 @@
 		A3BF45111D1AFFBC00334083 /* REC_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REC_UIViewController.h; sourceTree = "<group>"; };
 		A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REC_UIViewController.m; sourceTree = "<group>"; };
 		D3DF68671D1AD55400BF9944 /* SOVIS1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SOVIS1-Bridging-Header.h"; sourceTree = "<group>"; };
-		D3DF68691D1AD55400BF9944 /* SpeechRecognizerSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechRecognizerSampleViewController.h; sourceTree = "<group>"; };
-		D3DF686A1D1AD55400BF9944 /* SpeechRecognizerSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechRecognizerSampleViewController.m; sourceTree = "<group>"; };
-		D3DF686B1D1AD55400BF9944 /* SpeechRecognizerSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechRecognizerSampleViewController.xib; sourceTree = "<group>"; };
-		D3DF686C1D1AD55400BF9944 /* TextToSpeechSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextToSpeechSampleViewController.h; sourceTree = "<group>"; };
-		D3DF686D1D1AD55400BF9944 /* TextToSpeechSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextToSpeechSampleViewController.m; sourceTree = "<group>"; };
-		D3DF686E1D1AD55400BF9944 /* TextToSpeechSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextToSpeechSampleViewController.xib; sourceTree = "<group>"; };
 		D3DF68731D1AD5A100BF9944 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		D3DF68751D1AD5B000BF9944 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -132,12 +122,6 @@
 				280F47271D19547C004290C4 /* TableViewControllerDetail.swift */,
 				280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */,
 				280F47821D1A8361004290C4 /* ViewStoreDetail.swift */,
-				D3DF68691D1AD55400BF9944 /* SpeechRecognizerSampleViewController.h */,
-				D3DF686A1D1AD55400BF9944 /* SpeechRecognizerSampleViewController.m */,
-				D3DF686B1D1AD55400BF9944 /* SpeechRecognizerSampleViewController.xib */,
-				D3DF686C1D1AD55400BF9944 /* TextToSpeechSampleViewController.h */,
-				D3DF686D1D1AD55400BF9944 /* TextToSpeechSampleViewController.m */,
-				D3DF686E1D1AD55400BF9944 /* TextToSpeechSampleViewController.xib */,
 				D3DF68671D1AD55400BF9944 /* SOVIS1-Bridging-Header.h */,
 				A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */,
 				A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */,
@@ -233,9 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3DF68701D1AD55400BF9944 /* SpeechRecognizerSampleViewController.xib in Resources */,
 				280F46FB1D17D41F004290C4 /* LaunchScreen.storyboard in Resources */,
-				D3DF68721D1AD55400BF9944 /* TextToSpeechSampleViewController.xib in Resources */,
 				280F46F81D17D41F004290C4 /* Assets.xcassets in Resources */,
 				280F46F61D17D41F004290C4 /* Main.storyboard in Resources */,
 				28C04D8C1D1ACCC200BC3B32 /* woojeong.jpg in Resources */,
@@ -249,11 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3DF68711D1AD55400BF9944 /* TextToSpeechSampleViewController.m in Sources */,
 				280F46F31D17D41F004290C4 /* ViewController.swift in Sources */,
 				D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */,
 				280F47221D17F02F004290C4 /* Food.swift in Sources */,
-				D3DF686F1D1AD55400BF9944 /* SpeechRecognizerSampleViewController.m in Sources */,
 				280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */,
 				280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */,
 				A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */,

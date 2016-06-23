@@ -17,24 +17,26 @@ class ListViewController : UITableViewController{
     var selectedItem :String = ""
     
     override func viewDidLoad() {
-        let tts_ListViewController: TTS_UIViewController = TTS_UIViewController()
-        let kk_ListViewController : String = "원하시는 음식 종류를 선택해주세요."
+        //let tts_ListViewController: TTS_UIViewController = TTS_UIViewController()
+        //let kk_ListViewController : String = "원하시는 음식 종류를 선택해주세요."
         //tts_ListViewController.someMethod(kk_ListViewController)
         
         //
         //rec_ListView.Recognize(extstr)
         
         //delay
-        for i in 0..<1000000 {}
+        //for i in 0..<1000000 {}
         func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
             dispatch_after(time, dispatch_get_main_queue(), block)
         }
         
-        
-        runAfterDelay(1000) {
+        print("ListView start")
+
+        rec_ListView.Recognize(extstr)
+
+        runAfterDelay(2) {
             print("delay start")    
-            rec_ListView.Recognize(extstr)
 
             print("delay 1000")
             if extstr != "" {

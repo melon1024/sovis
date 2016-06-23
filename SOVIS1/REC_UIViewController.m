@@ -52,7 +52,7 @@ NSString *extstr = @"";
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"5355bdbf04eb4d28ff7ffcacde2ec6ff",
+                                   @"5ec089e0c8590d5a736fbde740f803cc",
 
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -83,7 +83,7 @@ NSString *extstr = @"";
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"5355bdbf04eb4d28ff7ffcacde2ec6ff",
+                                   @"5ec089e0c8590d5a736fbde740f803cc",
 
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -141,7 +141,7 @@ NSString *extstr = @"";
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"5355bdbf04eb4d28ff7ffcacde2ec6ff",
+                                   @"5ec089e0c8590d5a736fbde740f803cc",
 
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -175,7 +175,7 @@ SpeechRecognizerConfigKeyApiKey,
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                   // @"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"5355bdbf04eb4d28ff7ffcacde2ec6ff",
+                                   @"5ec089e0c8590d5a736fbde740f803cc",
 
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -199,15 +199,17 @@ SpeechRecognizerConfigKeyApiKey,
 #pragma mark ---- MTSpeechRecognizerDelegate ----
 
 - (void)onReady {
-    
+    NSLog(@"\nonReady\n");
 }
 
 - (void)onBeginningOfSpeech {
-    
+    NSLog(@"\nonBeginningOfSpeech\n");
+
 }
 
 - (void)onEndOfSpeech {
-    
+    NSLog(@"\nonEndOfSpeech\n");
+
 }
 
 - (void)onError:(MTSpeechRecognizerError)errorCode message:(NSString *)message {
@@ -215,6 +217,7 @@ SpeechRecognizerConfigKeyApiKey,
         self.speechRecognizer = nil;
     }
     self.resultText.text = message;
+    NSLog(@"\n안될 줄 알았어 ㅎㅎ \n");
 }
 
 - (void)onPartialResult:(NSString *)partialResult {
@@ -268,11 +271,13 @@ SpeechRecognizerConfigKeyApiKey,
 }
 
 - (void)onAudioLevel:(float)audioLevel {
-    
+    NSLog(@"\nonAudioLevel\n");
+
 }
 
 - (void)onFinished {
-    
+    NSLog(@"\nonFinished\n");
+
 }
 
 @end
