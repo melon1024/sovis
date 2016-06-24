@@ -8,11 +8,19 @@
 
 import UIKit
 
+var rec_TableViewControllerDetail: REC_UIViewController = REC_UIViewController ()
+
 class TableViewControllerDetail: UITableViewController {
     
     var list = Array<String>()
     var selctedCountry :String = ""
     var price :String = ""
+    
+    override func viewWillAppear(animated: Bool) {
+        let tts_TableViewControllerDetail: TTS_UIViewController = TTS_UIViewController()
+        let kk_TableViewControllerDetail : String = "원하시는 가격대를 선택해주세요."
+        tts_TableViewControllerDetail.someMethod(kk_TableViewControllerDetail)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +35,7 @@ class TableViewControllerDetail: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     override func viewDidAppear(animated: Bool) {
-        sleep(2)
+        sleep(6)
         price = list[0]   //셀렉트 "1만원 이하"
         
         //hashfunction 쓰면 아마도 될듯

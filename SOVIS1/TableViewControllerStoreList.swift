@@ -8,6 +8,9 @@
 
 import UIKit
 
+var rec_TableViewControllerStoreList: REC_UIViewController = REC_UIViewController ()
+
+
 class TableViewControllerStoreList: UITableViewController {
     @IBOutlet var storeTable: UITableView!
     
@@ -20,6 +23,14 @@ class TableViewControllerStoreList: UITableViewController {
     var randomStoreNum = [Int](count: 5,repeatedValue: -1)
     var suggestion = Array<storeInfo>()
     
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        let tts_TableViewControllerStoreList: TTS_UIViewController = TTS_UIViewController()
+        let kk_TableViewControllerStoreList : String = "원하시는 음식점을 선택해주세요."
+        tts_TableViewControllerStoreList.someMethod(kk_TableViewControllerStoreList)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

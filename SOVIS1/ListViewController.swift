@@ -182,7 +182,7 @@ class ListViewController : UITableViewController{
     }
     
     override func viewDidAppear(animated: Bool) {
-        sleep(2)
+        sleep(6)
         country = list[0]   //셀렉트 한식
         
         //hashfunction 쓰면 아마도 될듯

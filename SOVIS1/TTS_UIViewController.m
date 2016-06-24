@@ -61,7 +61,7 @@
     NSDictionary *config = @{TextToSpeechConfigKeyApiKey :
                               //   @"2b268b18991386c80c9054ab1aee8ce709b3085c", //sample api key
                             // @"72bbb307a99b0655aa1cb5d75c166b30",//kihwan api key
-                             @"d3460a19bdde7105fe92c9c58eb97fc1",
+                             @"c4498ec2d5fad521fd9c18e72f92cdf2",
 
                              TextToSpeechConfigKeyVoiceType : TextToSpeechVoiceTypeWoman,
                              TextToSpeechConfigServiceMode : NewtoneTalk_2,
@@ -83,7 +83,7 @@
     NSDictionary *config = @{TextToSpeechConfigKeyApiKey :
                                //  @"2b268b18991386c80c9054ab1aee8ce709b3085c", //sample api key
                             // @"72bbb307a99b0655aa1cb5d75c166b30", //kihwan api key
-                             @"d3460a19bdde7105fe92c9c58eb97fc1",
+                             @"c4498ec2d5fad521fd9c18e72f92cdf2",
                              TextToSpeechConfigKeyVoiceType : self.voiceType,
                              TextToSpeechConfigServiceMode : self.serviceMode,
                              TextToSpeechConfigKeySpeechSpeed : [NSNumber numberWithFloat:[self.speechSpeed.text floatValue]]};
