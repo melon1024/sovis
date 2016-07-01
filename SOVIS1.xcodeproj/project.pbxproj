@@ -40,6 +40,10 @@
 		28C267E81D1C25320059868C /* coco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267E01D1C25320059868C /* coco.jpg */; };
 		A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */; };
 		A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */; };
+		D38E29851D26536C001A7769 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38E29831D26536C001A7769 /* NotificationController.swift */; };
+		D38E29861D26536C001A7769 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38E29841D26536C001A7769 /* ScheduleController.swift */; };
+		D38E29881D265394001A7769 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38E29871D265394001A7769 /* List.swift */; };
+		D38E298C1D2653B0001A7769 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38E298B1D2653B0001A7769 /* Cell.swift */; };
 		D3DF68741D1AD5A100BF9944 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF68731D1AD5A100BF9944 /* libstdc++.6.tbd */; };
 		D3DF68761D1AD5B000BF9944 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF68751D1AD5B000BF9944 /* libiconv.tbd */; };
 		D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */; };
@@ -83,6 +87,10 @@
 		A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTS_UIViewController.m; sourceTree = "<group>"; };
 		A3BF45111D1AFFBC00334083 /* REC_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REC_UIViewController.h; sourceTree = "<group>"; };
 		A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REC_UIViewController.m; sourceTree = "<group>"; };
+		D38E29831D26536C001A7769 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D38E29841D26536C001A7769 /* ScheduleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
+		D38E29871D265394001A7769 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		D38E298B1D2653B0001A7769 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		D3DF68671D1AD55400BF9944 /* SOVIS1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SOVIS1-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3DF68731D1AD5A100BF9944 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		D3DF68751D1AD5B000BF9944 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -132,6 +140,7 @@
 		280F46EF1D17D41F004290C4 /* SOVIS1 */ = {
 			isa = PBXGroup;
 			children = (
+				D38E29821D2652BA001A7769 /* 공지,일정 */,
 				280F46F01D17D41F004290C4 /* AppDelegate.swift */,
 				280F46F21D17D41F004290C4 /* ViewController.swift */,
 				D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */,
@@ -189,6 +198,17 @@
 			);
 			name = ImageSet;
 			path = SOVIS1;
+			sourceTree = "<group>";
+		};
+		D38E29821D2652BA001A7769 /* 공지,일정 */ = {
+			isa = PBXGroup;
+			children = (
+				D38E29831D26536C001A7769 /* NotificationController.swift */,
+				D38E29841D26536C001A7769 /* ScheduleController.swift */,
+				D38E29871D265394001A7769 /* List.swift */,
+				D38E298B1D2653B0001A7769 /* Cell.swift */,
+			);
+			name = "공지,일정";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,14 +296,18 @@
 			files = (
 				280F46F31D17D41F004290C4 /* ViewController.swift in Sources */,
 				D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */,
+				D38E298C1D2653B0001A7769 /* Cell.swift in Sources */,
 				280F47221D17F02F004290C4 /* StoreClass.swift in Sources */,
 				280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */,
 				280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */,
 				A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */,
+				D38E29851D26536C001A7769 /* NotificationController.swift in Sources */,
 				280F47201D17ED11004290C4 /* ListViewController.swift in Sources */,
 				280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */,
+				D38E29881D265394001A7769 /* List.swift in Sources */,
 				289860D81D1C657B00BF87D6 /* Storelist.swift in Sources */,
 				280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */,
+				D38E29861D26536C001A7769 /* ScheduleController.swift in Sources */,
 				A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

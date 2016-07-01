@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //URLString key 값에 초기 URL주소를 저장
+        NSUserDefaults.standardUserDefaults().registerDefaults(["학사공지": "http://163.239.169.54:5002/sg1"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["장학공지": "http://163.239.169.54:5002/sg3"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["일반공지": "http://163.239.169.54:5002/sg2"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["전체일정": "http://163.239.169.54:5002/schedule"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["컴과공지": "http://163.239.169.54:5002/cse"])
         sleep(1)
         return true
     }
