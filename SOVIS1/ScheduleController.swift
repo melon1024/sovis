@@ -22,7 +22,7 @@ class ScheduleController : UITableViewController {
     }
     
     override func viewDidLoad() {
-        let urlString = NSUserDefaults.standardUserDefaults().stringForKey("전체일정")
+        let urlString = NSUserDefaults.standardUserDefaults().stringForKey("학사공지")
         updatelist(urlString!)
     }
     

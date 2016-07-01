@@ -24,7 +24,7 @@ class ListViewController : UITableViewController{
         let kk_ListViewController : String = "원하시는 음식 종류를 선택해주세요."
         tts_ListViewController.someMethod(kk_ListViewController)
         
-        
+        /*
         rec_ListView.Recognize(extstr)
         sleep(0)
         print("ListView before sleep @@@@@@@@@@@")
@@ -44,6 +44,7 @@ class ListViewController : UITableViewController{
             
             print("check finish: 0")
         }
+ */
     }
     override func viewDidLoad() {
         

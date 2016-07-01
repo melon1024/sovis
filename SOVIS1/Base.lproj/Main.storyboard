@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wfO-eg-p3H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ne8-aA-b8k">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -916,6 +916,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00O-Ib-lxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3821.25" y="307.875"/>
+        </scene>
+        <!--REC_U2-->
+        <scene sceneID="jRx-kO-4gI">
+            <objects>
+                <viewController id="Ne8-aA-b8k" customClass="REC_U2" customModule="SOVIS1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3t2-Ge-YlO"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Vk-mF-GYc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zq2-sR-1Oc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Park-Jung-Jin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Al-FT-rcO">
+                                <rect key="frame" x="246" y="289.5" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Al-FT-rcO" firstAttribute="centerY" secondItem="Zq2-sR-1Oc" secondAttribute="centerY" id="a0t-bC-Jhh"/>
+                            <constraint firstItem="9Al-FT-rcO" firstAttribute="centerX" secondItem="Zq2-sR-1Oc" secondAttribute="centerX" id="srf-P4-1OJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="9Al-FT-rcO" id="3VT-43-MdM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNt-Eu-Mr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2150" y="47"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="isS-kl-MXa">

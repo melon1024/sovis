@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -15,10 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Sogang.png" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-mp-awz">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" image="Sogang.png" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-mp-awz">
                                 <rect key="frame" x="0.0" y="-348" width="1140" height="348"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="GVL-BO-pgm"/>
@@ -48,7 +48,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Sovis" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-M4-QUa">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" image="Sovis" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-M4-QUa">
                                 <rect key="frame" x="0.0" y="-166" width="333" height="166"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="333" id="0ip-5k-tl7"/>
@@ -112,8 +112,6 @@
                                 <exclude reference="fYX-mm-vfu"/>
                                 <exclude reference="qho-BQ-hqg"/>
                                 <exclude reference="w6L-kP-rRp"/>
-                                <exclude reference="C8J-qy-eia"/>
-                                <exclude reference="Jl6-MC-6Vc"/>
                                 <exclude reference="AOt-E2-Iyr"/>
                                 <exclude reference="POo-WK-70K"/>
                                 <exclude reference="XbX-Fk-PEM"/>
@@ -124,6 +122,8 @@
                                 <exclude reference="xCo-L5-rc9"/>
                                 <exclude reference="xN6-Nz-nQf"/>
                                 <exclude reference="zwf-Qg-NmB"/>
+                                <exclude reference="C8J-qy-eia"/>
+                                <exclude reference="Jl6-MC-6Vc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -136,12 +136,12 @@
                                 <include reference="Ixu-dg-KbD"/>
                                 <include reference="MKh-5w-1AR"/>
                                 <include reference="fYX-mm-vfu"/>
-                                <include reference="C8J-qy-eia"/>
                                 <include reference="AOt-E2-Iyr"/>
                                 <include reference="dne-DV-DKz"/>
                                 <include reference="mUr-0C-dbK"/>
                                 <include reference="tNs-Fm-7UA"/>
                                 <include reference="xCo-L5-rc9"/>
+                                <include reference="C8J-qy-eia"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -150,12 +150,12 @@
                                 <include reference="7vY-Co-p8j"/>
                                 <include reference="qho-BQ-hqg"/>
                                 <include reference="w6L-kP-rRp"/>
-                                <include reference="Jl6-MC-6Vc"/>
                                 <include reference="POo-WK-70K"/>
                                 <include reference="XbX-Fk-PEM"/>
                                 <include reference="hrO-qZ-PUX"/>
                                 <include reference="xN6-Nz-nQf"/>
                                 <include reference="zwf-Qg-NmB"/>
+                                <include reference="Jl6-MC-6Vc"/>
                             </mask>
                         </variation>
                     </view>

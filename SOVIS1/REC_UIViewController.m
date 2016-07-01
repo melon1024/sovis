@@ -54,11 +54,11 @@ int check_finish = 0;
     if (self.speechRecognizer != nil) {
         self.speechRecognizer = nil;
     }
-    
+    /*speechRecognizer  가 client 다 */
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"c4498ec2d5fad521fd9c18e72f92cdf2",
+                                   @"5b0a1608e5c23b4f7d002bd24f089eed",
 
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -88,7 +88,7 @@ int check_finish = 0;
         self.speechRecognizer = nil;
     }
     str1 = @"";
-    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:                                 @"c4498ec2d5fad521fd9c18e72f92cdf2",
+    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:                                 @"5b0a1608e5c23b4f7d002bd24f089eed",
 
                                    SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -146,7 +146,7 @@ int check_finish = 0;
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                    //@"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"c4498ec2d5fad521fd9c18e72f92cdf2",
+                                   @"5b0a1608e5c23b4f7d002bd24f089eed",
 
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
@@ -180,7 +180,7 @@ SpeechRecognizerConfigKeyApiKey,
     NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    /*@"2b268b18991386c80c9054ab1aee8ce709b3085c", */
                                   // @"72bbb307a99b0655aa1cb5d75c166b30",
-                                   @"c4498ec2d5fad521fd9c18e72f92cdf2",
+                                   @"5b0a1608e5c23b4f7d002bd24f089eed",
 
 SpeechRecognizerConfigKeyApiKey,
                                    self.selectedServiceType, SpeechRecognizerConfigKeyServiceType, nil];
