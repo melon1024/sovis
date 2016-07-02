@@ -11,185 +11,78 @@ import UIKit
 
 var rec_ListView: REC_UIViewController = REC_UIViewController ()
 
-class ListViewController : UITableViewController{
+class ListViewController : UITableViewController,
+    MTSpeechRecognizerDelegate,
+    MTSpeechRecognizerViewDelegate
+{
+    //////////////////////////////////////////////
+    var textLabel: String?
+    
+    var dic_array: Array<String> = ["한식", "중식", "일식", "양식", "분식", "라면", "귀피"]
+    
+    var result = ""{
+        didSet{
+            for txt in dic_array {
+                if result == txt {
+                    performSegueWithIdentifier("showDetail", sender: self)
+                    
+                }
+            }
+            /*if oldValue != result{
+            performSegueWithIdentifier("showDetail", sender: self)
+ */
+            
+        }
+    }
+
+    var text_input: String?
+    var config = [:]
+    var config2 = [:]
+    var client: MTSpeechRecognizerClient?
+    
+    //test array
+    var array_set: Array<String> = ["봉선", "태연", "동네엉아", "패왕", "시스타조커"]
+    //var selectedServiceType: String = SpeechRecognizerServiceTypeWord;
+    var selectedServiceType: String = SpeechRecognizerServiceTypeDictation
+    
+    var return_val: Int = 0
     
     
     
+    ///////////////////////////////////////////////
     var list = ["한식","중식","일식","양식"]
     var country :String = ""
+    
+    var recog_inst_list = REC_U2()
+    var flag_list: Int?
     
     override func viewWillAppear(animated: Bool) {
         
         let tts_ListViewController: TTS_UIViewController = TTS_UIViewController()
         let kk_ListViewController : String = "원하시는 음식 종류를 선택해주세요."
         tts_ListViewController.someMethod(kk_ListViewController)
-        
-        /*
-        rec_ListView.Recognize(extstr)
-        sleep(0)
-        print("ListView before sleep @@@@@@@@@@@")
-        
-   
-        if check_finish == 1 {
-            if extstr != "" {
-                print("exstr :" + extstr)
-                //self.recogStr.text = extstr
-            }
-            else{
-                print("결과 없음")
-                //self.recogStr.text = ""
-            }
-        }
-        else{
-            
-            print("check finish: 0")
-        }
- */
+        flag_list = 0   //0: loop while, 1: break while
+  
+
     }
     override func viewDidLoad() {
         
-        
-        //
-        //rec_ListView.Recognize(extstr)
-        
-        //delay
-        //for i in 0..<10000 {}
-        func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
-            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
-            dispatch_after(time, dispatch_get_main_queue(), block)
-        }
-        
- 
-
-        /*
-        print("ListView start@@@@@@@@@@@@@@")
-        
-        repeat{
-            rec_ListView.Recognize(extstr)
-            
-            while check_finish < 1 {
-                print("1")
-                //usleep(500)
-                sleep(1)
-            }
-            print("rec ListView")
-
-        } while check_finish != 1
-        print("ListView before sleep @@@@@@@@@@@")
-
-        if check_finish == 1 {
-            if extstr != "" {
-                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
-                //self.recogStr.text = extstr
-            }
-            else{
-                print("하지만 없죠")
-                //self.recogStr.text = ""
-            }
-        }
-        */
-        
-        /*
-        while check_finish < 1{
-            usleep(5)
-        }
- */
-//        usleep(3500)
-/*
-        
-        runAfterDelay(3) {
-            
-            
-    
-            if check_finish == 1 {
-                if extstr != "" {
-                    print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
-                    //self.recogStr.text = extstr
-                }
-                else{
-                    print("하지만 없죠")
-                    //self.recogStr.text = ""
-                }
-            }
-            else if check_finish == 0 {
-                print("check finish 0@@@@@@@@@@@@@")
-            }
-        }
- */       
-        
-         /*
-            print("delay start")
-
-            print("delay 1000")
-            if extstr != "" {
-                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
-                //self.recogStr.text = extstr
-            }
-            else{
-                print("하지만 없죠")
-                //self.recogStr.text = ""
-            }
- 
-        }*/
-        /*
-        if check_finish == 1 {
-            if extstr != "" {
-                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
-                //self.recogStr.text = extstr
-            }
-            else{
-                print("하지만 없죠")
-                //self.recogStr.text = ""
-            }
-        }
-        else if check_finish == 0 {
-            print("check finish 0@@@@@@@@@@@@@")
-        }
-*/
         print("ListView select@@@@@@@@@@@")
-
-        
-       
-        
-        
-        /*
-        print("ListView start@@@@@@@@@@@@@@")
-        
-        repeat{
-            rec_ListView.Recognize(extstr)
-            
-            while check_finish < 1 {
-                print("1")
-                //usleep(500)
-                sleep(1)
-            }
-            print("rec ListView")
-            
-        } while check_finish != 1
-        print("ListView before sleep @@@@@@@@@@@")
-        
-        if check_finish == 1 {
-            if extstr != "" {
-                print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
-                //self.recogStr.text = extstr
-            }
-            else{
-                print("하지만 없죠")
-                //self.recogStr.text = ""
-            }
-        }
-    */
         
     }
     
     override func viewDidAppear(animated: Bool) {
-        sleep(6)
-        country = list[0]   //셀렉트 한식
+
+        print("sleep...")
+        sleep(5)
+        print("berfor start recording")
         
-        //hashfunction 쓰면 아마도 될듯
-        
-        self.performSegueWithIdentifier("showDetail", sender: self)
+        return_val = 0
+        self.recognizer()
+        print(self.textLabel)
     }
+    
+    
     
     override func tableView(tableView:UITableView, numberOfRowsInSection section : Int)
         -> Int{
@@ -221,6 +114,103 @@ class ListViewController : UITableViewController{
             let destination = segue.destinationViewController as! TableViewControllerDetail
             destination.selctedCountry = country
         }
+    }
+    
+
+    //////
+    func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue(), block)
+    }
+    
+    ///////////////////////////////////
+    
+    func recognizer() {
+        //self.textLabel.text = ""
+        textLabel = ""
+        if(self.client != nil){
+            self.client = nil
+        }
+        config = [SpeechRecognizerConfigKeyApiKey: "5b0a1608e5c23b4f7d002bd24f089eed",SpeechRecognizerConfigKeyServiceType : selectedServiceType]
+        config2 = [SpeechRecognizerConfigKeyApiKey: "5b0a1608e5c23b4f7d002bd24f089eed",SpeechRecognizerConfigKeyServiceType : selectedServiceType,
+                   SpeechRecognizerConfigKeyUserDictionary : "한식\n중식\n일식\n양식\n분식\n라면\n귀피"]
+        //고립어 추가
+      //  config [SpeechRecognizerConfigKeyUserDictionary] = "한식\n중식\n일식\n양식\n분식\n라면\n귀피"
+        
+        //self.client = MTSpeechRecognizerClient (config: config as [NSObject : AnyObject])
+        self.client = MTSpeechRecognizerClient (config: config2 as [NSObject : AnyObject])
+        
+        
+        //allocate MTSpeech... with config
+        print("client instance")
+        self.client?.delegate = self
+        //set delegate
+        print("set delegate")
+        self.client?.startRecording()
+        //recognization start...
+        print("start recording...")
+        
+    }
+    
+    ///////////////////////////////////
+    /* RecognizeClient.h */
+    //required
+    func onReady(){
+        print("on ready...set return val to 0")
+      //  return_val = 0
+    }
+    
+    func onBeginningOfSpeech() {
+        print("on beginning of speech...")
+    }
+    
+    func onEndOfSpeech() {
+        print("on end of speech...")
+    }
+    
+    func onError(errorCode: MTSpeechRecognizerError, message: String!/*!*/) {
+        print("on error...")
+    }
+    
+    func onPartialResult(partialResult: String!/*!*/) {
+      print(partialResult)
+    }
+    
+    func onResults(results: [AnyObject]!/*!*/, confidences: [AnyObject]!/*!*/, marked: Bool) {
+        //       self.textLabel.text = ""
+        textLabel = ""
+        if((self.client) != nil){
+            self.client = nil;
+        }
+        print("on result...start")
+        result = results[0] as! String
+        
+        //self.textLabel.text = result
+        textLabel = result
+        print("on result...end" + result)
+        
+        
+        
+        
+    }
+    
+    func onAudioLevel(audioLevel: Float) {
+        print("on Audiolevel...")
+    }
+    
+    func onFinished() {
+        print("on finished...")
+        // flag_return()
+        return_val = 1
+    }
+    
+    /* RecognizeViewDelegate.h */
+    //optional
+    // 그런데 위의 함수와 중복이네욤??: onResults, onError
+    ///////////////////////////////////////
+    func flag_return() -> Int{
+        print("REC_func_flag_ruturn")
+        return return_val
     }
 
 }

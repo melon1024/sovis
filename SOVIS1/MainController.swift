@@ -18,6 +18,9 @@ class MainController: UIViewController {
     
     var inputstr : String?
     
+    var recog_inst_main = REC_U2()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let now = NSDate()
@@ -33,24 +36,21 @@ class MainController: UIViewController {
         let kk : String = "안녕하세요 소비스입니다 무엇을 도와드릴까요?"
         tts.someMethod(kk)
         
-        //let rec: SpeechRecognizerSampleViewController = SpeechRecognizerSampleViewController()
-        //var str : String = "하하"
-        //str = rec.recogMethod()
-        //inputstr = String(rec.recogMethod())
-        //tts.someMethod(str)
-        
-        //glstr = globstr.Recognize()
-        
-        //globstr.resultText.text
         /*
-        if globstr.resultText.text != nil {
-            print(globstr.resultText.text)
-        }
- */
+        self.recogStr.text = ""
+        runAfterDelay(3){
+            self.recog_inst_main.recognizer()
+            
+            
+            
+            
+        }*/
+        
+        /*
         if globstr.recogstr != nil {
             glstr = globstr.recogstr
             print("dfdfdfdfdfdfdf" + String(glstr))
-                
+            
         }
         if extstr != "" {
             print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
@@ -59,6 +59,7 @@ class MainController: UIViewController {
         else{
             self.recogStr.text = ""
         }
+*/
         
         
         // Do any additional setup after loading the view.
@@ -77,12 +78,7 @@ class MainController: UIViewController {
     
    
     @IBAction func startRecog(sender: AnyObject) {
-       /*
-        let rec: SpeechRecognizerSampleViewController = SpeechRecognizerSampleViewController()
-        
-        inputstr = rec.recogMethod()
-        print(inputstr)
-        */
+
         
     }
 
@@ -95,5 +91,11 @@ class MainController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // He dropped the ball
+    func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue(), block)
+    }
 
 }
