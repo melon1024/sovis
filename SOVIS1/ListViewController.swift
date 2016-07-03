@@ -20,17 +20,86 @@ class ListViewController : UITableViewController,
     
     var dic_array: Array<String> = ["한식", "중식", "일식", "양식", "분식", "라면", "귀피"]
     
+    var idx_total_cnt: Int = 0
+    var strset1: Array<String> = ["신촌", "대흥"]
+    var strset2: Array<String> = ["병원", "약국", "음식"]
+    var strset3: Array<String> = ["정형외과", "내과", "한식", "중식", "일식"]
+    var strset1_idx: Int?
+    var strset2_idx: Int?
+    var strset3_idx: Int?
+    
     var result = ""{
         didSet{
+        /*
             for txt in dic_array {
                 if result == txt {
                     performSegueWithIdentifier("showDetail", sender: self)
                     
                 }
             }
-            /*if oldValue != result{
+        */
+        /*  if oldValue != result{
             performSegueWithIdentifier("showDetail", sender: self)
- */
+        */
+            if result == "-1" {
+                print("go to itself")
+                performSegueWithIdentifier("root view controller", sender: self)
+            }
+            idx_total_cnt = 0
+            strset1_idx = -1    //지역
+            strset2_idx = -1    //종류
+            strset3_idx = -1    //종류 -detail
+            
+            for (index, txt) in strset1.enumerate() {
+                if result.rangeOfString(txt) != nil {
+                    strset1_idx = index
+                    idx_total_cnt += 1
+                    break
+                }
+            }
+            
+            for (index, txt) in strset2.enumerate() {
+                if result.rangeOfString(txt) != nil {
+                    strset2_idx = index
+                    idx_total_cnt += 10
+                    break
+                }
+            }
+            
+            for (index, txt) in strset3.enumerate() {
+                if result.rangeOfString(txt) != nil {
+                    strset3_idx = index
+                    idx_total_cnt += 100
+                    break
+                }
+            }
+        
+            switch idx_total_cnt {
+            case 0:
+                print("try again...all idxes are -1 [\(strset1_idx)] [\(strset2_idx)] [\(strset3_idx)]")
+                break
+            case 1, 10, 100:
+                 print("idx[1]...[\(strset1_idx)] [\(strset2_idx)] [\(strset3_idx)]")
+                break
+            case 11, 101, 110:
+                 print("idx[2]...[\(strset1_idx)] [\(strset2_idx)] [\(strset3_idx)]")
+                break
+            case 111:
+                print("idx[3]...[\(strset1_idx)] [\(strset2_idx)] [\(strset3_idx)]")
+                break
+            default:
+                break
+            }
+            
+            /*
+            if strset1_idx == -1 && strset2_idx == -1 && strset3_idx == -1 {
+                print("try again...")
+            }
+            else {
+         
+               
+            }
+            */
             
         }
     }
@@ -42,9 +111,10 @@ class ListViewController : UITableViewController,
     
     //test array
     var array_set: Array<String> = ["봉선", "태연", "동네엉아", "패왕", "시스타조커"]
-    //var selectedServiceType: String = SpeechRecognizerServiceTypeWord;
-    var selectedServiceType: String = SpeechRecognizerServiceTypeDictation
-    
+    //var selectedServiceType: String = SpeechRecognizerServiceTypeWeb      //검색어
+    var selectedServiceType: String = SpeechRecognizerServiceTypeDictation  //연속어
+    //var selectedServiceType: String = SpeechRecognizerServiceTypeWord     //고립어
+
     var return_val: Int = 0
     
     
@@ -74,7 +144,7 @@ class ListViewController : UITableViewController,
     override func viewDidAppear(animated: Bool) {
 
         print("sleep...")
-        sleep(5)
+        sleep(4)
         print("berfor start recording")
         
         return_val = 0
@@ -132,13 +202,12 @@ class ListViewController : UITableViewController,
             self.client = nil
         }
         config = [SpeechRecognizerConfigKeyApiKey: "5b0a1608e5c23b4f7d002bd24f089eed",SpeechRecognizerConfigKeyServiceType : selectedServiceType]
-        config2 = [SpeechRecognizerConfigKeyApiKey: "5b0a1608e5c23b4f7d002bd24f089eed",SpeechRecognizerConfigKeyServiceType : selectedServiceType,
-                   SpeechRecognizerConfigKeyUserDictionary : "한식\n중식\n일식\n양식\n분식\n라면\n귀피"]
+        config2 = [SpeechRecognizerConfigKeyApiKey: "5b0a1608e5c23b4f7d002bd24f089eed",SpeechRecognizerConfigKeyServiceType : selectedServiceType, SpeechRecognizerConfigKeyUserDictionary : "한식\n중식\n일식\n양식\n분식\n라면\n귀피"]
         //고립어 추가
       //  config [SpeechRecognizerConfigKeyUserDictionary] = "한식\n중식\n일식\n양식\n분식\n라면\n귀피"
         
-        //self.client = MTSpeechRecognizerClient (config: config as [NSObject : AnyObject])
-        self.client = MTSpeechRecognizerClient (config: config2 as [NSObject : AnyObject])
+        self.client = MTSpeechRecognizerClient (config: config as [NSObject : AnyObject])
+        //self.client = MTSpeechRecognizerClient (config: config2 as [NSObject : AnyObject])
         
         
         //allocate MTSpeech... with config
@@ -169,6 +238,7 @@ class ListViewController : UITableViewController,
     }
     
     func onError(errorCode: MTSpeechRecognizerError, message: String!/*!*/) {
+        result = "-1"
         print("on error...")
     }
     
