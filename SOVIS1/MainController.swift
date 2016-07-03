@@ -36,33 +36,22 @@ class MainController: UIViewController {
         let kk : String = "안녕하세요 소비스입니다 무엇을 도와드릴까요?"
         tts.someMethod(kk)
         
-        /*
-        self.recogStr.text = ""
-        runAfterDelay(3){
-            self.recog_inst_main.recognizer()
-            
-            
-            
-            
-        }*/
+        let tabBar = self.tabBarController?.tabBar
+        //let item0 = tabBar?.items![0]
+        //Let item1 = tabBar?.items![1]
+        let item2 = (tabBar?.items![2])! as UITabBarItem
+        //let item3 = tabBar?.items![3]
+        //let item4 = tabBar?.items![4]
         
-        /*
-        if globstr.recogstr != nil {
-            glstr = globstr.recogstr
-            print("dfdfdfdfdfdfdf" + String(glstr))
-            
-        }
-        if extstr != "" {
-            print("여러분들 저 듣보잡입니다. 컴공 아닙니다." + extstr)
-            self.recogStr.text = extstr
-        }
-        else{
-            self.recogStr.text = ""
-        }
-*/
-        
+        item2.title=""
+        item2.imageInsets = UIEdgeInsetsMake(6,0,-6,0)
+        //let item2 = tabBar?.!items[2]item2.image.
         
         // Do any additional setup after loading the view.
+        
+        let button : UIButton
+        
+        
     }
 
     override func didReceiveMemoryWarning() { 

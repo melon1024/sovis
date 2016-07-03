@@ -43,7 +43,7 @@ class ListViewController : UITableViewController,
         */
             if result == "-1" {
                 print("go to itself")
-                performSegueWithIdentifier("root view controller", sender: self)
+                //performSegueWithIdentifier("root view controller", sender: self)
             }
             idx_total_cnt = 0
             strset1_idx = -1    //지역
@@ -142,14 +142,15 @@ class ListViewController : UITableViewController,
     }
     
     override func viewDidAppear(animated: Bool) {
-
-        print("sleep...")
-        sleep(4)
-        print("berfor start recording")
         
-        return_val = 0
+        print("sleep...")
+        //sleep(4)
+        print("berfor start recording")
+        runAfterDelay(4){
+        self.return_val = 0
         self.recognizer()
         print(self.textLabel)
+        }
     }
     
     
@@ -187,7 +188,7 @@ class ListViewController : UITableViewController,
     }
     
 
-    //////
+    ///////
     func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue(), block)
