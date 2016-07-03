@@ -19,7 +19,7 @@ MTSpeechRecognizerViewDelegate /* result */{
     var selectedServiceType: String = SpeechRecognizerServiceTypeDictation
     //TTS
     let red_ListViewController: TTS_UIViewController = TTS_UIViewController()
-
+    
     //select variables...
     var tabbar_array: Array<String> = ["공지사항", "주변정보", "0", "날씨", "설정"]
     var tabbar_cnt = 0
@@ -27,20 +27,20 @@ MTSpeechRecognizerViewDelegate /* result */{
     
     
     //주변정보...
-    var category_array: Array<String> = ["대형마트", "편의점", "어린이집", "유치원", "학교", "학원", "주차장", "주유소", "충전소", "은행", "문화시설", "중개업소", "공공기관", "관광명소", "숙박", "음식점", "음식", "카페", "까페", "병원", "약국"]
+    var category_array: Array<String> = ["대형마트", "편의점", "어린이집", "유치원", "학교", "학원", "주차장", "주유소", "충전소", "은행", "문화시설", "중개업소", "공공기관", "관광명소", "숙박", "음식점", "음식", "카페", "병원", "약국"]
     
-    var verb_array: Array<String> = ["보여줘", "알려줘", "말해줘", /**/ "추천해줘", "추천", "골라줘", "골라"]
+    var verb_array: Array<String> = ["보여", "알려", "말해", /**/ "추천", "골라"]
     var idx_total_cnt: Int = 0
-   
     
-    var dic_array: Array<String> = ["한식", "중식", "일식", "양식", "분식", "라면", "귀피"]
+    
+    // var dic_array: Array<String> = ["한식", "중식", "일식", "양식", "분식", "라면", "귀피"]
     
     
     var notice_array: Array<String> = ["학사", "일반", "장학", "학과"]
-
-    var strset1: Array<String> = ["신촌", "대흥"]
-    var strset2: Array<String> = ["병원", "약국", "음식"]
-    var strset3: Array<String> = ["정형외과", "내과", "한식", "중식", "일식"]
+    
+    //  var strset1: Array<String> = ["신촌", "대흥"]
+    //  var strset2: Array<String> = ["병원", "약국", "음식"]
+    //  var strset3: Array<String> = ["정형외과", "내과", "한식", "중식", "일식"]
     var strset1_idx: Int?
     var strset2_idx: Int?
     var strset3_idx: Int?
@@ -103,81 +103,115 @@ MTSpeechRecognizerViewDelegate /* result */{
                     print("else if tabbar_cnt > 1")
                     result = ""
                     sleep(4)
-                   // self.tabBarController?.selectedIndex = 0
+                    // self.tabBarController?.selectedIndex = 0
                     self.tabBarController?.selectedIndex = 0
-                  //  let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("REDLIGHT")
-                  //  self.showViewController(vc as! UIViewController, sender: vc)
+                    //  let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("REDLIGHT")
+                    //  self.showViewController(vc as! UIViewController, sender: vc)
                 }
                 
                 print(".....")
-                
-                
                 idx_total_cnt = 0
                 strset1_idx = -1    //지역
                 strset2_idx = -1    //종류
                 strset3_idx = -1    //종류 -detail
                 
-                for (index, txt) in strset1.enumerate() {
-                    if result.rangeOfString(txt) != nil {
-                        strset1_idx = index
-                        idx_total_cnt += 1
+                
+                if result.rangeOfString("공지") != nil {
+                    //"공지사항" 이라고 말 안하고 ~~ 공지 라고 말한 경우
+                    for (index, txt) in notice_array.enumerate() {
+                        if result.rangeOfString(txt) != nil {
+                            print("idx:[\(index)], \(txt)")
+                            // 해당 공지사항으로 이동하는 부분 추가 되어야 되는 부분
+                            result = ""
+                            idx_total_cnt += 1
+                            //self.tabBarController?.selectedIndex = 0
+                            
+                            break
+                        }
+                    }
+                    
+                    if idx_total_cnt == 1 {
+                        print("공지사항으로 가버렷!")
+                        self.tabBarController?.selectedIndex = 0
+                    }
+                    else{
+                        self.tabBarController?.selectedIndex = 0
+                    }
+                }
+                else{
+                    //공지 이외의 문장: ~~ 안내해줘, ~~ 추천해줘, 아무 의미없는 말
+                    print("else")
+                    for (index, txt) in category_array.enumerate() {
+                        if result.rangeOfString(txt) != nil {
+                            strset1_idx = index
+                            idx_total_cnt += 1
+                            
+                        }
+                    }
+                    
+                    for (index, txt) in verb_array.enumerate() {
+                        if result.rangeOfString(txt) != nil {
+                            strset2_idx = index
+                            idx_total_cnt += 10
+                            
+                        }
+                    }
+                    /*
+                     for (index, txt) in strset3.enumerate() {
+                     if result.rangeOfString(txt) != nil {
+                     strset3_idx = index
+                     idx_total_cnt += 100
+                     break
+                     }
+                     }
+                     */
+                    
+                    
+                    print("end of else")
+                    result = ""
+                    //goto start...
+                    
+                    
+                    
+                    //idx_total_cnt ++ 과정(+=1)에서 10 넘을 수도 있지만, 음성인식 되는 문장이 15자 이하기 때문에 안되겠죠...
+                    
+                    switch idx_total_cnt {
+                    case 0: //false
+                        print("try again...all idxes are -1 [\(strset1_idx)] [\(strset2_idx)]")
+                        break
+                    case 1: //true
+                        //추천정보 초기 page로 이동
+                        print("case 1  [\(strset1_idx), \(category_array[strset1_idx!])] ")
+                        self.tabBarController?.selectedIndex = 1
+                        break
+                    case 11: //true
+                        //detailed page 까지 한번에 이동
+                        print("case 11  [\(strset1_idx), \(category_array[strset1_idx!])] [\(strset2_idx), \(verb_array[strset2_idx!])]")
+                        break
+                    case 2..<10, 12..<100: //false
+                        //각 카테고리에서 2개 이상나옴(하나의 정보만 알려줘야 되는데 한번에 여러 정보를 알고 싶어함..)
+                        print("case false")
+                        self.tabBarController?.selectedIndex = 0
+                        break
+                        
+                    default:
+                        print("case default")
+                        self.tabBarController?.selectedIndex = 0
                         break
                     }
                 }
-                
-                for (index, txt) in strset2.enumerate() {
-                    if result.rangeOfString(txt) != nil {
-                        strset2_idx = index
-                        idx_total_cnt += 10
-                        break
-                    }
-                }
-                
-                for (index, txt) in strset3.enumerate() {
-                    if result.rangeOfString(txt) != nil {
-                        strset3_idx = index
-                        idx_total_cnt += 100
-                        break
-                    }
-                }
-                
-                switch idx_total_cnt {
-                case 0:
-                    print("try again...all idxes are -1 [\(strset1_idx)] [\(strset2_idx)] [\(strset3_idx)]")
-                    break
-                case 1, 10, 100:
-                    print("idx[1]...[\(strset1_idx)] [\(strset2_idx)] [\(strset3_idx)]")
-                    break
-                case 11, 101, 110:
-                    print("idx[2]...[\(strset1_idx)] [\(strset2_idx)] [\(strset3_idx)]")
-                    break
-                case 111:
-                    print("idx[3]...[\(strset1_idx)] [\(strset2_idx)] [\(strset3_idx)]")
-                    break
-                default:
-                    break
-                }
-                
-                /*
-                 if strset1_idx == -1 && strset2_idx == -1 && strset3_idx == -1 {
-                 print("try again...")
-                 }
-                 else {
-                 
-                 
-                 }
-                 */
             }
+            print("end of didSet")
         }
     }
     
     
     override func viewWillAppear(animated: Bool) {
         
- 
+        
         let redkk_ListViewController : String = "음성인식."
         red_ListViewController.someMethod(redkk_ListViewController)
-            
+        
         
     }
     override func viewDidLoad() {
