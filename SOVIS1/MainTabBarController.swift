@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class MainTabbarController : UITabBarController,UITabBarControllerDelegate{
+    
+    
+ 
+    
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        print(viewController)
+    }
+}

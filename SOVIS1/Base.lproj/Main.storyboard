@@ -950,15 +950,16 @@
             </objects>
             <point key="canvasLocation" x="2150" y="47"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tabbar Controller-->
         <scene sceneID="isS-kl-MXa">
             <objects>
-                <tabBarController id="wfO-eg-p3H" sceneMemberID="viewController">
+                <tabBarController id="wfO-eg-p3H" customClass="MainTabbarController" customModule="SOVIS1" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="DNv-eK-LWu">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="DNv-eK-LWu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.69411764705882351" green="0.066666666666666666" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="uFS-OA-kXr" kind="relationship" relationship="viewControllers" id="5do-EH-ck3"/>

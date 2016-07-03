@@ -11,15 +11,17 @@ import UIKit
 var globstr: REC_UIViewController = REC_UIViewController ()
 var glstr : String?
 
-class MainController: UIViewController {
-
-    @IBOutlet weak var DateLabel: UILabel!
+class MainController: UIViewController,UITabBarDelegate {
+    
+       @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var recogStr: UILabel!
+    
+    
     
     var inputstr : String?
     
     var recog_inst_main = REC_U2()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,26 +33,45 @@ class MainController: UIViewController {
         //tts.tts_func()
         //let tts = TTS_UIViewController.tts_func()
         //globstr.recogstr = nil
-        
+        /*
         let tts: TTS_UIViewController = TTS_UIViewController()
         let kk : String = "안녕하세요 소비스입니다 무엇을 도와드릴까요?"
         tts.someMethod(kk)
+        */
         
         let tabBar = self.tabBarController?.tabBar
-        //let item0 = tabBar?.items![0]
-        //Let item1 = tabBar?.items![1]
+        tabBar?.tintColor? = UIColor(red: 177/255.0,green: 17/255.0,blue : 12/255.0, alpha: 1.0)
         let item2 = (tabBar?.items![2])! as UITabBarItem
-        //let item3 = tabBar?.items![3]
-        //let item4 = tabBar?.items![4]
-        
         item2.title=""
+        let buttonImage=UIImage(named: "recording")?.imageWithRenderingMode(.AlwaysOriginal)
+        buttonImage?.drawInRect(CGRectMake(0, 0, 50, 50))
+        item2.image=buttonImage
+        
         item2.imageInsets = UIEdgeInsetsMake(6,0,-6,0)
+        item2.selectedImage = UIImage(named: "selectedRecording")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        
         //let item2 = tabBar?.!items[2]item2.image.
         
         // Do any additional setup after loading the view.
+        /*
+        let button = UIButton()
+        button.frame = CGRectMake(0, 0, 100, 100)
+        button.setBackgroundImage(UIImage(named: "recognize"), forState: UIControlState.Normal)
+        let heigtDiffernece = 100-(self.tabBarController?.tabBar.frame.size.height)!
+        if (heigtDiffernece < 0)
+        {
+            button.center = (tabBar?.center)!
+        }
+        else
+        {
+            var center = tabBar?.center
+            center!.y = center!.y-heigtDiffernece/2.0
+            button.center=center!
+        }
         
-        let button : UIButton
-        
+        self.tabBarController?.tabBar.insertSubview(button, atIndex: 2)
+        */
         
     }
 
@@ -80,7 +101,9 @@ class MainController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+    override func viewDidAppear(animated: Bool) {
+        
+    }
     // He dropped the ball
     func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
