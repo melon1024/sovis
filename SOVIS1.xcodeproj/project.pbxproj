@@ -40,6 +40,7 @@
 		28C267E71D1C25320059868C /* yongssa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DF1D1C25320059868C /* yongssa.jpg */; };
 		28C267E81D1C25320059868C /* coco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267E01D1C25320059868C /* coco.jpg */; };
 		A39CE4921D26ADA300AE2CCB /* REC_U2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39CE4911D26ADA300AE2CCB /* REC_U2.swift */; };
+		A39CE4961D294CD900AE2CCB /* REDLIGHT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39CE4951D294CD900AE2CCB /* REDLIGHT.swift */; };
 		A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */; };
 		A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */; };
 		D38E29851D26536C001A7769 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38E29831D26536C001A7769 /* NotificationController.swift */; };
@@ -87,6 +88,7 @@
 		28C267DF1D1C25320059868C /* yongssa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yongssa.jpg; sourceTree = "<group>"; };
 		28C267E01D1C25320059868C /* coco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coco.jpg; sourceTree = "<group>"; };
 		A39CE4911D26ADA300AE2CCB /* REC_U2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REC_U2.swift; sourceTree = "<group>"; };
+		A39CE4951D294CD900AE2CCB /* REDLIGHT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDLIGHT.swift; sourceTree = "<group>"; };
 		A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTS_UIViewController.h; sourceTree = "<group>"; };
 		A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTS_UIViewController.m; sourceTree = "<group>"; };
 		A3BF45111D1AFFBC00334083 /* REC_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REC_UIViewController.h; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				A3BF45111D1AFFBC00334083 /* REC_UIViewController.h */,
 				A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */,
 				A39CE4911D26ADA300AE2CCB /* REC_U2.swift */,
+				A39CE4951D294CD900AE2CCB /* REDLIGHT.swift */,
 			);
 			path = SOVIS1;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */,
 				D38E29861D26536C001A7769 /* ScheduleController.swift in Sources */,
 				A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */,
+				A39CE4961D294CD900AE2CCB /* REDLIGHT.swift in Sources */,
 				2889FB3A1D291F2D00F2F9C7 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
