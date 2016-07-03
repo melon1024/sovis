@@ -11,7 +11,7 @@ import Foundation
 class MainTabbarController : UITabBarController,UITabBarControllerDelegate{
     
     
- 
+    var temp : String?
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         print(viewController)
