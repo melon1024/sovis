@@ -65,7 +65,7 @@ class NotificationController : UITableViewController {
         
         do{
             let JsonObject = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSDictionary
-            
+            print(JsonObject)
             let boarder = JsonObject["boarder"] as! NSArray
             
             var noti : NotificationList
