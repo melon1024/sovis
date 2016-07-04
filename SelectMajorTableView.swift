@@ -10,7 +10,9 @@ import Foundation
 
 class SelectMajorTableView:UITableViewController{
     let userSetting = NSUserDefaults.standardUserDefaults()
-    @IBAction func unwindAgoView(segue: UIStoryboardSegue){}
+    @IBAction func unwindAgoView(segue: UIStoryboardSegue){
+    //self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
     let majorList
         =
         ["화공생명학과", "화학과", "아트앤테크놀로지", "컴퓨터공학",
@@ -27,6 +29,17 @@ class SelectMajorTableView:UITableViewController{
         let cell = tableView.dequeueReusableCellWithIdentifier("majorListCell") as UITableViewCell!
         
         cell.textLabel?.text = row
+        
+        //check mark for setting item
+        if (row == userSetting.stringForKey("Major"))
+        {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
+        }
+        else
+        {
+            cell.accessoryType = UITableViewCellAccessoryType.None;
+        }
+
         return cell
     }
     override func viewDidLoad() {
@@ -39,8 +52,9 @@ class SelectMajorTableView:UITableViewController{
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
        userSetting.setObject(majorList[indexPath.row], forKey: "Major")
+        
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-        self.performSegueWithIdentifier("unwindAgoView", sender:self)
+        self.navigationController?.popViewControllerAnimated(true)
         print("unwind...;")
         
     }
