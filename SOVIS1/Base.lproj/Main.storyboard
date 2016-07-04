@@ -327,15 +327,15 @@
                                 <exclude reference="asV-6Z-OXm"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="NIG-Kx-hzj"/>
+                                <exclude reference="DES-jY-nTI"/>
+                                <exclude reference="WWP-FX-AWT"/>
                                 <exclude reference="2PF-zR-15K"/>
                                 <exclude reference="4Se-id-pXu"/>
                                 <exclude reference="kvb-og-k8h"/>
-                                <exclude reference="DES-jY-nTI"/>
-                                <exclude reference="WWP-FX-AWT"/>
                                 <exclude reference="097-ED-IAi"/>
                                 <exclude reference="M1Y-D3-qw8"/>
                                 <exclude reference="MXZ-UL-i5D"/>
-                                <exclude reference="NIG-Kx-hzj"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -345,15 +345,15 @@
                                 <include reference="asV-6Z-OXm"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="NIG-Kx-hzj"/>
+                                <include reference="DES-jY-nTI"/>
+                                <include reference="WWP-FX-AWT"/>
                                 <include reference="2PF-zR-15K"/>
                                 <include reference="4Se-id-pXu"/>
                                 <include reference="kvb-og-k8h"/>
-                                <include reference="DES-jY-nTI"/>
-                                <include reference="WWP-FX-AWT"/>
                                 <include reference="097-ED-IAi"/>
                                 <include reference="M1Y-D3-qw8"/>
                                 <include reference="MXZ-UL-i5D"/>
-                                <include reference="NIG-Kx-hzj"/>
                             </mask>
                         </variation>
                     </view>
