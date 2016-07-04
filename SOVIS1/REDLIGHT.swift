@@ -152,7 +152,7 @@ MTSpeechRecognizerViewDelegate /* result */{
                                 strset2_idx = index
                                 idx_total_cnt += 10
                                 
-                            }
+                            } 
                         }
                         /*
                          for (index, txt) in strset3.enumerate() {
