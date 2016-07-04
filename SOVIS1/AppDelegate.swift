@@ -17,12 +17,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         //URLString key 값에 초기 URL주소를 저장
-        NSUserDefaults.standardUserDefaults().registerDefaults(["학사공지": "https://163.239.169.54:5002/sg1"])
-        NSUserDefaults.standardUserDefaults().registerDefaults(["장학공지": "https://163.239.169.54:5002/sg3"])
-        NSUserDefaults.standardUserDefaults().registerDefaults(["일반공지": "https://163.239.169.54:5002/sg2"])
-        NSUserDefaults.standardUserDefaults().registerDefaults(["전체일정": "https://163.239.169.54:5002/schedule"])
-        NSUserDefaults.standardUserDefaults().registerDefaults(["컴과공지": "https://163.239.169.54:5002/cse"])
-        sleep(1)
+        NSUserDefaults.standardUserDefaults().registerDefaults(["학사공지": "http://163.239.169.54:5002/sg1"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["일반공지": "http://163.239.169.54:5002/sg2"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["장학공지": "http://163.239.169.54:5002/sg3"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["전체일정": "http://163.239.169.54:5002/schedule"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["컴과공지": "http://163.239.169.54:5002/cse"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["기계공지": "http://163.239.169.54:5002/me"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["화공공지": "http://163.239.169.54:5002/chemeng"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["전자공지": "http://163.239.169.54:5002/ee"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["대형마트": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=MT1&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["편의점": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=CS2&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["어린이집": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=PS3&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["학교": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=SC4&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["학원": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=AC5&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["주차장": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=PK6&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["주유소": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=OL7&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["은행": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=BK9&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["문화시설": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=CT1&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["중개업소": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=AG2&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["공공기관": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=PO3&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["관광명소": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=AT4&location=37.551305,126.9385642&radius=30000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["숙박": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=AD5&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["음식점": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=FD6&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["카페": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=CE7&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["병원": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=HP8&location=37.551305,126.9385642&radius=20000"])
+        NSUserDefaults.standardUserDefaults().registerDefaults(["약국": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&code=PM9&location=37.551305,126.9385642&radius=20000"])
         return true
     }
 

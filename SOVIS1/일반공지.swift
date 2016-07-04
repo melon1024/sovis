@@ -1,14 +1,14 @@
 //
-//  NotificationController.swift
-//  crawling
+//  일반공지.swift
+//  SOVIS1
 //
-//  Created by sgcs on 2016. 6. 29..
-//  Copyright © 2016년 kihwan. All rights reserved.
+//  Created by sgcs on 2016. 7. 4..
+//  Copyright © 2016년 JJ. All rights reserved.
 //
 
 import UIKit
 
-class NotificationController : UITableViewController {
+class NormalNoticeController : UITableViewController {
     
     var list = Array<NotificationList>()
     
@@ -18,14 +18,16 @@ class NotificationController : UITableViewController {
         super.viewWillAppear(animated)
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         self.urlSession = NSURLSession(configuration: configuration)
-        
     }
     
     override func viewDidLoad() {
-        let urlString = NSUserDefaults.standardUserDefaults().stringForKey("학사공지")
+        //기존의 구분선 삭제하기
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        let urlString = NSUserDefaults.standardUserDefaults().stringForKey("일반공지")
         updatelist(urlString!)
     }
-        
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.urlSession.invalidateAndCancel()
@@ -44,16 +46,35 @@ class NotificationController : UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // 주어진 행에 맞는 데이터 소스를 가져옴
-        let cell = tableView.dequeueReusableCellWithIdentifier("NotificationCell") as! NotificationCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("NormalCell") as! NormalCell
         let item = self.list[indexPath.row]
+        
+        //구분선역할을 할 뷰를 선언
+        let separatorLineView: UIView = UIView(frame: CGRectMake(0, 0, view.frame.size.width, 5))
+        //뷰의 색을 지정 여기에 이미지를 넣을 수도 있습니다
+        separatorLineView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+        
+        //셀에 추가하기
+        cell.contentView.addSubview(separatorLineView)
+        
         cell.Title.text = item.Title
         cell.Date.text = item.date
         return cell
     }
     
     override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let cell = cell as? NotificationCell {
+        if let cell = cell as? ScholarCell {
             cell.dataTask?.cancel()
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "UrlView")
+        {
+            let Select = segue.destinationViewController as! UrlViewController
+            let myindex = self.tableView.indexPathForSelectedRow!
+            let row = myindex.row
+            Select.url = list[row].URL
         }
     }
     
@@ -62,10 +83,11 @@ class NotificationController : UITableViewController {
         let url = NSURL(string: key)
         
         let data = NSData(contentsOfURL: url!)
+        //print(NSString(data: data!, encoding: NSUTF8StringEncoding))
         
         do{
             let JsonObject = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSDictionary
-            print(JsonObject)
+            
             let boarder = JsonObject["boarder"] as! NSArray
             
             var noti : NotificationList
