@@ -38,7 +38,7 @@ class SelectMajorTableView:UITableViewController{
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       userSetting.setObject(majorList[index    Path.row], forKey: "Major")
+       userSetting.setObject(majorList[indexPath.row], forKey: "Major")
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         self.performSegueWithIdentifier("unwindAgoView", sender:self)
         print("unwind...;")
