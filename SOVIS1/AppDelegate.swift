@@ -33,6 +33,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let TabBarItem3 = tabBar.items![2]
         let TabBarItem4 = tabBar.items![3]
         let TabBarItem5 = tabBar.items![4]*/
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if ( defaults.stringForKey("Duration") == nil)
+        {
+            defaults.setInteger(30, forKey: "Duration")
+        }
+        
+        if (defaults .stringForKey("Major") == nil)
+        {
+            defaults.setObject("컴퓨터공학과", forKey: "Major")
+        }
         return true
     }
 
@@ -60,4 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+
 

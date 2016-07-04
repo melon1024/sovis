@@ -127,10 +127,12 @@ class ListViewController : UITableViewController,
     var flag_list: Int?
     
     override func viewWillAppear(animated: Bool) {
-        
+        #if DEBUG
+            #else
         let tts_ListViewController: TTS_UIViewController = TTS_UIViewController()
         let kk_ListViewController : String = "원하시는 음식 종류를 선택해주세요."
         tts_ListViewController.someMethod(kk_ListViewController)
+            #endif
         flag_list = 0   //0: loop while, 1: break while
   
 

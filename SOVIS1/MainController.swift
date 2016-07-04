@@ -15,6 +15,7 @@ class MainController: UIViewController,UITabBarDelegate {
     
        @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var recogStr: UILabel!
+    @IBOutlet weak var settingTesting: UILabel!
     
     
     
@@ -28,16 +29,19 @@ class MainController: UIViewController,UITabBarDelegate {
         let now = NSDate()
         NSUserDefaults.standardUserDefaults().setObject(now, forKey: "buttonTap")
         UpdateDateLabel()
-        
-        //let tts = TTS_UIViewController()
-        //tts.tts_func()
-        //let tts = TTS_UIViewController.tts_func()
-        //globstr.recogstr = nil
-        /*
+        #if DEBUG
+            #else
+            
+//        let tts = TTS_UIViewController()
+//        tts.tts_func()
+//        let tts = TTS_UIViewController.tts_func()
+//        globstr.recogstr = nil
+
         let tts: TTS_UIViewController = TTS_UIViewController()
         let kk : String = "안녕하세요 소비스입니다 무엇을 도와드릴까요?"
         tts.someMethod(kk)
-        */
+            #endif
+            
         
         let tabBar = self.tabBarController?.tabBar
         tabBar?.tintColor? = UIColor(red: 177/255.0,green: 17/255.0,blue : 12/255.0, alpha: 1.0)
@@ -102,6 +106,8 @@ class MainController: UIViewController,UITabBarDelegate {
     }
     */
     override func viewDidAppear(animated: Bool) {
+        
+        settingTesting.text = "설정 기간 : " + NSUserDefaults.standardUserDefaults().stringForKey("Duration")! + "\n설정학과" + NSUserDefaults.standardUserDefaults().stringForKey("Major")!
         
     }
     // He dropped the ball
