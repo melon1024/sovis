@@ -29,3 +29,36 @@ struct ScheduleList {
     //일정 날짜
     var date : String?
 }
+
+struct DataList {
+    
+    //이름
+    var title : String?
+    
+    //전화번호
+    var phone : String?
+    
+    //카테고리
+    var category : String?
+    
+    //지도 url
+    var placeUrl : String?
+    
+    //image
+    var imageUrl : String?
+    
+    //새주소
+    var newAddress : String?
+    
+    //구주소
+    var address : String?
+    
+    //거리
+    var distance : String?
+    
+    //방향
+    var direction : String?
+    
+    //ID
+    var id : String?
+}
