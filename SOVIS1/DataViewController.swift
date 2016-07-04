@@ -10,13 +10,15 @@ import UIKit
 
 class DataViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     var list = Array<DataList>()
     
     var selectedItem : DataList?
     
     var urlSession: NSURLSession!
+    
+    var key : String?
     
     var row : Int?
     
@@ -28,7 +30,88 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func viewDidLoad() {
-        let urlString = NSUserDefaults.standardUserDefaults().stringForKey("병원제공")
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        //기존의 구분선 삭제하기
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        switch row! {
+        case 0 :
+            //대형마트
+            key = "MT1"
+            break
+        case 1 :
+            //편의점
+            key = "CS2"
+            break
+        case 2 :
+            //어린이집, 유치원
+            key = "PS3"
+            break
+        case 3 :
+            //학교
+            key = "SC4"
+            break
+        case 4 :
+            //학원
+            key = "AC5"
+            break
+        case 5 :
+            //주차장
+            key = "PK6"
+            break
+        case 6 :
+            //주유소, 충전소
+            key = "OL7"
+            break
+        case 7 :
+            //은행
+            key = "BK9"
+            break
+        case 8 :
+            //문화시설
+            key = "CT1"
+            break
+        case 9 :
+            //중개업소
+            key = "AG2"
+            break
+        case 10 :
+            //공공기관
+            key = "PO3"
+            break
+        case 11 :
+            //관광명소
+            key = "AT4"
+            break
+        case 12 :
+            //숙박
+            key = "AD5"
+            break
+        case 13 :
+            //음식점
+            key = "FD6"
+            break
+        case 14 :
+            //카페
+            key = "CF7"
+            break
+        case 15 :
+            //병원
+            key = "HP8"
+            break
+        case 16 :
+            //약국
+            key = "PM9"
+            break
+        default:
+            key = "MT1"
+            break
+        }
+        
+        let urlString = NSUserDefaults.standardUserDefaults().stringForKey(key!)
         updatelist(urlString!)
     }
     
@@ -57,7 +140,7 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let cell = cell as? ScheduleCell {
+        if let cell = cell as? DataCell {
             cell.dataTask?.cancel()
         }
     }

@@ -54,6 +54,7 @@ class CategoryViewController : UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // 주어진 행에 맞는 데이터 소스를 가져옴
         let cell = self.tableView.dequeueReusableCellWithIdentifier("CategoryCell") as! CategoryCell
+        
         let item = self.List[indexPath.row]
         
         //구분선역할을 할 뷰를 선언
@@ -69,7 +70,7 @@ class CategoryViewController : UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let cell = cell as? MajorCell {
+        if let cell = cell as? CategoryCell {
             cell.dataTask?.cancel()
         }
     }

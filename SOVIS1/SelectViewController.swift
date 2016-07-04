@@ -10,15 +10,53 @@ import UIKit
 
 class SelectViewController : UIViewController, UITableViewDelegate {
     
+    var urlSession: NSURLSession!
+    
+    @IBOutlet var tableView: UITableView!
+    
+    @IBOutlet weak var Detail_Title: UILabel!
+    
+    @IBOutlet weak var Detail_category: UILabel!
+
+    @IBOutlet weak var Detail_phone: UILabel!
+    
+    @IBOutlet weak var Detail_address: UILabel!
+    
+    @IBOutlet weak var Detail_newadd: UILabel!
+    
+    @IBOutlet weak var Detail_distance: UILabel!
+    
+    @IBOutlet weak var Detail_direction: UILabel!
+    
     var selectlist : DataList?
     
-    @IBOutlet weak var Name: UILabel!
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        self.urlSession = NSURLSession(configuration: configuration)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let list : DataList? = selectlist
-        Name.text = list?.title
+        tableView.delegate = self
+        
+        //기존의 구분선 삭제하기
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        self.Detail_Title.text = selectlist?.title
+        self.Detail_category.text = selectlist?.category
+        self.Detail_phone.text = selectlist?.phone
+        self.Detail_address.text = selectlist?.address
+        self.Detail_newadd.text = selectlist?.newAddress
+        self.Detail_distance.text = selectlist?.distance
+        self.Detail_direction.text = selectlist?.direction
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.urlSession.invalidateAndCancel()
+        self.urlSession = nil
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,6 +72,7 @@ class SelectViewController : UIViewController, UITableViewDelegate {
             Select.selectName = selectlist?.title
         }
     }
+    
     @IBAction func Back(sender: AnyObject) {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
