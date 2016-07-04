@@ -10,7 +10,8 @@ import UIKit
 
 class OldNotice : UITabBarController {
     
-    
+    var recog_select: Int = 0
+
     
     var descrizioneTab:AcademyNoticeController!
     
@@ -21,9 +22,17 @@ class OldNotice : UITabBarController {
     let tabBtn04 = UIButton()
 
     
+ 
+
+    
+   // nc.addObserver(self,selector: "didReceiveSimpleNotification:",name: "simple-notification",object: nil)
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //#
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: #selector(OldNotice.didReceiveSimpleNotification(_:)), name: "simple-notification", object: nil)
         
         self.tabBar.hidden = true
         
@@ -79,6 +88,31 @@ class OldNotice : UITabBarController {
       
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.selectedIndex = recog_select
+        self.tabBtn01.selected = false
+        self.tabBtn02.selected = false
+        self.tabBtn03.selected = false
+        self.tabBtn04.selected = false
+        switch recog_select {
+        case 0:
+            self.tabBtn01.selected = true
+            break
+        case 1:
+            self.tabBtn02.selected = true
+            break
+        case 2:
+            self.tabBtn03.selected = true
+            break
+        case 3:
+            self.tabBtn04.selected = true
+            break
+        default:
+            break
+        }
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -94,5 +128,16 @@ class OldNotice : UITabBarController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    // Swift Example: Notification Handler Method
+    func didReceiveSimpleNotification(notification: NSNotification) {
+        let message: String? = notification.userInfo!["message"] as? String
+        print("I've got the message \(message)")
+        recog_select = Int(message!)!
+        print("@@@@ [\(recog_select)]")
+    }
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
     
 }

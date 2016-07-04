@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DnJ-s8-D4k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DnJ-s8-D4k">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="3064.5" y="526.5"/>
         </scene>
-        <!--View Controller-->
+        <!--REDLIGHT-->
         <scene sceneID="4JS-FD-zkL">
             <objects>
-                <viewController id="6Sz-gf-ETx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="REDLIGHT" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Sz-gf-ETx" customClass="REDLIGHT" customModule="SOVIS1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fG0-gL-Vog"/>
                         <viewControllerLayoutGuide type="bottom" id="QYy-U0-dwH"/>
@@ -168,13 +168,77 @@
                     <view key="view" contentMode="scaleToFill" id="p7w-OG-NNh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BM-pj-w44">
+                                <rect key="frame" x="580" y="41" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인식된 문장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAi-me-NIU">
+                                <rect key="frame" x="302" y="41" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="추천 문장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teJ-Yk-PjY">
+                                <rect key="frame" x="268" y="150" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1. 근처 맛집 좀 추천해줘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdi-LW-Ai4">
+                                <rect key="frame" x="219" y="211" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2. 주변에 병원 좀 알려줘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dn0-Kf-VNs">
+                                <rect key="frame" x="217" y="272" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3. 학과 공지사항 알고 싶어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDk-pS-mM4">
+                                <rect key="frame" x="210" y="333" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4. 날씨 가르쳐줘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ5-K9-x2y">
+                                <rect key="frame" x="234" y="406" width="132" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bAi-me-NIU" firstAttribute="top" secondItem="fG0-gL-Vog" secondAttribute="bottom" constant="21" id="5Z8-IJ-JM7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0BM-pj-w44" secondAttribute="trailing" id="6BC-OJ-JKC"/>
+                            <constraint firstItem="Hdi-LW-Ai4" firstAttribute="top" secondItem="teJ-Yk-PjY" secondAttribute="bottom" constant="40" id="DVm-8g-yli"/>
+                            <constraint firstItem="Hdi-LW-Ai4" firstAttribute="centerX" secondItem="p7w-OG-NNh" secondAttribute="centerX" id="IQq-vN-vEv"/>
+                            <constraint firstItem="BQ5-K9-x2y" firstAttribute="top" secondItem="uDk-pS-mM4" secondAttribute="bottom" constant="40" id="KrK-ce-z5Z"/>
+                            <constraint firstItem="0BM-pj-w44" firstAttribute="top" secondItem="fG0-gL-Vog" secondAttribute="bottom" constant="21" id="NMc-Gl-ZiX"/>
+                            <constraint firstItem="teJ-Yk-PjY" firstAttribute="top" secondItem="fG0-gL-Vog" secondAttribute="bottom" constant="130" id="RcP-eE-YlY"/>
+                            <constraint firstItem="uDk-pS-mM4" firstAttribute="top" secondItem="Dn0-Kf-VNs" secondAttribute="bottom" constant="40" id="Tlv-8Y-8IM"/>
+                            <constraint firstItem="uDk-pS-mM4" firstAttribute="centerX" secondItem="p7w-OG-NNh" secondAttribute="centerX" id="b4h-Mj-3Kl"/>
+                            <constraint firstItem="BQ5-K9-x2y" firstAttribute="centerX" secondItem="p7w-OG-NNh" secondAttribute="centerX" id="co4-Sf-dIu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bAi-me-NIU" secondAttribute="trailing" constant="200" id="lEb-nH-I61"/>
+                            <constraint firstItem="teJ-Yk-PjY" firstAttribute="centerX" secondItem="p7w-OG-NNh" secondAttribute="centerX" id="lNt-uJ-D4j"/>
+                            <constraint firstItem="Dn0-Kf-VNs" firstAttribute="centerX" secondItem="p7w-OG-NNh" secondAttribute="centerX" id="wLj-SQ-VSS"/>
+                            <constraint firstItem="Dn0-Kf-VNs" firstAttribute="top" secondItem="Hdi-LW-Ai4" secondAttribute="bottom" constant="40" id="zUz-pJ-UtU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="recognize" id="MD9-rA-8JV"/>
+                    <connections>
+                        <outlet property="recog_out" destination="0BM-pj-w44" id="B2Y-YL-07p"/>
+                        <segue destination="gv1-Ri-qRF" kind="show" identifier="recog" id="XdO-KZ-nTC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0P-52-aw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612.5" y="526.5"/>
+            <point key="canvasLocation" x="1632" y="543"/>
         </scene>
         <!--학사공지-->
         <scene sceneID="i9Z-Ri-mPt">
@@ -661,6 +725,7 @@
         <image name="weather" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="XdO-KZ-nTC"/>
         <segue reference="9Cd-bQ-i6G"/>
     </inferredMetricsTieBreakers>
 </document>

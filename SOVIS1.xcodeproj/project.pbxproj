@@ -32,6 +32,8 @@
 		28C267E71D1C25320059868C /* yongssa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267DF1D1C25320059868C /* yongssa.jpg */; };
 		28C267E81D1C25320059868C /* coco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267E01D1C25320059868C /* coco.jpg */; };
 		A39CE4921D26ADA300AE2CCB /* REC_U2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39CE4911D26ADA300AE2CCB /* REC_U2.swift */; };
+		A39CE49A1D2A80E000AE2CCB /* REDLIGHT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39CE4991D2A80E000AE2CCB /* REDLIGHT.swift */; };
+		A39CE49C1D2A83CE00AE2CCB /* KakaoTalk_Photo_2016-07-04-20-34-02_38.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A39CE49B1D2A83CE00AE2CCB /* KakaoTalk_Photo_2016-07-04-20-34-02_38.jpeg */; };
 		A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */; };
 		D33784D31D293A2900536013 /* 공지사항.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33784D21D293A2900536013 /* 공지사항.swift */; };
 		D33784D61D29444000536013 /* 장학공지.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33784D51D29444000536013 /* 장학공지.swift */; };
@@ -74,6 +76,8 @@
 		28C267DF1D1C25320059868C /* yongssa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yongssa.jpg; sourceTree = "<group>"; };
 		28C267E01D1C25320059868C /* coco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coco.jpg; sourceTree = "<group>"; };
 		A39CE4911D26ADA300AE2CCB /* REC_U2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REC_U2.swift; sourceTree = "<group>"; };
+		A39CE4991D2A80E000AE2CCB /* REDLIGHT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDLIGHT.swift; sourceTree = "<group>"; };
+		A39CE49B1D2A83CE00AE2CCB /* KakaoTalk_Photo_2016-07-04-20-34-02_38.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-04-20-34-02_38.jpeg"; sourceTree = "<group>"; };
 		A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTS_UIViewController.h; sourceTree = "<group>"; };
 		A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTS_UIViewController.m; sourceTree = "<group>"; };
 		D33784D21D293A2900536013 /* 공지사항.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "공지사항.swift"; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 				A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */,
 				A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */,
 				A39CE4911D26ADA300AE2CCB /* REC_U2.swift */,
+				A39CE4991D2A80E000AE2CCB /* REDLIGHT.swift */,
 			);
 			path = SOVIS1;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 		28C04D8A1D1ACC9C00BC3B32 /* ImageSet */ = {
 			isa = PBXGroup;
 			children = (
+				A39CE49B1D2A83CE00AE2CCB /* KakaoTalk_Photo_2016-07-04-20-34-02_38.jpeg */,
 				289860DF1D1C8E2100BF87D6 /* icon-60@3x.png */,
 				289860DD1D1C899C00BF87D6 /* Sovis.png */,
 				289860D91D1C887B00BF87D6 /* Sogang.png */,
@@ -269,6 +275,7 @@
 				D36F6DA41D2A5AA900EA32C9 /* Main.storyboard in Resources */,
 				280F46F81D17D41F004290C4 /* Assets.xcassets in Resources */,
 				289860DB1D1C887B00BF87D6 /* Sogang.png in Resources */,
+				A39CE49C1D2A83CE00AE2CCB /* KakaoTalk_Photo_2016-07-04-20-34-02_38.jpeg in Resources */,
 				289860E01D1C8E2100BF87D6 /* icon-60@3x.png in Resources */,
 				28C267E51D1C25320059868C /* tutle.jpg in Resources */,
 				289860DE1D1C899C00BF87D6 /* Sovis.png in Resources */,
@@ -289,6 +296,7 @@
 				280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */,
 				D33784D31D293A2900536013 /* 공지사항.swift in Sources */,
 				D33784E21D2965CC00536013 /* URL.swift in Sources */,
+				A39CE49A1D2A80E000AE2CCB /* REDLIGHT.swift in Sources */,
 				D33784D61D29444000536013 /* 장학공지.swift in Sources */,
 				A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */,
 				D33784DA1D2944FA00536013 /* Cell.swift in Sources */,
