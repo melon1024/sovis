@@ -8,8 +8,10 @@
 
 import UIKit
 
-class scholarNoticeController : UITableViewController {
-        
+class ScholarNoticeController : UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tableView: UITableView!
+    
     var list = Array<NotificationList>()
     
     var urlSession: NSURLSession!
@@ -21,6 +23,10 @@ class scholarNoticeController : UITableViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         //기존의 구분선 삭제하기
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
@@ -34,19 +40,19 @@ class scholarNoticeController : UITableViewController {
         self.urlSession = nil
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 테이블 행의 갯수
         return self.list.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // 주어진 행에 맞는 데이터 소스를 가져옴
-        let cell = tableView.dequeueReusableCellWithIdentifier("ScholarCell") as! ScholarCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("ScholarCell") as! ScholarCell
         let item = self.list[indexPath.row]
         
         //구분선역할을 할 뷰를 선언
@@ -62,7 +68,7 @@ class scholarNoticeController : UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if let cell = cell as? ScholarCell {
             cell.dataTask?.cancel()
         }
@@ -75,6 +81,7 @@ class scholarNoticeController : UITableViewController {
             let myindex = self.tableView.indexPathForSelectedRow!
             let row = myindex.row
             Select.url = list[row].URL
+            Select.text = "장학공지"
         }
     }
     
@@ -112,4 +119,3 @@ class scholarNoticeController : UITableViewController {
     }
     
 }
-

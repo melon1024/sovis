@@ -12,14 +12,19 @@ class UrlViewController : UIViewController, UIWebViewDelegate {
     
     var url : String?
     
+    @IBAction func Back(sender: AnyObject) {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBOutlet weak var webview: UIWebView!
+    var text : String?
+    @IBOutlet weak var NoticeName: UILabel!
     
     override func viewDidLoad() {
 
         webview?.loadRequest(NSURLRequest(URL: NSURL(string: url!)!))
         webview?.scrollView.bounces = true
         webview?.delegate = self
-        
+        self.NoticeName.text = text
         self.view.addSubview(webview!)
         
         }

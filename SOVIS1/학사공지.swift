@@ -10,7 +10,7 @@ import UIKit
 
 class AcademyNoticeController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     var list = Array<NotificationList>()
     
@@ -23,6 +23,10 @@ class AcademyNoticeController : UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         //기존의 구분선 삭제하기
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
@@ -48,7 +52,7 @@ class AcademyNoticeController : UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // 주어진 행에 맞는 데이터 소스를 가져옴
-        let cell = tableView.dequeueReusableCellWithIdentifier("AcademyCell") as! AcademyCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("AcademyCell") as! AcademyCell
         let item = self.list[indexPath.row]
         
         //구분선역할을 할 뷰를 선언
@@ -65,7 +69,7 @@ class AcademyNoticeController : UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let cell = cell as? ScholarCell {
+        if let cell = cell as? AcademyCell {
             cell.dataTask?.cancel()
         }
     }
@@ -77,6 +81,8 @@ class AcademyNoticeController : UIViewController, UITableViewDelegate, UITableVi
             let myindex = self.tableView.indexPathForSelectedRow!
             let row = myindex.row
             Select.url = list[row].URL
+            Select.text = "학사공지"
+            print("학사공지")
         }
     }
     

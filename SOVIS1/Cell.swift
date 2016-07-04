@@ -74,7 +74,7 @@ class NormalCell: UITableViewCell {
     
 }
 
-class ComputerCell: UITableViewCell {
+class MajorCell: UITableViewCell {
     
     
     @IBOutlet weak var Title: UILabel!

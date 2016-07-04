@@ -8,7 +8,11 @@
 
 import UIKit
 
-class Notice : UITabBarController {
+class OldNotice : UITabBarController {
+    
+    
+    
+    var descrizioneTab:AcademyNoticeController!
     
     let customTabBarView = UIView()
     let tabBtn01 = UIButton()
@@ -23,10 +27,11 @@ class Notice : UITabBarController {
         
         self.tabBar.hidden = true
         
-        customTabBarView.frame = CGRectMake(0, 20, self.view.frame.size.width, 60)
+        customTabBarView.frame = CGRectMake(0, 10, self.view.frame.size.width, 60)
         customTabBarView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         
-        let widthOfOneBtn = self.tabBar.frame.size.width/4
+        let widthOfOneBtn = self.view.frame.size.width/4
+
         let heightOfOneBtn = self.customTabBarView.frame.height
         
         tabBtn01.frame = CGRectMake(0, 0, widthOfOneBtn, heightOfOneBtn)
@@ -54,7 +59,7 @@ class Notice : UITabBarController {
     
     func setAttributeTabBarButton(btn : UIButton)
     {
-        btn.addTarget(self, action: #selector(Notice.onBtnClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        btn.addTarget(self, action: #selector(OldNotice.onBtnClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         btn.setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1), forState: UIControlState.Normal)
         btn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 1), forState: UIControlState.Selected)
         
@@ -69,10 +74,10 @@ class Notice : UITabBarController {
         self.tabBtn04.selected = false
         
         sender.selected = true
-            
+        
         self.selectedIndex = sender.tag
+      
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

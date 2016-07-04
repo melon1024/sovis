@@ -8,7 +8,9 @@
 
 import UIKit
 
-class NormalNoticeController : UITableViewController {
+class NormalNoticeController : UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tableView: UITableView!
     
     var list = Array<NotificationList>()
     
@@ -21,6 +23,10 @@ class NormalNoticeController : UITableViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         //기존의 구분선 삭제하기
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
@@ -34,19 +40,19 @@ class NormalNoticeController : UITableViewController {
         self.urlSession = nil
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 테이블 행의 갯수
         return self.list.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // 주어진 행에 맞는 데이터 소스를 가져옴
-        let cell = tableView.dequeueReusableCellWithIdentifier("NormalCell") as! NormalCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("NormalCell") as! NormalCell
         let item = self.list[indexPath.row]
         
         //구분선역할을 할 뷰를 선언
@@ -62,8 +68,8 @@ class NormalNoticeController : UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let cell = cell as? ScholarCell {
+    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if let cell = cell as? NormalCell {
             cell.dataTask?.cancel()
         }
     }
@@ -75,6 +81,8 @@ class NormalNoticeController : UITableViewController {
             let myindex = self.tableView.indexPathForSelectedRow!
             let row = myindex.row
             Select.url = list[row].URL
+            Select.text = "일반공지"
+            print("일반공지")
         }
     }
     
