@@ -1129,39 +1129,6 @@
             </objects>
             <point key="canvasLocation" x="4995.75" y="854.625"/>
         </scene>
-        <!--REC_U2-->
-        <scene sceneID="jRx-kO-4gI">
-            <objects>
-                <viewController id="Ne8-aA-b8k" customClass="REC_U2" customModule="SOVIS1" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3t2-Ge-YlO"/>
-                        <viewControllerLayoutGuide type="bottom" id="4Vk-mF-GYc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zq2-sR-1Oc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Park-Jung-Jin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Al-FT-rcO">
-                                <rect key="frame" x="246" y="289.5" width="108" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9Al-FT-rcO" firstAttribute="centerY" secondItem="Zq2-sR-1Oc" secondAttribute="centerY" id="a0t-bC-Jhh"/>
-                            <constraint firstItem="9Al-FT-rcO" firstAttribute="centerX" secondItem="Zq2-sR-1Oc" secondAttribute="centerX" id="srf-P4-1OJ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="textLabel" destination="9Al-FT-rcO" id="3VT-43-MdM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kNt-Eu-Mr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2150" y="47"/>
-        </scene>
         <!--Main Tabbar Controller-->
         <scene sceneID="isS-kl-MXa">
             <objects>
@@ -1185,10 +1152,10 @@
             </objects>
             <point key="canvasLocation" x="2850.75" y="30.375"/>
         </scene>
-        <!--View Controller-->
+        <!--Speech Recognize-->
         <scene sceneID="bEe-vf-3fa">
             <objects>
-                <viewController id="1Aa-t7-aeJ" sceneMemberID="viewController">
+                <viewController id="1Aa-t7-aeJ" customClass="SpeechRecognize" customModule="SOVIS1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sjC-ic-cXi"/>
                         <viewControllerLayoutGuide type="bottom" id="D0y-Vu-6W7"/>
@@ -1202,29 +1169,47 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="158" y="210" width="59" height="21"/>
+                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXn-5V-mwC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="TapButton:" destination="1Aa-t7-aeJ" eventType="touchUpInside" id="M0d-gW-krj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gMD-7V-gRq" firstAttribute="centerY" secondItem="eTe-FE-s6O" secondAttribute="centerY" id="0y1-kn-euz"/>
                             <constraint firstItem="gMD-7V-gRq" firstAttribute="centerX" secondItem="eTe-FE-s6O" secondAttribute="centerX" id="Xtt-rf-qLO"/>
+                            <constraint firstItem="D0y-Vu-6W7" firstAttribute="top" secondItem="xXn-5V-mwC" secondAttribute="bottom" constant="205" id="fH5-HF-4Yz"/>
+                            <constraint firstItem="xXn-5V-mwC" firstAttribute="centerX" secondItem="eTe-FE-s6O" secondAttribute="centerX" id="pkh-hM-7Bo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="gMD-7V-gRq"/>
+                                <exclude reference="xXn-5V-mwC"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0y1-kn-euz"/>
                                 <exclude reference="Xtt-rf-qLO"/>
+                                <exclude reference="pkh-hM-7Bo"/>
+                                <exclude reference="fH5-HF-4Yz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="gMD-7V-gRq"/>
+                                <include reference="xXn-5V-mwC"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0y1-kn-euz"/>
                                 <include reference="Xtt-rf-qLO"/>
+                                <include reference="pkh-hM-7Bo"/>
+                                <include reference="fH5-HF-4Yz"/>
                             </mask>
                         </variation>
                     </view>

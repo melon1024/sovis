@@ -30,6 +30,7 @@
 		2889FB3C1D2A68DD00F2F9C7 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB3B1D2A68DD00F2F9C7 /* AppSetting.swift */; };
 		2889FB3F1D2A744900F2F9C7 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB3E1D2A744900F2F9C7 /* VersionInfo.swift */; };
 		2889FB411D2A74A000F2F9C7 /* SelectMajorTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB401D2A74A000F2F9C7 /* SelectMajorTableView.swift */; };
+		2889FB431D2AB8D800F2F9C7 /* speechrecognize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB421D2AB8D800F2F9C7 /* speechrecognize.swift */; };
 		289860D81D1C657B00BF87D6 /* Storelist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289860D71D1C657B00BF87D6 /* Storelist.swift */; };
 		289860DB1D1C887B00BF87D6 /* Sogang.png in Resources */ = {isa = PBXBuildFile; fileRef = 289860D91D1C887B00BF87D6 /* Sogang.png */; };
 		289860DE1D1C899C00BF87D6 /* Sovis.png in Resources */ = {isa = PBXBuildFile; fileRef = 289860DD1D1C899C00BF87D6 /* Sovis.png */; };
@@ -80,6 +81,7 @@
 		2889FB3B1D2A68DD00F2F9C7 /* AppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSetting.swift; path = SOVIS1/AppSetting.swift; sourceTree = "<group>"; };
 		2889FB3E1D2A744900F2F9C7 /* VersionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionInfo.swift; sourceTree = "<group>"; };
 		2889FB401D2A74A000F2F9C7 /* SelectMajorTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMajorTableView.swift; sourceTree = "<group>"; };
+		2889FB421D2AB8D800F2F9C7 /* speechrecognize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speechrecognize.swift; sourceTree = "<group>"; };
 		289860D71D1C657B00BF87D6 /* Storelist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storelist.swift; sourceTree = "<group>"; };
 		289860D91D1C887B00BF87D6 /* Sogang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sogang.png; sourceTree = "<group>"; };
 		289860DD1D1C899C00BF87D6 /* Sovis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sovis.png; sourceTree = "<group>"; };
@@ -132,7 +134,6 @@
 		280F46E41D17D41F004290C4 = {
 			isa = PBXGroup;
 			children = (
-				2889FB3D1D2A741F00F2F9C7 /* settings */,
 				280F470A1D17D8AC004290C4 /* Frameworks */,
 				280F46EF1D17D41F004290C4 /* SOVIS1 */,
 				280F46EE1D17D41F004290C4 /* Products */,
@@ -151,11 +152,13 @@
 		280F46EF1D17D41F004290C4 /* SOVIS1 */ = {
 			isa = PBXGroup;
 			children = (
+				2889FB3D1D2A741F00F2F9C7 /* settings */,
 				D38E29821D2652BA001A7769 /* 공지,일정 */,
 				280F46F01D17D41F004290C4 /* AppDelegate.swift */,
 				280F46F21D17D41F004290C4 /* ViewController.swift */,
 				D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */,
 				280F46F41D17D41F004290C4 /* Main.storyboard */,
+				2889FB421D2AB8D800F2F9C7 /* speechrecognize.swift */,
 				2889FB391D291F2D00F2F9C7 /* MainTabBarController.swift */,
 				289860D71D1C657B00BF87D6 /* Storelist.swift */,
 				280F47211D17F02F004290C4 /* StoreClass.swift */,
@@ -202,6 +205,7 @@
 				2889FB401D2A74A000F2F9C7 /* SelectMajorTableView.swift */,
 			);
 			name = settings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		28C04D8A1D1ACC9C00BC3B32 /* ImageSet */ = {
@@ -327,6 +331,7 @@
 				280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */,
 				A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */,
 				A39CE4921D26ADA300AE2CCB /* REC_U2.swift in Sources */,
+				2889FB431D2AB8D800F2F9C7 /* speechrecognize.swift in Sources */,
 				D38E29851D26536C001A7769 /* NotificationController.swift in Sources */,
 				280F47201D17ED11004290C4 /* ListViewController.swift in Sources */,
 				280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */,

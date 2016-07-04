@@ -22,7 +22,7 @@ class MainController: UIViewController,UITabBarDelegate {
     var inputstr : String?
     
     var recog_inst_main = REC_U2()
-    
+    var receiveData : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
