@@ -13,6 +13,7 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var tableView: UITableView!
     
     var recognized_index: Int = -1
+    
     var detailed: Int = -1
     
     var list = Array<DataList>()
@@ -41,7 +42,7 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+        print("디테일값",self.detailed)
         //# 음성인식으로 받은 데이터 받기위해 notification Observer 사용
        // let nc = NSNotificationCenter.defaultCenter()
        // nc.addObserver(self, selector: #selector(OldNotice.didReceiveSimpleNotification(_:)), name: "simple-notification", object: nil)
@@ -128,10 +129,15 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
         let urlString = NSUserDefaults.standardUserDefaults().stringForKey("카테고리")
         let url = urlString! + self.key!
         updatelist(url)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         print("ggggggg \(recognized_index)  [detailed \(detailed)]")
+        if self.detailed > -1 {
+            추천해줘요()
+        }
+        self.detailed = -1
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -172,13 +178,22 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    func 추천해줘요 () {
+        self.performSegueWithIdentifier("SelectData", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "SelectData")
         {
             let Select = segue.destinationViewController as! SelectViewController
-            let myindex = self.tableView.indexPathForSelectedRow!
-            let row = myindex.row
-            Select.selectlist = list[row]
+            if self.detailed == -1 {
+                let myindex = self.tableView.indexPathForSelectedRow!
+                let row = myindex.row
+                Select.selectlist = list[row]
+            }
+            else {
+                Select.selectlist = list[detailed]
+            }
         }
     }
     

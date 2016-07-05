@@ -21,6 +21,8 @@ class SelectViewController : UIViewController {
     @IBOutlet weak var 방향: UILabel!
     @IBOutlet weak var 사진: UIImageView!
     
+    
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
