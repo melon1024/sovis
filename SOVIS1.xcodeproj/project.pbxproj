@@ -20,17 +20,10 @@
 		280F47181D17DA0E004290C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47171D17DA0E004290C4 /* QuartzCore.framework */; };
 		280F471A1D17DA20004290C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47191D17DA20004290C4 /* Foundation.framework */; };
 		280F471E1D17DCFF004290C4 /* DaumSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F471D1D17DCFF004290C4 /* DaumSpeech.framework */; };
-		280F47201D17ED11004290C4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F471F1D17ED11004290C4 /* ListViewController.swift */; };
-		280F47221D17F02F004290C4 /* StoreClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47211D17F02F004290C4 /* StoreClass.swift */; };
-		280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47271D19547C004290C4 /* TableViewControllerDetail.swift */; };
-		280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */; };
-		280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F47821D1A8361004290C4 /* ViewStoreDetail.swift */; };
 		2889FB3A1D291F2D00F2F9C7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB391D291F2D00F2F9C7 /* MainTabBarController.swift */; };
 		2889FB3C1D2A68DD00F2F9C7 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB3B1D2A68DD00F2F9C7 /* AppSetting.swift */; };
 		2889FB3F1D2A744900F2F9C7 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB3E1D2A744900F2F9C7 /* VersionInfo.swift */; };
 		2889FB411D2A74A000F2F9C7 /* SelectMajorTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB401D2A74A000F2F9C7 /* SelectMajorTableView.swift */; };
-		2889FB431D2AB8D800F2F9C7 /* speechrecognize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889FB421D2AB8D800F2F9C7 /* speechrecognize.swift */; };
-		289860D81D1C657B00BF87D6 /* Storelist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289860D71D1C657B00BF87D6 /* Storelist.swift */; };
 		289860DB1D1C887B00BF87D6 /* Sogang.png in Resources */ = {isa = PBXBuildFile; fileRef = 289860D91D1C887B00BF87D6 /* Sogang.png */; };
 		289860DE1D1C899C00BF87D6 /* Sovis.png in Resources */ = {isa = PBXBuildFile; fileRef = 289860DD1D1C899C00BF87D6 /* Sovis.png */; };
 		289860E01D1C8E2100BF87D6 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 289860DF1D1C8E2100BF87D6 /* icon-60@3x.png */; };
@@ -47,7 +40,6 @@
 		A39CE4A31D2BFF2A00AE2CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39CE4A11D2BFF2A00AE2CCB /* Main.storyboard */; };
 		A39CE4A51D2C022400AE2CCB /* KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A39CE4A41D2C022400AE2CCB /* KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg */; };
 		A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */; };
-		A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */; };
 		D37BBDF21D2B9D1B008383D7 /* 공지사항.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37BBDEA1D2B9D1B008383D7 /* 공지사항.swift */; };
 		D37BBDF31D2B9D1B008383D7 /* 일반공지.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37BBDEB1D2B9D1B008383D7 /* 일반공지.swift */; };
 		D37BBDF41D2B9D1B008383D7 /* 장학공지.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37BBDEC1D2B9D1B008383D7 /* 장학공지.swift */; };
@@ -62,7 +54,6 @@
 		D37BBE061D2BB562008383D7 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37BBE021D2BB562008383D7 /* SelectViewController.swift */; };
 		D3DF68741D1AD5A100BF9944 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF68731D1AD5A100BF9944 /* libstdc++.6.tbd */; };
 		D3DF68761D1AD5B000BF9944 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DF68751D1AD5B000BF9944 /* libiconv.tbd */; };
-		D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,17 +72,10 @@
 		280F47171D17DA0E004290C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		280F47191D17DA20004290C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		280F471D1D17DCFF004290C4 /* DaumSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumSpeech.framework; path = SOVIS1/framework/DaumSpeech.framework; sourceTree = "<group>"; };
-		280F471F1D17ED11004290C4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		280F47211D17F02F004290C4 /* StoreClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreClass.swift; sourceTree = "<group>"; };
-		280F47271D19547C004290C4 /* TableViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerDetail.swift; sourceTree = "<group>"; };
-		280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerStoreList.swift; sourceTree = "<group>"; };
-		280F47821D1A8361004290C4 /* ViewStoreDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStoreDetail.swift; sourceTree = "<group>"; };
 		2889FB391D291F2D00F2F9C7 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2889FB3B1D2A68DD00F2F9C7 /* AppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSetting.swift; path = SOVIS1/AppSetting.swift; sourceTree = "<group>"; };
 		2889FB3E1D2A744900F2F9C7 /* VersionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionInfo.swift; sourceTree = "<group>"; };
 		2889FB401D2A74A000F2F9C7 /* SelectMajorTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMajorTableView.swift; sourceTree = "<group>"; };
-		2889FB421D2AB8D800F2F9C7 /* speechrecognize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speechrecognize.swift; sourceTree = "<group>"; };
-		289860D71D1C657B00BF87D6 /* Storelist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storelist.swift; sourceTree = "<group>"; };
 		289860D91D1C887B00BF87D6 /* Sogang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sogang.png; sourceTree = "<group>"; };
 		289860DD1D1C899C00BF87D6 /* Sovis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sovis.png; sourceTree = "<group>"; };
 		289860DF1D1C8E2100BF87D6 /* icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@3x.png"; sourceTree = "<group>"; };
@@ -109,8 +93,6 @@
 		A39CE4A41D2C022400AE2CCB /* KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg"; sourceTree = "<group>"; };
 		A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTS_UIViewController.h; sourceTree = "<group>"; };
 		A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTS_UIViewController.m; sourceTree = "<group>"; };
-		A3BF45111D1AFFBC00334083 /* REC_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REC_UIViewController.h; sourceTree = "<group>"; };
-		A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REC_UIViewController.m; sourceTree = "<group>"; };
 		D37BBDEA1D2B9D1B008383D7 /* 공지사항.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "공지사항.swift"; path = "공지사항/공지사항.swift"; sourceTree = "<group>"; };
 		D37BBDEB1D2B9D1B008383D7 /* 일반공지.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "일반공지.swift"; path = "공지사항/일반공지.swift"; sourceTree = "<group>"; };
 		D37BBDEC1D2B9D1B008383D7 /* 장학공지.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "장학공지.swift"; path = "공지사항/장학공지.swift"; sourceTree = "<group>"; };
@@ -126,7 +108,6 @@
 		D3DF68671D1AD55400BF9944 /* SOVIS1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SOVIS1-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3DF68731D1AD5A100BF9944 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		D3DF68751D1AD5B000BF9944 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,31 +153,17 @@
 		280F46EF1D17D41F004290C4 /* SOVIS1 */ = {
 			isa = PBXGroup;
 			children = (
+				D3E7E7A91D2C180800236EE3 /* 음성인식 */,
 				D37BBDFC1D2BB547008383D7 /* 주변정보 */,
 				2889FB3D1D2A741F00F2F9C7 /* settings */,
 				D38E29821D2652BA001A7769 /* 공지,일정 */,
 				280F46F01D17D41F004290C4 /* AppDelegate.swift */,
 				280F46F21D17D41F004290C4 /* ViewController.swift */,
-				D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */,
-				2889FB421D2AB8D800F2F9C7 /* speechrecognize.swift */,
 				2889FB391D291F2D00F2F9C7 /* MainTabBarController.swift */,
-				289860D71D1C657B00BF87D6 /* Storelist.swift */,
-				280F47211D17F02F004290C4 /* StoreClass.swift */,
 				A39CE4A11D2BFF2A00AE2CCB /* Main.storyboard */,
 				280F46F71D17D41F004290C4 /* Assets.xcassets */,
 				280F46F91D17D41F004290C4 /* LaunchScreen.storyboard */,
 				280F46FC1D17D41F004290C4 /* Info.plist */,
-				280F471F1D17ED11004290C4 /* ListViewController.swift */,
-				280F47271D19547C004290C4 /* TableViewControllerDetail.swift */,
-				280F47291D1959E4004290C4 /* TableViewControllerStoreList.swift */,
-				280F47821D1A8361004290C4 /* ViewStoreDetail.swift */,
-				D3DF68671D1AD55400BF9944 /* SOVIS1-Bridging-Header.h */,
-				A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */,
-				A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */,
-				A3BF45111D1AFFBC00334083 /* REC_UIViewController.h */,
-				A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */,
-				A39CE4911D26ADA300AE2CCB /* REC_U2.swift */,
-				A39CE49D1D2BD19500AE2CCB /* REDLIGHT.swift */,
 			);
 			path = SOVIS1;
 			sourceTree = "<group>";
@@ -265,15 +232,27 @@
 			isa = PBXGroup;
 			children = (
 				D37BBDEA1D2B9D1B008383D7 /* 공지사항.swift */,
+				D37BBDEE1D2B9D1B008383D7 /* 학사공지.swift */,
 				D37BBDEB1D2B9D1B008383D7 /* 일반공지.swift */,
 				D37BBDEC1D2B9D1B008383D7 /* 장학공지.swift */,
 				D37BBDED1D2B9D1B008383D7 /* 학과공지.swift */,
-				D37BBDEE1D2B9D1B008383D7 /* 학사공지.swift */,
 				D37BBDEF1D2B9D1B008383D7 /* Cell.swift */,
 				D37BBDF01D2B9D1B008383D7 /* LIst.swift */,
 				D37BBDF11D2B9D1B008383D7 /* URL.swift */,
 			);
 			name = "공지,일정";
+			sourceTree = "<group>";
+		};
+		D3E7E7A91D2C180800236EE3 /* 음성인식 */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF68671D1AD55400BF9944 /* SOVIS1-Bridging-Header.h */,
+				A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */,
+				A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */,
+				A39CE4911D26ADA300AE2CCB /* REC_U2.swift */,
+				A39CE49D1D2BD19500AE2CCB /* REDLIGHT.swift */,
+			);
+			name = "음성인식";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,14 +344,11 @@
 				D37BBDF71D2B9D1B008383D7 /* Cell.swift in Sources */,
 				D37BBDF51D2B9D1B008383D7 /* 학과공지.swift in Sources */,
 				2889FB411D2A74A000F2F9C7 /* SelectMajorTableView.swift in Sources */,
-				D3E82E9B1D1A6B5D0043B7D1 /* MainController.swift in Sources */,
 				D37BBDF31D2B9D1B008383D7 /* 일반공지.swift in Sources */,
-				280F47221D17F02F004290C4 /* StoreClass.swift in Sources */,
 				D37BBDF61D2B9D1B008383D7 /* 학사공지.swift in Sources */,
 				2889FB3F1D2A744900F2F9C7 /* VersionInfo.swift in Sources */,
 				A39CE49E1D2BD19500AE2CCB /* REDLIGHT.swift in Sources */,
 				D37BBE031D2BB562008383D7 /* CategoryViewController.swift in Sources */,
-				280F47831D1A8361004290C4 /* ViewStoreDetail.swift in Sources */,
 				280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */,
 				D37BBE061D2BB562008383D7 /* SelectViewController.swift in Sources */,
 				A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */,
@@ -380,14 +356,8 @@
 				D37BBDF41D2B9D1B008383D7 /* 장학공지.swift in Sources */,
 				D37BBDF91D2B9D1B008383D7 /* URL.swift in Sources */,
 				A39CE4921D26ADA300AE2CCB /* REC_U2.swift in Sources */,
-				2889FB431D2AB8D800F2F9C7 /* speechrecognize.swift in Sources */,
 				D37BBE041D2BB562008383D7 /* DataViewController.swift in Sources */,
-				280F47201D17ED11004290C4 /* ListViewController.swift in Sources */,
-				280F47281D19547C004290C4 /* TableViewControllerDetail.swift in Sources */,
-				289860D81D1C657B00BF87D6 /* Storelist.swift in Sources */,
-				280F472A1D1959E4004290C4 /* TableViewControllerStoreList.swift in Sources */,
 				2889FB3C1D2A68DD00F2F9C7 /* AppSetting.swift in Sources */,
-				A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */,
 				2889FB3A1D291F2D00F2F9C7 /* MainTabBarController.swift in Sources */,
 				D37BBE051D2BB562008383D7 /* MapViewController.swift in Sources */,
 			);

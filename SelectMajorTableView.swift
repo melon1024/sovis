@@ -9,10 +9,9 @@
 import Foundation
 
 class SelectMajorTableView:UITableViewController{
+
     let userSetting = NSUserDefaults.standardUserDefaults()
-    @IBAction func unwindAgoView(segue: UIStoryboardSegue){
-    //self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-    }
+
     let majorList
         =
         ["화공생명학과", "화학과", "아트앤테크놀로지", "컴퓨터공학",
@@ -55,6 +54,7 @@ class SelectMajorTableView:UITableViewController{
         
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         self.navigationController?.popViewControllerAnimated(true)
+ 
         print("unwind...;")
         
     }

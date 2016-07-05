@@ -12,9 +12,10 @@ class OldNotice : UITabBarController {
     
     //음성인식으로 화면전환 콘츄롤
     var recog_select: Int = 0
-
     
     var descrizioneTab:AcademyNoticeController!
+    
+    var flag: Int?
     
     let customTabBarView = UIView()
     let tabBtn01 = UIButton()
@@ -60,7 +61,13 @@ class OldNotice : UITabBarController {
         setAttributeTabBarButton(tabBtn04)
         
         self.view.addSubview(customTabBarView)
+
+        if flag == nil {
         self.tabBtn01.selected = true
+        }
+        else {
+            self.tabBtn04.selected = true
+        }
     }
     
     func setAttributeTabBarButton(btn : UIButton)
@@ -81,7 +88,16 @@ class OldNotice : UITabBarController {
         sender.selected = true
         
         self.selectedIndex = sender.tag
-      
+
+        if self.tabBtn04.selected==true {
+            if flag==nil {
+
+            }
+            else {
+                self.performSegueWithIdentifier("Major", sender: self)
+            }
+        }
+ 
     }
     
     
@@ -115,6 +131,9 @@ class OldNotice : UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        flag = 1
+    }
     
     /*
      // MARK: - Navigation
