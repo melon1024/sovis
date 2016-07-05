@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "selectedRecording@1x.png",
+      "filename" : "mic.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "mic@2x.png",
       "scale" : "2x"
     },
     {

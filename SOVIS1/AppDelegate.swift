@@ -17,15 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         //URLString key 값에 초기 URL주소를 저장
+        NSUserDefaults.standardUserDefaults().registerDefaults(["서버": "http://163.239.169.54:5002/"])
         NSUserDefaults.standardUserDefaults().registerDefaults(["학사공지": "http://163.239.169.54:5002/sg1"])
         NSUserDefaults.standardUserDefaults().registerDefaults(["일반공지": "http://163.239.169.54:5002/sg2"])
         NSUserDefaults.standardUserDefaults().registerDefaults(["장학공지": "http://163.239.169.54:5002/sg3"])
         NSUserDefaults.standardUserDefaults().registerDefaults(["전체일정": "http://163.239.169.54:5002/schedule"])
         NSUserDefaults.standardUserDefaults().registerDefaults(["컴과공지": "http://163.239.169.54:5002/cse"])
-        NSUserDefaults.standardUserDefaults().registerDefaults(["기계공지": "http://163.239.169.54:5002/me"])
-        NSUserDefaults.standardUserDefaults().registerDefaults(["화공공지": "http://163.239.169.54:5002/chemeng"])
-        NSUserDefaults.standardUserDefaults().registerDefaults(["전자공지": "http://163.239.169.54:5002/ee"])
         NSUserDefaults.standardUserDefaults().registerDefaults(["카테고리": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&location=37.551305,126.9385642&radius=20000&image=only&sort=2"])
+
 
         
         let defaults = NSUserDefaults.standardUserDefaults()

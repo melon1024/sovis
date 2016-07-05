@@ -255,8 +255,9 @@ MTSpeechRecognizerViewDelegate /* result */{
                     }
                 }
             }
-            result = ""
+            
             self.recog_out.text = result
+            result = ""
             print("end of didSet")
         }
     }
@@ -272,7 +273,7 @@ MTSpeechRecognizerViewDelegate /* result */{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg")!)
+       self.view.backgroundColor = UIColor(patternImage: UIImage(named: "KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg")!)
 
         print("RED LIGHT ")
         

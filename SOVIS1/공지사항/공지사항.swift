@@ -16,6 +16,8 @@ class OldNotice : UITabBarController {
     
     var descrizioneTab:AcademyNoticeController!
     
+    var flag: Int?
+    
     let customTabBarView = UIView()
     let tabBtn01 = UIButton()
     let tabBtn02 = UIButton()
@@ -26,6 +28,20 @@ class OldNotice : UITabBarController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        let tabBar = self.tabBarController?.tabBar
+        tabBar?.tintColor? = UIColor(red: 177/255.0,green: 17/255.0,blue : 12/255.0, alpha: 1.0)
+        let item2 = (tabBar?.items![2])! as UITabBarItem
+        item2.title=""
+        let buttonImage=UIImage(named: "recording")?.imageWithRenderingMode(.AlwaysOriginal)
+        buttonImage?.drawInRect(CGRectMake(0, 0, 50, 50))
+        item2.image=buttonImage
+        
+        item2.imageInsets = UIEdgeInsetsMake(6,0,-6,0)
+        item2.selectedImage = UIImage(named: "selectedRecording")?.imageWithRenderingMode(.AlwaysOriginal)
+
+        
+        
         //# 음성인식으로 받은 데이터 받기위해 notification Observer 사용
         let nc = NSNotificationCenter.defaultCenter()
         nc.addObserver(self, selector: #selector(OldNotice.didReceiveSimpleNotification(_:)), name: "simple-notification", object: nil)
@@ -43,6 +59,8 @@ class OldNotice : UITabBarController {
         tabBtn02.frame = CGRectMake(widthOfOneBtn, 0, widthOfOneBtn, heightOfOneBtn)
         tabBtn03.frame = CGRectMake(widthOfOneBtn*2, 0, widthOfOneBtn, heightOfOneBtn)
         tabBtn04.frame = CGRectMake(widthOfOneBtn*3, 0, widthOfOneBtn, heightOfOneBtn)
+        
+        
 
         tabBtn01.setTitle("학사공지", forState: UIControlState.Normal)
         tabBtn02.setTitle("일반공지", forState: UIControlState.Normal)
@@ -60,7 +78,13 @@ class OldNotice : UITabBarController {
         setAttributeTabBarButton(tabBtn04)
         
         self.view.addSubview(customTabBarView)
-        self.tabBtn01.selected = true
+        if flag == nil {
+            self.tabBtn01.selected = true
+        }
+        else {
+            self.tabBtn04.selected = true
+        }
+        
     }
     
     func setAttributeTabBarButton(btn : UIButton)

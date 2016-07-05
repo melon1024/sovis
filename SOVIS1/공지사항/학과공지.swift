@@ -29,8 +29,102 @@ class MajorNoticeController : UIViewController, UITableViewDelegate, UITableView
         
         //기존의 구분선 삭제하기
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        var urlString:String! = NSUserDefaults.standardUserDefaults().stringForKey("서버")
         
-        let urlString = NSUserDefaults.standardUserDefaults().stringForKey("컴과공지")
+        print(NSUserDefaults.standardUserDefaults().stringForKey("Major"))
+        
+        switch NSUserDefaults.standardUserDefaults().stringForKey("Major")! {
+        case "컴퓨터공학":
+            urlString = NSUserDefaults.standardUserDefaults().stringForKey("컴과공지")!
+            break
+        case "화공생명학과":
+            urlString = urlString + "chemeng"
+            break
+        case "화학과":
+            urlString = urlString + "chem"
+            break
+        case "아트앤테크놀로지":
+            urlString = urlString + "creative"
+            break
+        case "경제학과":
+            urlString = urlString + "econdept"
+            break
+        case "전자공학":
+            urlString = urlString + "ee"
+            break
+        case "영미어문학과":
+            urlString = urlString + "english"
+            break
+        case "미국문화학과":
+            urlString = urlString + "english"
+            break
+        case "유럽문화학과":
+            urlString = urlString + "europe"
+            break
+        case "프랑스문화학과":
+            urlString = urlString + "france"
+            break
+        case "독일문화":
+            urlString = urlString + "germany"
+            break
+        case "국제한국학과":
+            urlString = urlString + "gks"
+            break
+        case "사회학과":
+            urlString = urlString + "sociology"
+            break
+        case "생명과학과":
+            urlString = urlString + "lifescien"
+            break
+        case "국문학과":
+            urlString = urlString + "korea"
+            break
+        case "수학과":
+            urlString = urlString + "math"
+            print(urlString)
+            break
+        case "물리학과":
+            urlString = urlString + "physics"
+            break
+        case "기계공학과":
+            urlString = urlString + "me"
+            break
+        case "철학과":
+            urlString = urlString + "philosophy"
+            break
+        case "정치외교학과":
+            urlString = urlString + "politics"
+            break
+        case "심리학과":
+            urlString = urlString + "psychology"
+            break
+        case "경영학과":
+            urlString = urlString + "sbs"
+            break
+        case "신문방송학과":
+            urlString = urlString + "sgcomm"
+            break
+        case "사회학과":
+            urlString = urlString + "sociology"
+            break
+        case "종교학과" :
+            urlString = urlString + "religion"
+            break
+        default:
+            urlString = NSUserDefaults.standardUserDefaults().stringForKey("컴과공지")!
+            break
+        }
+        
+        switch NSUserDefaults.standardUserDefaults().stringForKey("Duration")! {
+        case "7":
+            urlString = urlString + "/7"
+            break
+        case "15":
+            urlString = urlString + "/15"
+            break
+        default:
+            break
+        }
         updatelist(urlString!)
     }
     

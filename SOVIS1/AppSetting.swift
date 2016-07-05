@@ -39,6 +39,8 @@ class AppSetting : UITableViewController{
         stepper.stepValue = 1
         
         
+        
+        
     
         durationLabel.text = userSetting.stringForKey("Duration")
         
