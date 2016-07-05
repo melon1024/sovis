@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSUserDefaults.standardUserDefaults().registerDefaults(["컴과공지": "http://163.239.169.54:5002/cse"])
         NSUserDefaults.standardUserDefaults().registerDefaults(["카테고리": "http://apis.daum.net/local/v1/search/category.json?apikey=7992dff3d985d3e31af87978177d22c4&location=37.551305,126.9385642&radius=20000&image=only&sort=2"])
 
-
+        //hahaha
         
         let defaults = NSUserDefaults.standardUserDefaults()
         if ( defaults.stringForKey("Duration") == nil)
