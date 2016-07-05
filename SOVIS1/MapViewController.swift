@@ -10,18 +10,20 @@ import UIKit
 
 class MapViewController : UIViewController, UIWebViewDelegate {
     
-    var webview : UIWebView?
+    
     var mapurl : String?
     var selectName : String?
+    
+    @IBOutlet weak var webview: UIWebView!
     
     @IBOutlet weak var SelectTitle: UILabel!
     
     override func viewDidLoad() {
-        webview = UIWebView(frame: self.view.bounds)
         
         webview?.loadRequest(NSURLRequest(URL: NSURL(string: mapurl!)!))
         webview?.scrollView.bounces = true
         webview?.delegate = self
+        
         self.SelectTitle.text = selectName
         self.view.addSubview(webview!)
     }
@@ -40,6 +42,10 @@ class MapViewController : UIViewController, UIWebViewDelegate {
     //웹뷰 로딩 시작
     func webViewDidStartLoad(webView: UIWebView) {
         print("LOAD START\n")
+    }
+    
+    @IBAction func Back(sender: AnyObject) {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

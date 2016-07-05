@@ -8,27 +8,18 @@
 
 import UIKit
 
-class SelectViewController : UIViewController, UITableViewDelegate {
+class SelectViewController : UIViewController {
     
     var urlSession: NSURLSession!
-    
-    @IBOutlet var tableView: UITableView!
-    
-    @IBOutlet weak var Detail_Title: UILabel!
-    
-    @IBOutlet weak var Detail_category: UILabel!
-
-    @IBOutlet weak var Detail_phone: UILabel!
-    
-    @IBOutlet weak var Detail_address: UILabel!
-    
-    @IBOutlet weak var Detail_newadd: UILabel!
-    
-    @IBOutlet weak var Detail_distance: UILabel!
-    
-    @IBOutlet weak var Detail_direction: UILabel!
-    
     var selectlist : DataList?
+    @IBOutlet weak var 이름: UILabel!
+    @IBOutlet weak var 카테고리: UILabel!
+    @IBOutlet weak var 전화번호: UILabel!
+    @IBOutlet weak var 지번주소: UILabel!
+    @IBOutlet weak var 도로명주소: UILabel!
+    @IBOutlet weak var 거리: UILabel!
+    @IBOutlet weak var 방향: UILabel!
+    @IBOutlet weak var 사진: UIImageView!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,18 +30,20 @@ class SelectViewController : UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
+        self.이름.text = self.selectlist?.title
+        self.카테고리.text = self.selectlist?.category
+        self.전화번호.text = self.selectlist?.phone
+        self.지번주소.text = self.selectlist?.address
+        self.도로명주소.text = self.selectlist?.newAddress
+        self.거리.text = self.selectlist?.distance
+        self.방향.text = self.selectlist?.direction
         
-        //기존의 구분선 삭제하기
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+
         
-        self.Detail_Title.text = selectlist?.title
-        self.Detail_category.text = selectlist?.category
-        self.Detail_phone.text = selectlist?.phone
-        self.Detail_address.text = selectlist?.address
-        self.Detail_newadd.text = selectlist?.newAddress
-        self.Detail_distance.text = selectlist?.distance
-        self.Detail_direction.text = selectlist?.direction
+        if let url  = NSURL(string: (self.selectlist?.imageUrl)!), data = NSData(contentsOfURL: url) {
+            self.사진.image = UIImage(data: data)
+        }
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -63,6 +56,8 @@ class SelectViewController : UIViewController, UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "MapView")

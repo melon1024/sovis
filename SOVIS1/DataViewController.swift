@@ -22,6 +22,10 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
     
     var row : Int?
     
+    var selectedtitle : String?
+    
+    @IBOutlet weak var SelectTitle: UILabel!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
@@ -33,86 +37,90 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
         
+        self.SelectTitle.text = selectedtitle
+
         //기존의 구분선 삭제하기
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         switch row! {
         case 0 :
             //대형마트
-            key = "MT1"
+            self.key = "&code=MT1"
             break
         case 1 :
             //편의점
-            key = "CS2"
+            self.key = "&code=CS2"
             break
         case 2 :
             //어린이집, 유치원
-            key = "PS3"
+            self.key = "&code=PS3"
             break
         case 3 :
             //학교
-            key = "SC4"
+            self.key = "&code=SC4"
             break
         case 4 :
             //학원
-            key = "AC5"
+            self.key = "&code=AC5"
             break
         case 5 :
             //주차장
-            key = "PK6"
+            self.key = "&code=PK6"
             break
         case 6 :
             //주유소, 충전소
-            key = "OL7"
+            self.key = "&code=OL7"
             break
         case 7 :
             //은행
-            key = "BK9"
+            self.key = "&code=BK9"
             break
         case 8 :
             //문화시설
-            key = "CT1"
+            self.key = "&code=CT1"
             break
         case 9 :
             //중개업소
-            key = "AG2"
+            key = "&code=AG2"
             break
         case 10 :
             //공공기관
-            key = "PO3"
+            self.key = "&code=PO3"
             break
         case 11 :
             //관광명소
-            key = "AT4"
+            self.key = "&code=AT4"
             break
         case 12 :
             //숙박
-            key = "AD5"
+            self.key = "&code=AD5"
             break
         case 13 :
             //음식점
-            key = "FD6"
+            self.key = "&code=FD6"
             break
         case 14 :
             //카페
-            key = "CF7"
+            self.key = "&code=CF7"
             break
         case 15 :
             //병원
-            key = "HP8"
+            self.key = "&code=HP8"
             break
         case 16 :
             //약국
-            key = "PM9"
+            self.key = "&code=PM9"
             break
         default:
-            key = "MT1"
+            self.key = "&code=MT1"
             break
         }
         
-        let urlString = NSUserDefaults.standardUserDefaults().stringForKey(key!)
-        updatelist(urlString!)
+        let urlString = NSUserDefaults.standardUserDefaults().stringForKey("카테고리")
+        let url = urlString! + self.key!
+        updatelist(url)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -134,6 +142,14 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DataCell") as! DataCell
         let item = self.list[indexPath.row]
+        
+        //구분선역할을 할 뷰를 선언
+        let separatorLineView: UIView = UIView(frame: CGRectMake(0, 0, view.frame.size.width, 5))
+        //뷰의 색을 지정 여기에 이미지를 넣을 수도 있습니다
+        separatorLineView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+        //셀에 추가하기
+        cell.contentView.addSubview(separatorLineView)
+        
         cell.Title.text = item.title
         cell.Category.text = item.category
         return cell

@@ -30,6 +30,8 @@ class CategoryViewController : UIViewController, UITableViewDelegate, UITableVie
  
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet weak var CategoryTitle: UILabel!
+    
     let List = ["대형마트","편의점","어린이집,유치원","학교","학원","주차장","주유소,충전소","은행","문화시설","중개업소","공공기관","관광명소","숙박","음식점","카페","병원","약국"]
     
     override func viewDidLoad() {
@@ -39,6 +41,7 @@ class CategoryViewController : UIViewController, UITableViewDelegate, UITableVie
         
         //기존의 구분선 삭제하기
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.CategoryTitle.text = "카테고리"
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -81,6 +84,7 @@ class CategoryViewController : UIViewController, UITableViewDelegate, UITableVie
             let Select = segue.destinationViewController as! DataViewController
             let myindex = self.tableView.indexPathForSelectedRow!
             Select.row = myindex.row
+            Select.selectedtitle = self.List[myindex.row]
         }
     }
     

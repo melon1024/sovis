@@ -91,6 +91,7 @@ class AcademyNoticeController : UIViewController, UITableViewDelegate, UITableVi
         let url = NSURL(string: key)
         
         let data = NSData(contentsOfURL: url!)
+        
         //print(NSString(data: data!, encoding: NSUTF8StringEncoding))
         
         do{
