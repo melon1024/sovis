@@ -330,11 +330,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="recog_out" destination="a0L-ZI-X38" id="gkE-yM-UJn"/>
+                        <segue destination="YGL-4J-s4E" kind="presentation" identifier="SelectData2" id="ZlT-8w-hHx"/>
+                        <segue destination="XOa-s1-0uM" kind="presentation" identifier="CategorySegue2" id="qyg-3c-gUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbK-6Y-v77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.5" y="854.5"/>
+            <point key="canvasLocation" x="1641.5" y="1074.5"/>
         </scene>
         <!--날씨-->
         <scene sceneID="572-al-lyv">
@@ -1273,7 +1275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08b-ap-kTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="2370"/>
+            <point key="canvasLocation" x="586.5" y="2293.5"/>
         </scene>
         <!--지도-->
         <scene sceneID="Chz-tW-hQr">
@@ -1352,7 +1354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDK-Nx-YLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.5" y="3084.75"/>
+            <point key="canvasLocation" x="32.5" y="2742.5"/>
         </scene>
         <!--카테고리-->
         <scene sceneID="sVC-BL-UNC">
@@ -1452,6 +1454,8 @@
         <image name="weather" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bZz-na-zOC"/>
+        <segue reference="Oeu-Hy-TmJ"/>
+        <segue reference="qyg-3c-gUY"/>
+        <segue reference="ZlT-8w-hHx"/>
     </inferredMetricsTieBreakers>
 </document>

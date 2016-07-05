@@ -24,26 +24,24 @@ MTSpeechRecognizerViewDelegate /* result */{
     let red_ListViewController: TTS_UIViewController = TTS_UIViewController()
     
     //select variables...
-    var tabbar_array: Array<String> = ["공지사항", "주변정보", "0", "날씨", "설정"]
+    var tabbar_array: Array<String> = ["공지사항", "주변", "0", "날씨", "설정"]
     var tabbar_cnt = 0
     var tabbar_index = -1
     
     
     //주변정보...
-    var category_array: Array<String> = ["대형마트", "편의점", "어린이집", "유치원", "학교", "학원", "주차장", "주유소", "충전소", "은행", "문화시설", "중개업소", "공공기관", "관광명소", "숙박", "음식점", "음식", "카페", "병원", "약국"]
+    var category_array: Array<String> = ["대형마트", "편의점", "어린이집", "학교", "학원", "주차장", "주유소", "은행", "문화시설", "중개업소", "공공기관", "관광명소", "숙박", "음식점", "카페", "병원", "약국", /**/"유치원", "충전소", "음식", "까페", "맛집"]
+                                                                    //17    ,   18  ,   19 , 20
     
-    var verb_array: Array<String> = ["보여", "알려", "말해", "가르쳐줘", "어디",/**/ "추천", "골라"]
+    var verb_array: Array<String> = ["보여", "알려", "말해", "가르쳐줘", "어디", "어딘", "궁금",/**/ "추천", "골라"]
     var idx_total_cnt: Int = 0
     //ㅠㅠ
     
-    // var dic_array: Array<String> = ["한식", "중식", "일식", "양식", "분식", "라면", "귀피"]
-    
+
     
     var notice_array: Array<String> = ["학사", "일반", "장학", "학과"]
     
-    //  var strset1: Array<String> = ["신촌", "대흥"]
-    //  var strset2: Array<String> = ["병원", "약국", "음식"]
-    //  var strset3: Array<String> = ["정형외과", "내과", "한식", "중식", "일식"]
+
     var strset1_idx: Int?
     var strset2_idx: Int?
     var strset3_idx: Int?
@@ -143,7 +141,28 @@ MTSpeechRecognizerViewDelegate /* result */{
                             if result.rangeOfString(txt) != nil {
                                 strset1_idx = index
                                 idx_total_cnt += 1
+                               
                                 
+                            }
+                        }
+                        
+                        if strset1_idx > 16 {
+                            switch strset1_idx! {
+                            case 17:
+                                strset1_idx = 2 //어린이집, 유치원
+                                break
+                            case 18:
+                                strset1_idx = 6 //주유소, 충전소
+                                break
+                            case 19, 21:
+                                strset1_idx = 13 //음식점, 음식, 맛집
+                                break
+                            case 20:
+                                strset1_idx = 14 //카페, 까페
+                                break
+                                
+                            default:
+                                break
                             }
                         }
                         
@@ -177,15 +196,21 @@ MTSpeechRecognizerViewDelegate /* result */{
                         case 0: //false
                             print("try again...all idxes are -1 [\(strset1_idx)] [\(strset2_idx)]")
                             break
+                            
                         case 1: //true
                             //추천정보 초기 page로 이동
                             print("case 1  [\(strset1_idx), \(category_array[strset1_idx!])] ")
-                            self.tabBarController?.selectedIndex = 1
+                            //self.tabBarController?.selectedIndex = 1
+                            self.performSegueWithIdentifier("CategorySegue2", sender: self)
                             break
-                        case 11: //true
+                            
+                        case 11, 21: //true (21: 카페(1)가 어딘지(10) 궁금해(10)
                             //detailed page 까지 한번에 이동
                             print("case 11  [\(strset1_idx), \(category_array[strset1_idx!])] [\(strset2_idx), \(verb_array[strset2_idx!])]")
+                           // self.tabBarController?.selectedIndex = 1
+                            self.performSegueWithIdentifier("SelectData2", sender: self)
                             break
+                            
                         case 2..<10, 12..<100: //false
                             //각 카테고리에서 2개 이상나옴(하나의 정보만 알려줘야 되는데 한번에 여러 정보를 알고 싶어함..)
                             print("case false")
@@ -201,6 +226,7 @@ MTSpeechRecognizerViewDelegate /* result */{
                 }
             }
             result = ""
+            self.recog_out.text = result
             print("end of didSet")
         }
     }
@@ -311,10 +337,30 @@ MTSpeechRecognizerViewDelegate /* result */{
     func onFinished() {
         print("on finished...")
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "CategorySegue2")
+        {
+            let Select = segue.destinationViewController as! DataViewController
+          //  let myindex: NSIndexPath = strset1_idx
+            Select.row = strset1_idx//myindex.row
+            //Select.selectedtitle = self.List[myindex.row]
+            Select.selectedtitle = category_array[strset1_idx!]
+        }
+        if(segue.identifier == "SelectData2")
+        {
+            let Select = segue.destinationViewController as! SelectViewController
+          //  let myindex = self.tableView.indexPathForSelectedRow!
+            //let row = myindex.row
+            let row = strset1_idx
+            //Select.selectlist = list[row]
+ //           Select.selectlist = category_array[strset1_idx]
+        }
+    }
     
     /* RecognizeViewDelegate.h */
     //optional
     // 그런데 위의 함수와 중복이네욤??: onResults, onError
     ///////////////////////////////////////
     
+
 }
