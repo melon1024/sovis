@@ -10,6 +10,10 @@ import UIKit
 
 class OldNotice : UITabBarController {
     
+    //음성인식으로 화면전환 콘츄롤
+    var recog_select: Int = 0
+
+    
     var descrizioneTab:AcademyNoticeController!
     
     let customTabBarView = UIView()
@@ -22,6 +26,9 @@ class OldNotice : UITabBarController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //# 음성인식으로 받은 데이터 받기위해 notification Observer 사용
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: #selector(OldNotice.didReceiveSimpleNotification(_:)), name: "simple-notification", object: nil)
         
         self.tabBar.hidden = true
         
@@ -77,6 +84,32 @@ class OldNotice : UITabBarController {
       
     }
     
+    
+    override func viewDidAppear(animated: Bool) {
+        //음성인식 데이터로 화면전환
+        self.selectedIndex = recog_select
+        self.tabBtn01.selected = false
+        self.tabBtn02.selected = false
+        self.tabBtn03.selected = false
+        self.tabBtn04.selected = false
+        switch recog_select {
+        case 0:
+            self.tabBtn01.selected = true
+            break
+        case 1:
+            self.tabBtn02.selected = true
+            break
+        case 2:
+            self.tabBtn03.selected = true
+            break
+        case 3:
+            self.tabBtn04.selected = true
+            break
+        default:
+            break
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -93,4 +126,15 @@ class OldNotice : UITabBarController {
      }
      */
     
+    // 음성인식 데이터 받기 위하여 notification 사용
+    // Swift Example: Notification Handler Method
+    func didReceiveSimpleNotification(notification: NSNotification) {
+        let message: String? = notification.userInfo!["message"] as? String
+        print("I've got the message \(message)")
+        recog_select = Int(message!)!
+        print("@@@@ [\(recog_select)]")
+    }
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 }
