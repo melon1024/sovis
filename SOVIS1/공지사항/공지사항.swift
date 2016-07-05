@@ -134,7 +134,9 @@ class OldNotice : UITabBarController {
         recog_select = Int(message!)!
         print("@@@@ [\(recog_select)]")
     }
+    
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+ 
 }

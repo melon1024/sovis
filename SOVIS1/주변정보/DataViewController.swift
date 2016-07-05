@@ -12,6 +12,9 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var tableView: UITableView!
     
+    var recognized_index: Int = -1
+    var detailed: Int = -1
+    
     var list = Array<DataList>()
     
     var selectedItem : DataList?
@@ -38,6 +41,10 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        //# 음성인식으로 받은 데이터 받기위해 notification Observer 사용
+       // let nc = NSNotificationCenter.defaultCenter()
+       // nc.addObserver(self, selector: #selector(OldNotice.didReceiveSimpleNotification(_:)), name: "simple-notification", object: nil)
         
         self.SelectTitle.text = selectedtitle
 
@@ -103,7 +110,7 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
             break
         case 14 :
             //카페
-            self.key = "&code=CF7"
+            self.key = "&code=CE7"
             break
         case 15 :
             //병원
@@ -121,6 +128,10 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
         let urlString = NSUserDefaults.standardUserDefaults().stringForKey("카테고리")
         let url = urlString! + self.key!
         updatelist(url)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print("ggggggg \(recognized_index)  [detailed \(detailed)]")
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -222,4 +233,19 @@ class DataViewController : UIViewController, UITableViewDelegate, UITableViewDat
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
+    // 음성인식 데이터 받기 위하여 notification 사용
+    // Swift Example: Notification Handler Method
+    /*
+    func didReceiveSimpleNotification(notification: NSNotification) {
+        let message: String? = notification.userInfo!["message"] as? String
+        print("[$$$$$]I've got the message \(message)")
+        recognized_index = Int(message!)!
+  //      recog_select = Int(message!)!
+//     print("@@@@ [\(recog_select)]")
+    }
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+ */
 }

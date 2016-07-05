@@ -15,7 +15,8 @@ MTSpeechRecognizerViewDelegate /* result */{
     
     @IBOutlet weak var recog_out: UILabel!
     let nc = NSNotificationCenter.defaultCenter()
-    
+   // let nc2 = NSNotificationCenter.defaultCenter()
+
     //set recog variables
     var config = [:]
     var client: MTSpeechRecognizerClient?
@@ -24,16 +25,20 @@ MTSpeechRecognizerViewDelegate /* result */{
     let red_ListViewController: TTS_UIViewController = TTS_UIViewController()
     
     //select variables...
-    var tabbar_array: Array<String> = ["공지사항", "주변", "0", "날씨", "설정"]
+    var tabbar_array: Array<String> = ["공지사항", "주변정보", "0", "날씨", "설정"]
     var tabbar_cnt = 0
     var tabbar_index = -1
     
+    var data_index: Int?
+    var go_detail = -1
+    
     
     //주변정보...
-    var category_array: Array<String> = ["대형마트", "편의점", "어린이집", "학교", "학원", "주차장", "주유소", "은행", "문화시설", "중개업소", "공공기관", "관광명소", "숙박", "음식점", "카페", "병원", "약국", /**/"유치원", "충전소", "음식", "까페", "맛집"]
+    var category_array: Array<String> = ["대형마트", "편의점", "어린이집", "학교", "학원", "주차장", "주유소", "은행", "문화시설", "중개업소", "공공기관", "관광명소", "숙박", "음식점", "카페", "병원", "약국", /**/"유치원", "충전소", "음식", "까페", "맛집", "앞에"]
                                                                     //17    ,   18  ,   19 , 20
     
-    var verb_array: Array<String> = ["보여", "알려", "말해", "가르쳐줘", "어디", "어딘", "궁금",/**/ "추천", "골라"]
+    var verb_array: Array<String> = ["보여", "알려", "말해", "가르쳐줘", "어디", "어딘", "궁금",/**/  "추천", "골라"]
+   // var select_verb_array: Array<String> = ["하나"]
     var idx_total_cnt: Int = 0
     //ㅠㅠ
     
@@ -51,7 +56,7 @@ MTSpeechRecognizerViewDelegate /* result */{
         didSet{
             if result != ""{
                 
-                
+                go_detail = -1
                 usleep(1_500_000)
                 //음성인식 실패...현재 view를 다시 나오게 해 줘야 되는 부분
                 if result == "-1" {
@@ -59,7 +64,7 @@ MTSpeechRecognizerViewDelegate /* result */{
                     //performSegueWithIdentifier("root view controller", sender: self)
                 }
                 else{
-                    
+                    print("인식된 결과야: \(result)")
                     //tab bar menu 인지 확인
                     tabbar_cnt = 0
                     tabbar_index = -1
@@ -157,8 +162,8 @@ MTSpeechRecognizerViewDelegate /* result */{
                             case 19, 21:
                                 strset1_idx = 13 //음식점, 음식, 맛집
                                 break
-                            case 20:
-                                strset1_idx = 14 //카페, 까페
+                            case 20, 22:
+                                strset1_idx = 14 //카페, 까페, 앞에
                                 break
                                 
                             default:
@@ -170,9 +175,23 @@ MTSpeechRecognizerViewDelegate /* result */{
                             if result.rangeOfString(txt) != nil {
                                 strset2_idx = index
                                 idx_total_cnt += 10
+                                if index >= 7 {
+                                    go_detail = Int(arc4random() % 15)
+                                }
+                                else{
+                                    go_detail = -1
+                                }
                                 
                             }
                         }
+                 /*
+                        for (_, txt) in select_verb_array.enumerate() {
+                            if result.rangeOfString(txt) != nil {
+                                idx_total_cnt += 100
+                                go_detail = Int(arc4random() % 15)
+                            }
+                        }
+                */
                         /*
                          for (index, txt) in strset3.enumerate() {
                          if result.rangeOfString(txt) != nil {
@@ -184,7 +203,7 @@ MTSpeechRecognizerViewDelegate /* result */{
                          */
                         
                         
-                        print("end of else")
+                        print("end of else, idx_total_cnt: [\(idx_total_cnt)]")
                         //result = ""
                         //goto start...
                         
@@ -194,32 +213,43 @@ MTSpeechRecognizerViewDelegate /* result */{
                         
                         switch idx_total_cnt {
                         case 0: //false
-                            print("try again...all idxes are -1 [\(strset1_idx)] [\(strset2_idx)]")
+                            print("case 0")
+                         //   print("try again...all idxes are -1 [\(strset1_idx)] [\(strset2_idx)]")
                             break
                             
                         case 1: //true
+                            print("case 1")
                             //추천정보 초기 page로 이동
-                            print("case 1  [\(strset1_idx), \(category_array[strset1_idx!])] ")
+                         //   print("case 1  [\(strset1_idx), \(category_array[strset1_idx!])] ")
                             //self.tabBarController?.selectedIndex = 1
+                           // let userInfo3 = [ "message": String(-1) ]
+                           // nc.postNotificationName("simple-notification", object: nil, userInfo: userInfo3)
+                            data_index = -1
                             self.performSegueWithIdentifier("CategorySegue2", sender: self)
                             break
                             
-                        case 11, 21: //true (21: 카페(1)가 어딘지(10) 궁금해(10)
+                        case 11, 21/*, 101..<200*/: //true (21: 카페(1)가 어딘지(10) 궁금해(10)
+                            print("case 3")
                             //detailed page 까지 한번에 이동
-                            print("case 11  [\(strset1_idx), \(category_array[strset1_idx!])] [\(strset2_idx), \(verb_array[strset2_idx!])]")
+                          //  print("case 11  [\(strset1_idx), \(category_array[strset1_idx!])] [\(strset2_idx), \(verb_array[strset2_idx!])]")
                            // self.tabBarController?.selectedIndex = 1
-                            self.performSegueWithIdentifier("SelectData2", sender: self)
+                           // let userInfo3 = [ "message": String(strset1_idx) ]
+                           // nc.postNotificationName("simple-notification", object: nil, userInfo: userInfo3)
+                            data_index = strset1_idx
+                            print(data_index)
+                            self.performSegueWithIdentifier("CategorySegue2", sender: self)
                             break
                             
                         case 2..<10, 12..<100: //false
+                            print("case 4")
                             //각 카테고리에서 2개 이상나옴(하나의 정보만 알려줘야 되는데 한번에 여러 정보를 알고 싶어함..)
                             print("case false")
-                            self.tabBarController?.selectedIndex = 0
+                            self.tabBarController?.selectedIndex = 2
                             break
                             
                         default:
                             print("case default")
-                            self.tabBarController?.selectedIndex = 0
+                            self.tabBarController?.selectedIndex = 2
                             break
                         }
                     }
@@ -242,7 +272,7 @@ MTSpeechRecognizerViewDelegate /* result */{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "KakaoTalk_Photo_2016-07-05-20-32-56_38.jpeg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg")!)
 
         print("RED LIGHT ")
         
@@ -342,19 +372,15 @@ MTSpeechRecognizerViewDelegate /* result */{
         {
             let Select = segue.destinationViewController as! DataViewController
           //  let myindex: NSIndexPath = strset1_idx
-            Select.row = strset1_idx//myindex.row
+            Select.row = strset1_idx!//myindex.row
+            Select.recognized_index = data_index!
+            Select.detailed = go_detail
             //Select.selectedtitle = self.List[myindex.row]
-            Select.selectedtitle = category_array[strset1_idx!]
+            if strset1_idx > -1 {
+                Select.selectedtitle = self.category_array[self.strset1_idx!]
+            }
         }
-        if(segue.identifier == "SelectData2")
-        {
-            let Select = segue.destinationViewController as! SelectViewController
-          //  let myindex = self.tableView.indexPathForSelectedRow!
-            //let row = myindex.row
-            let row = strset1_idx
-            //Select.selectlist = list[row]
- //           Select.selectlist = category_array[strset1_idx]
-        }
+
     }
     
     /* RecognizeViewDelegate.h */

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		280F46F11D17D41F004290C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F46F01D17D41F004290C4 /* AppDelegate.swift */; };
 		280F46F31D17D41F004290C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F46F21D17D41F004290C4 /* ViewController.swift */; };
-		280F46F61D17D41F004290C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280F46F41D17D41F004290C4 /* Main.storyboard */; };
 		280F46F81D17D41F004290C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F46F71D17D41F004290C4 /* Assets.xcassets */; };
 		280F46FB1D17D41F004290C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280F46F91D17D41F004290C4 /* LaunchScreen.storyboard */; };
 		280F47031D17D874004290C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F47021D17D874004290C4 /* AudioToolbox.framework */; };
@@ -45,7 +44,8 @@
 		28C267E81D1C25320059868C /* coco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28C267E01D1C25320059868C /* coco.jpg */; };
 		A39CE4921D26ADA300AE2CCB /* REC_U2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39CE4911D26ADA300AE2CCB /* REC_U2.swift */; };
 		A39CE49E1D2BD19500AE2CCB /* REDLIGHT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39CE49D1D2BD19500AE2CCB /* REDLIGHT.swift */; };
-		A39CE4A01D2BD29600AE2CCB /* KakaoTalk_Photo_2016-07-05-20-32-56_38.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A39CE49F1D2BD29600AE2CCB /* KakaoTalk_Photo_2016-07-05-20-32-56_38.jpeg */; };
+		A39CE4A31D2BFF2A00AE2CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39CE4A11D2BFF2A00AE2CCB /* Main.storyboard */; };
+		A39CE4A51D2C022400AE2CCB /* KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A39CE4A41D2C022400AE2CCB /* KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg */; };
 		A3BF450E1D1ADBDC00334083 /* TTS_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */; };
 		A3BF45131D1AFFBC00334083 /* REC_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF45121D1AFFBC00334083 /* REC_UIViewController.m */; };
 		D37BBDF21D2B9D1B008383D7 /* 공지사항.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37BBDEA1D2B9D1B008383D7 /* 공지사항.swift */; };
@@ -69,7 +69,6 @@
 		280F46ED1D17D41F004290C4 /* SOVIS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOVIS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F46F01D17D41F004290C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		280F46F21D17D41F004290C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		280F46F51D17D41F004290C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		280F46F71D17D41F004290C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280F46FA1D17D41F004290C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280F46FC1D17D41F004290C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,7 +105,8 @@
 		28C267E01D1C25320059868C /* coco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coco.jpg; sourceTree = "<group>"; };
 		A39CE4911D26ADA300AE2CCB /* REC_U2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REC_U2.swift; sourceTree = "<group>"; };
 		A39CE49D1D2BD19500AE2CCB /* REDLIGHT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDLIGHT.swift; sourceTree = "<group>"; };
-		A39CE49F1D2BD29600AE2CCB /* KakaoTalk_Photo_2016-07-05-20-32-56_38.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-20-32-56_38.jpeg"; sourceTree = "<group>"; };
+		A39CE4A21D2BFF2A00AE2CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A39CE4A41D2C022400AE2CCB /* KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg"; sourceTree = "<group>"; };
 		A3BF450C1D1ADBDC00334083 /* TTS_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTS_UIViewController.h; sourceTree = "<group>"; };
 		A3BF450D1D1ADBDC00334083 /* TTS_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTS_UIViewController.m; sourceTree = "<group>"; };
 		A3BF45111D1AFFBC00334083 /* REC_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REC_UIViewController.h; sourceTree = "<group>"; };
@@ -178,11 +178,11 @@
 				280F46F01D17D41F004290C4 /* AppDelegate.swift */,
 				280F46F21D17D41F004290C4 /* ViewController.swift */,
 				D3E82E9A1D1A6B5D0043B7D1 /* MainController.swift */,
-				280F46F41D17D41F004290C4 /* Main.storyboard */,
 				2889FB421D2AB8D800F2F9C7 /* speechrecognize.swift */,
 				2889FB391D291F2D00F2F9C7 /* MainTabBarController.swift */,
 				289860D71D1C657B00BF87D6 /* Storelist.swift */,
 				280F47211D17F02F004290C4 /* StoreClass.swift */,
+				A39CE4A11D2BFF2A00AE2CCB /* Main.storyboard */,
 				280F46F71D17D41F004290C4 /* Assets.xcassets */,
 				280F46F91D17D41F004290C4 /* LaunchScreen.storyboard */,
 				280F46FC1D17D41F004290C4 /* Info.plist */,
@@ -233,7 +233,7 @@
 		28C04D8A1D1ACC9C00BC3B32 /* ImageSet */ = {
 			isa = PBXGroup;
 			children = (
-				A39CE49F1D2BD29600AE2CCB /* KakaoTalk_Photo_2016-07-05-20-32-56_38.jpeg */,
+				A39CE4A41D2C022400AE2CCB /* KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg */,
 				289860DF1D1C8E2100BF87D6 /* icon-60@3x.png */,
 				289860DD1D1C899C00BF87D6 /* Sovis.png */,
 				289860D91D1C887B00BF87D6 /* Sogang.png */,
@@ -336,18 +336,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				28C267E61D1C25320059868C /* woojeong.jpg in Resources */,
+				A39CE4A51D2C022400AE2CCB /* KakaoTalk_Photo_2016-07-05-23-56-12_98.jpeg in Resources */,
 				280F46FB1D17D41F004290C4 /* LaunchScreen.storyboard in Resources */,
 				28C267E71D1C25320059868C /* yongssa.jpg in Resources */,
 				28C267E41D1C25320059868C /* tol.jpg in Resources */,
 				28C267E31D1C25320059868C /* gaya.jpg in Resources */,
 				28C267E81D1C25320059868C /* coco.jpg in Resources */,
+				A39CE4A31D2BFF2A00AE2CCB /* Main.storyboard in Resources */,
 				28C267E21D1C25320059868C /* cheesebob.jpg in Resources */,
 				280F46F81D17D41F004290C4 /* Assets.xcassets in Resources */,
 				289860DB1D1C887B00BF87D6 /* Sogang.png in Resources */,
-				280F46F61D17D41F004290C4 /* Main.storyboard in Resources */,
 				289860E01D1C8E2100BF87D6 /* icon-60@3x.png in Resources */,
 				28C267E51D1C25320059868C /* tutle.jpg in Resources */,
-				A39CE4A01D2BD29600AE2CCB /* KakaoTalk_Photo_2016-07-05-20-32-56_38.jpeg in Resources */,
 				289860DE1D1C899C00BF87D6 /* Sovis.png in Resources */,
 				28C267E11D1C25320059868C /* bali.jpg in Resources */,
 			);
@@ -396,20 +396,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		280F46F41D17D41F004290C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				280F46F51D17D41F004290C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		280F46F91D17D41F004290C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				280F46FA1D17D41F004290C4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A39CE4A11D2BFF2A00AE2CCB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A39CE4A21D2BFF2A00AE2CCB /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
